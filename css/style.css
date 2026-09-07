@@ -181,14 +181,17 @@ html[data-theme="light"] .ic-moon { display: none; }
 /* ---------- showcase marquee ---------- */
 .showcase { margin: 26px 0 10px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 .marquee {
-  display: flex; gap: 14px; width: max-content;
+  display: flex; width: max-content;
   cursor: grab; user-select: none; -webkit-user-select: none;
   touch-action: pan-y; will-change: transform;
 }
 .marquee.dragging { cursor: grabbing; }
+/* margin instead of flex gap: every copy ends with its own spacing, so
+   scrollWidth/2 is the exact loop seam and the wrap is pixel-perfect */
 .marquee img {
   width: 168px; height: 210px; object-fit: cover; border-radius: 14px;
   border: 1px solid var(--border); opacity: .9;
+  margin-right: 14px;
   pointer-events: none; -webkit-user-drag: none;
 }
 

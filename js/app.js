@@ -485,9 +485,9 @@
     };
 
     function wrap() {
-      if (M.half <= 0) return;
-      while (M.x <= -M.half) M.x += M.half;
-      while (M.x > 0) M.x -= M.half;
+      if (M.half <= 0) { M.x = 0; return; }
+      /* keep x in (-half, 0] — the exact seam, since each copy ends with its own margin */
+      M.x = -(((M.half - (M.x % M.half)) % M.half));
     }
     function render() { marquee.style.transform = `translateX(${M.x}px)`; }
     function measure() {
@@ -497,6 +497,7 @@
     function setPaused(p) { M.paused = p; marquee.classList.toggle('paused', p); }
     function updatePause() { setPaused(M.hover || M.pointers.size > 0); }
 
+    let frameCount = 0;
     function frame(ts) {
       M.raf = requestAnimationFrame(frame);
       if (M.last == null) M.last = ts;
@@ -505,6 +506,8 @@
       if (dt > 100) return; // tab was hidden -> don't jump ahead
       if (M.paused || M.drag || reduceMotion) return;
       M.x -= SPEED * dt;
+      // re-measure ~once a second so the loop distance tracks any late layout change
+      if (++frameCount % 60 === 0) measure();
       wrap();
       render();
     }
