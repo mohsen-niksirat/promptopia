@@ -84,7 +84,6 @@ html[data-theme="light"] .blob { opacity: .25; }
 .hero-sub { animation: fadeUp .6s .14s cubic-bezier(.2, .7, .2, 1) backwards; }
 .hero-cta { animation: fadeUp .6s .2s cubic-bezier(.2, .7, .2, 1) backwards; }
 .hero-stats { animation: fadeUp .6s .26s cubic-bezier(.2, .7, .2, 1) backwards; }
-.showcase { animation: fadeUp .8s .34s cubic-bezier(.2, .7, .2, 1) backwards; }
 
 [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s cubic-bezier(.2, .7, .2, 1); }
 [data-reveal].in { opacity: 1; transform: none; }
@@ -177,23 +176,6 @@ html[data-theme="light"] .ic-moon { display: none; }
 }
 .stat b { display: block; font-size: 1.15rem; font-weight: 800; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .stat span { font-size: .72rem; color: var(--muted); }
-
-/* ---------- showcase marquee ---------- */
-.showcase { margin: 26px 0 10px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
-.marquee {
-  display: flex; width: max-content;
-  cursor: grab; user-select: none; -webkit-user-select: none;
-  touch-action: pan-y; will-change: transform;
-}
-.marquee.dragging { cursor: grabbing; }
-/* margin instead of flex gap: every copy ends with its own spacing, so
-   scrollWidth/2 is the exact loop seam and the wrap is pixel-perfect */
-.marquee img {
-  width: 168px; height: 210px; object-fit: cover; border-radius: 14px;
-  border: 1px solid var(--border); opacity: .9;
-  margin-right: 14px;
-  pointer-events: none; -webkit-user-drag: none;
-}
 
 /* ---------- toolbar ---------- */
 .gallery-section { padding: 30px 0 60px; scroll-margin-top: calc(var(--header-h) + 10px); }
@@ -453,7 +435,6 @@ html.modal-open, html.modal-open body { overflow: hidden; }
   .hero { padding-top: 30px; }
   .hero-cta .btn { flex: 0 1 auto; padding: 10px 16px; font-size: .84rem; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .marquee img { width: 112px; height: 140px; }
   .stat { min-width: 96px; padding: 10px 14px; }
   .stat b { font-size: 1.2rem; }
   .brand-name { font-size: 1rem; }
