@@ -9,6 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'node-html-parser';
+import { loadTextPrompts, isTextId } from './text-data.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -377,7 +378,7 @@ async function cmdBuild({ force = false } = {}) {
   let missingEd = 0;
   for (const id of curation.selected) {
     const p = byId.get(id);
-    if (!p) { console.warn(`!! msgId ${id} not found`); continue; }
+    if (!p) { if (!isTextId(id)) console.warn(`!! msgId ${id} not found`); continue; }
     if (!p.photoFull) { console.warn(`!! msgId ${id} has no photo`); continue; }
     const ed = editorial[String(id)];
     if (!ed) missingEd++;
@@ -429,6 +430,8 @@ async function cmdBuild({ force = false } = {}) {
     });
   }
   if (missingEd) console.log(`auto-derived bilingual titles for ${missingEd} prompts (add entries in tools/editorial.json to override)`);
+  /* hand-curated text prompts (writing / coding / marketing) ride along with the photo gallery */
+  out.push(...loadTextPrompts());
   const catCount = {};
   for (const o of out) catCount[o.cat] = (catCount[o.cat] || 0) + 1;
   console.log('final category mix:', catCount);
@@ -480,8 +483,11 @@ async function cmdBuild({ force = false } = {}) {
 }
 
 /* ------------------------------------------------------------------ */
-const cmd = process.argv[2] || 'all';
-if (cmd === 'parse') await cmdParse();
-else if (cmd === 'select') await cmdSelect();
-else if (cmd === 'build') await cmdBuild({ force: process.argv.includes('--force') });
-else { await cmdParse(); await cmdSelect(); await cmdBuild({ force: process.argv.includes('--force') }); }
+/* dispatch only when run directly, so other tools can import this module */
+if (process.argv[1] && path.basename(process.argv[1]) === 'build.mjs') {
+  const cmd = process.argv[2] || 'all';
+  if (cmd === 'parse') await cmdParse();
+  else if (cmd === 'select') await cmdSelect();
+  else if (cmd === 'build') await cmdBuild({ force: process.argv.includes('--force') });
+  else { await cmdParse(); await cmdSelect(); await cmdBuild({ force: process.argv.includes('--force') }); }
+}

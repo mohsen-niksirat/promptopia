@@ -26,11 +26,18 @@ if (data) {
   else ok(`prompts: ${data.prompts.length}`);
 }
 
-/* 2. curation.json matches the shipped data */
+/* 2. curation.json matches the shipped data (photo prompts only —
+      hand-curated text prompts live in tools/text-prompts.json) */
 const curation = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'curation.json'), 'utf8'));
-if (data && curation.selected.length !== data.prompts.length) {
-  fail(`curation.json has ${curation.selected.length} ids but data has ${data.prompts.length} prompts — re-run build`);
-} else if (data) ok('curation count matches data');
+let textCount = 0;
+try {
+  const tp = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'text-prompts.json'), 'utf8'));
+  textCount = (tp.prompts || []).length;
+} catch { /* missing/malformed file -> textCount stays 0 */ }
+const photoCount = data ? data.prompts.filter((p) => p.id < 20000).length : 0;
+if (data && curation.selected.length !== photoCount) {
+  fail(`curation.json has ${curation.selected.length} ids but data has ${photoCount} photo prompts (+ ${textCount} text prompts) — re-run build`);
+} else if (data) ok(`curation count matches data (${photoCount} photos + ${textCount} text)`);
 
 /* 3. every prompt has image + title + at least one variant */
 if (data) {

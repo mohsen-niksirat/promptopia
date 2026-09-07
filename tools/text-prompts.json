@@ -1,0 +1,221 @@
+{
+  "_note": "Hand-curated text prompts (no photos). Merged into data/prompts.js by tools/build.mjs or tools/sync-text.mjs. Each prompt ships a Persian and an English variant. IDs use the 20000+ range to stay clear of photo prompt ids.",
+  "prompts": [
+    {
+      "id": 20001,
+      "cat": "writing",
+      "catFa": "نویسندگی",
+      "catEn": "Writing",
+      "t": { "fa": "داستان کوتاه بنویس", "en": "Write a Short Story" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: نویسنده داستان کوتاه حرفه‌ای.\nوظیفه: یک داستان کوتاه درباره [موضوع/ایده] بنویس.\nخروجی:\n- ۸۰۰ تا ۱۲۰۰ کلمه\n- عنوانی جذاب برای داستان\n- سه بخش: شروع با یک اتفاق یا جزئیات گیرا، میانه با یک کشمکش مشخص (درونی یا بیرونی)، پایان با یک چرخش یا جمع‌بندی احساسی\n- حداقل یک شخصیت اصلی با انگیزه و ضعف مشخص\n- دیالوگ طبیعی و توصیف‌های حسی (نه فقط ظاهری)\nنکات:\n- لحن متناسب با ژانر [درام/معمایی/رمانتیک/ترسناک] باشد\n- از کلیشه و جمله‌های تکراری دوری کن\n- اگر بخواهم، ادامه داستان را در بخش‌های بعدی بنویس"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a professional short-story writer.\nTask: write a short story about [topic/idea].\nOutput:\n- 800–1200 words\n- A compelling title\n- Three parts: an opening hook with vivid detail, a middle with a clear conflict (inner or outer), and an ending with a twist or emotional payoff\n- At least one main character with a clear motivation and flaw\n- Natural dialogue and sensory descriptions, not just visual ones\nRules:\n- Match the tone of the [genre: drama/mystery/romance/horror]\n- Avoid clichés and repetitive phrasing\n- If I ask, continue the story in follow-up messages"
+        }
+      ]
+    },
+    {
+      "id": 20002,
+      "cat": "writing",
+      "catFa": "نویسندگی",
+      "catEn": "Writing",
+      "t": { "fa": "رمان ناتمام را تمام کن", "en": "Finish an Unfinished Novel" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: ویراستار و نویسنده همکار که قرار است رمانی ناتمام را به سرانجام برساند.\nوظیفه: متن [بخش نوشته‌شده رمان] را بخوان و:\n- سبک، لحن، ریتم و زاویه دید نویسنده را دقیق تحلیل کن\n- خلاصه‌ای از داستان تا اینجا و شخصیت‌ها بده\n- سه مسیر احتمالی برای ادامه با نقاط قوت و ریسک هرکدام پیشنهاد بده\n- سپس ادامه را از جایی که متن قطع شده، در همان سبک بنویس\nخروجی:\n- بخش تحلیل (حداکثر ۳۰۰ کلمه)\n- ادامه داستان حداقل ۱۰۰۰ کلمه، هم‌خوان با شخصیت‌ها و اتفاقات قبلی\nنکته: اگر پایان بندی مشخصی در ذهن داری، بگو تا همان را هدف بگیرم."
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a collaborating editor tasked with finishing an unfinished novel.\nTask: read the [written part of the novel] and:\n- Analyze the author's style, tone, rhythm and point of view precisely\n- Summarize the story so far and the characters\n- Propose three possible directions for continuing, with the strengths and risks of each\n- Then continue the story from where it stopped, in the same style\nOutput:\n- Analysis section (max 300 words)\n- At least 1000 words of continuation consistent with the existing characters and events\nNote: if you have a specific ending in mind, tell me so I can aim for it."
+        }
+      ]
+    },
+    {
+      "id": 20003,
+      "cat": "writing",
+      "catFa": "نویسندگی",
+      "catEn": "Writing",
+      "t": { "fa": "اسکریپت ویدیو بنویس", "en": "Write a Video Script" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: فیلم‌نامه‌نویس ویدیوهای آموزشی/یوتیوب.\nوظیفه: یک اسکریپت کامل برای ویدیویی درباره [موضوع] با مدت [مثلاً ۸ دقیقه] بنویس.\nخروجی:\n- تیتر جذاب و سه ایده برای عنوان ویدیو\n- هُک شروع (۱۰-۱۵ ثانیه اول که مخاطب را نگه دارد)\n- اسکریپت خط‌به‌خط با زمان‌بندی هر بخش\n- بخش‌بندی به سکانس‌ها: مقدمه، بدنه (۲-۳ ایده اصلی)، جمع‌بندی و کال تو اکشن\n- برای هر سکانس: متن گوینده + توضیح تصویر/گرافیک روی صفحه\n- یک جمله چکیده که بیننده بعد از ویدیو به خاطر بسپارد\nنکات:\n- لحن صمیمی و ساده، جملات کوتاه مناسب گفتار\n- از اصطلاحات تخصصی بی‌توضیح پرهیز کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a scriptwriter for educational/YouTube videos.\nTask: write a complete script for a video about [topic] with a runtime of [e.g. 8 minutes].\nOutput:\n- A catchy headline and three title ideas\n- A cold open (first 10–15 seconds that keeps the viewer)\n- A line-by-line script with timing for each section\n- Segments: intro, body (2–3 core ideas), summary and a call to action\n- For each segment: narrator text + on-screen visual/graphic description\n- One takeaway sentence the viewer should remember after the video\nRules:\n- Friendly, simple tone with short sentences suited to speech\n- Avoid unexplained jargon"
+        }
+      ]
+    },
+    {
+      "id": 20004,
+      "cat": "writing",
+      "catFa": "نویسندگی",
+      "catEn": "Writing",
+      "t": { "fa": "شعر سفارشی بساز", "en": "Compose a Custom Poem" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: شاعر معاصر.\nوظیفه: شعری درباره [موضوع/احساس/مناسبت] برای [مخاطب/هدیه‌دهنده] بسرای.\nخروجی:\n- ۸ تا ۱۶ بیت (یا بر اساس قالب درخواستی)\n- انتخاب قالب: آزاد، نیمایی یا کلاسیک — اگر مشخص نکردی، متناسب با موضوع انتخاب کن\n- حداقل دو تصویر شاعرانه (تشبیه یا استعاره) مرتبط با موضوع\n- وزن و قافیه روان بدون قافیه‌های اجباری و تکراری\n- پایان‌بندی با یک بیت ماندگار\nنکات:\n- حس و لحن شعر با مناسبت هماهنگ باشد\n- از شعرهای معروف تقلید نکن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a contemporary poet.\nTask: compose a poem about [topic/feeling/occasion] for [audience/recipient].\nOutput:\n- 8–16 lines (or follow the requested form)\n- Choose the form: free verse, blank verse or structured — pick what fits the topic if not specified\n- At least two poetic images (simile or metaphor) tied to the theme\n- Smooth rhythm and rhyme without forced or repetitive rhymes\n- End with a memorable closing line\nRules:\n- The mood of the poem should match the occasion\n- Do not imitate famous poems"
+        }
+      ]
+    },
+    {
+      "id": 20005,
+      "cat": "coding",
+      "catFa": "کدنویسی",
+      "catEn": "Coding",
+      "t": { "fa": "باگ را پیدا و رفع کن", "en": "Find and Fix a Bug" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مهندس نرم‌افزار ارشد و اشکال‌زدایی حرفه‌ای.\nوظیفه: کد زیر را که [توضیح مشکل/خطا] دارد بررسی کن:\n[kد کد اینجا]\nخروجی:\n۱. تشخیص: ریشه مشکل در کدام بخش و چرا (تحلیل علت، نه فقط علائم)\n۲. راه‌حل پیشنهادی: کد اصلاح‌شده به‌همراه توضیح تغییرات\n۳. پیشگیری: چه تستی یا چه تغییری از بازگشت این باگ جلوگیری می‌کند\nنکات:\n- اگر خطا خاصی داری، متن کامل خطا را هم بده\n- اگر زبان/فریم‌ورک مشخص است بگو تا راه‌حل متناسب باشد\n- کد را کامل و قابل کپی برگردان، نه فقط تکه‌های تغییر"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a senior software engineer and professional debugger.\nTask: examine the code below that has [problem/error description]:\n[PASTE CODE HERE]\nOutput:\n1. Diagnosis: where the root cause is and why (root-cause analysis, not just symptoms)\n2. Proposed fix: corrected code with an explanation of the changes\n3. Prevention: what test or change stops this bug from coming back\nRules:\n- If you have a specific error, include the full error message\n- State the language/framework so the fix matches your stack\n- Return complete, copy-pasteable code, not just snippets"
+        }
+      ]
+    },
+    {
+      "id": 20006,
+      "cat": "coding",
+      "catFa": "کدنویسی",
+      "catEn": "Coding",
+      "t": { "fa": "کد را ریفکتور کن", "en": "Refactor This Code" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: معمار نرم‌افزار.\nوظیفه: کد زیر را بازسازی (ریفکتور) کن بدون اینکه رفتار آن تغییر کند:\n[کد اینجا]\nاهداف:\n- خوانایی: نام‌گذاری معنادار متغیرها و توابع\n- سادگی: حذف تکرار و کاهش پیچیدگی (چند توابع تودرتو را ساده کن)\n- قابلیت تست: جداسازی منطق خالص از وابستگی‌های بیرونی\nخروجی:\n- کد ریفکتورشده کامل و قابل کپی\n- فهرست تغییرات: هر تغییر در یک خط با دلیل\n- اگر شکستی احتمالی در رفتار وجود دارد، هشدار بده\nنکته: اگر فریم‌ورک یا نسخه زبان را مشخص کنی، راه‌حل دقیق‌تر می‌شود."
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a software architect.\nTask: refactor the code below without changing its behavior:\n[PASTE CODE HERE]\nGoals:\n- Readability: meaningful variable and function names\n- Simplicity: remove duplication and reduce complexity (simplify deeply nested functions)\n- Testability: separate pure logic from external dependencies\nOutput:\n- Complete, copy-pasteable refactored code\n- A change list: each change on one line with a reason\n- Flag any potential behavioral breakage\nNote: specifying the framework or language version gives a more precise result."
+        }
+      ]
+    },
+    {
+      "id": 20007,
+      "cat": "coding",
+      "catFa": "کدنویسی",
+      "catEn": "Coding",
+      "t": { "fa": "تابع/کامپوننت بساز", "en": "Build a Function or Component" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: توسعه‌دهنده فول‌استک.\nوظیفه: یک [تابع/کامپوننت/کلاس] در زبان [زبان/فریم‌ورک] بساز که [شرح دقیق خواسته] را انجام دهد.\nخروجی:\n- کد کامل و آماده استفاده\n- امضای ورودی/خروجی مشخص (پارامترها، نوع و خروجی)\n- مدیریت خطا و حالت‌های مرزی (ورودی خالی، مقدار نامعتبر و…)\n- مثال استفاده: یک نمونه فراخوانی/استفاده واقعی با خروجی نمونه\n- توضیح یک‌خطی هر بخش مهم کد\nنکات:\n- از کتابخانه‌های غیرضروری استفاده نکن؛ اگر لازم است، نامش را بگو\n- اگر وابستگی دیگری لازم است، راهنمای نصب بده\n- کد را با بهترین شیوه‌های آن زبان بنویس"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a full-stack developer.\nTask: build a [function/component/class] in [language/framework] that does [detailed description of the requirement].\nOutput:\n- Complete, ready-to-use code\n- A clear input/output signature (parameters, types and return value)\n- Error handling and edge cases (empty input, invalid values, etc.)\n- A usage example: one real call/use with sample output\n- A one-line explanation for each important part of the code\nRules:\n- Avoid unnecessary libraries; if one is needed, name it\n- If extra dependencies are required, provide install instructions\n- Follow the language's best practices"
+        }
+      ]
+    },
+    {
+      "id": 20008,
+      "cat": "coding",
+      "catFa": "کدنویسی",
+      "catEn": "Coding",
+      "t": { "fa": "کد را مستند کن", "en": "Document This Code" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: تک‌نویس فنی.\nوظیفه: کد زیر را مستندسازی کن:\n[کد اینجا]\nخروجی:\n- کامنت‌های کوتاه و هدفمند روی بخش‌های غیربدیهی (چرا، نه چی)\n- برای هر تابع/کلاس: شرح، پارامترها، خروجی و مثال استفاده\n- فایل README کوتاه شامل: معرفی، نصب/راه‌اندازی، مثال استفاده و عیب‌یابی رایج\n- اگر کد پایگاه داده/API دارد، مستندات نقاط اتصال را هم بنویس\nنکات:\n- کامنت‌ها به زبان [فارسی/انگلیسی] نوشته شوند\n- از مستندسازی تزئینی و اضافه پرهیز کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a technical writer.\nTask: document the code below:\n[PASTE CODE HERE]\nOutput:\n- Short, purposeful comments on non-obvious parts (explain why, not what)\n- For each function/class: description, parameters, return value and a usage example\n- A short README: introduction, install/setup, usage example and common troubleshooting\n- If the code touches a database/API, document the integration points too\nRules:\n- Comments should be in [Persian/English]\n- Avoid decorative or redundant documentation"
+        }
+      ]
+    },
+    {
+      "id": 20009,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": { "fa": "کپشن اینستاگرام بنویس", "en": "Write an Instagram Caption" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: کپی‌رایتر شبکه‌های اجتماعی.\nوظیفه: برای [نوع پست: محصول/معرفی/آموزش/مسابقه/خبر] درباره [موضوع/محصول] کپشن اینستاگرام بنویس.\nخروجی:\n- ۳ نسخه با لحن‌های متفاوت: صمیمی، حرفه‌ای و طنز/دوستانه\n- هر نسخه شامل: متن اصلی (۳-۵ خط)، هشتگ‌های مرتبط (۵-۷ مورد) و پیشنهاد کال تو اکشن\n- یک نسخه کوتاه مخصوص استوری\n- خط اول هر کپشن طوری باشد که مخاطب را وادار به خواندن ادامه کند (هوک)\nنکات:\n- مخاطب هدف: [مخاطب]\n- از ادعاهای غیرواقعی پرهیز کن\n- تا حد امکان از کلمات محاوره‌ای امروزی و ریتم‌دار استفاده کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a social media copywriter.\nTask: write Instagram captions for a [post type: product/intro/promo/giveaway/announcement] about [topic/product].\nOutput:\n- 3 versions with different tones: friendly, professional and humorous/casual\n- Each version includes: main copy (3–5 lines), relevant hashtags (5–7) and a call-to-action suggestion\n- One short version for Stories\n- The first line of each caption must hook the reader into continuing\nRules:\n- Target audience: [audience]\n- Avoid unrealistic claims\n- Prefer modern, rhythmic everyday language where possible"
+        }
+      ]
+    },
+    {
+      "id": 20010,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": { "fa": "ایمیل سرد فروش بنویس", "en": "Write a Cold Sales Email" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: متخصص فروش B2B.\nوظیفه: یک ایمیل سرد (اولین تماس) برای معرفی [محصول/خدمت] به [نوع مخاطب/شرکت] بنویس.\nخروجی:\n- خط موضوع (Subject): دو گزینه کوتاه و کلیک‌خور\n- بدنه ایمیل (حداکثر ۱۲۰ کلمه) شامل:\n  ۱. خط اول شخصی‌سازی‌شده بر اساس شرکت/نقش مخاطب\n  ۲. بیان یک مشکل مشخص که محصول ما حل می‌کند\n  ۳. یک جمله درباره راه‌حل (بدون جزئیات فنی اضافه)\n  ۴. کال تو اکشن ساده و کم‌فشار (مثلاً «آیا این مشکل را دارید؟»)\n- نسخه پیگیری ۲ روز بعد (کوتاه‌تر)\nنکات:\n- لحن محترمانه و بدون تملق\n- از کلمات اغراق‌آمیز («بهترین»، «انقلابی») پرهیز کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a B2B sales specialist.\nTask: write a cold outreach email introducing [product/service] to [audience type/company].\nOutput:\n- Subject line: two short, click-worthy options\n- Email body (max 120 words) including:\n  1. A personalized opening line based on the company/role\n  2. A specific problem our product solves\n  3. One sentence about the solution (no excessive technical detail)\n  4. A simple, low-pressure call to action (e.g. \"Is this a problem you're facing?\")\n- A shorter 2-day follow-up version\nRules:\n- Respectful tone, no flattery\n- Avoid hype words (\"best\", \"revolutionary\")"
+        }
+      ]
+    },
+    {
+      "id": 20011,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": { "fa": "نام و شعار برند بساز", "en": "Create a Brand Name & Tagline" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: متخصص برندینگ و نام‌گذاری.\nوظیفه: برای کسب‌وکاری که [شرح کسب‌وکار/محصول] است و مخاطبش [مخاطب]، نام برند و شعار پیشنهاد بده.\nخروجی:\n- ۱۰ نام پیشنهادی در دسته‌بندی: ۴ نام فارسی، ۳ نام لاتین (با تلفظ فارسی)، ۳ نام ترکیبی\n- برای هر نام: دلیل انتخاب، حس/تداعی، و بررسی اجمالی قابلیت ثبت (احتمال تداخل کم)\n- ۵ شعار (تگ‌لاین) کوتاه، یکی برای هر لحن: انگیزشی، توصیفی، چالشی، طنز و لوکس\n- پیشنهاد نام دامنه برای ۳ نام برتر (در صورت امکان)\nنکات:\n- نام‌ها کوتاه، به‌خاطرماندنی و تلفظ‌آسان باشند\n- از نام‌های تکراری و شبیه برندهای بزرگ پرهیز کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a branding and naming specialist.\nTask: suggest a brand name and tagline for a business that [business/product description] targeting [audience].\nOutput:\n- 10 name suggestions grouped: 4 Persian names, 3 Latin names (with Persian pronunciation), 3 hybrid names\n- For each name: the reasoning, the feeling/association, and a quick trademark check note (low collision likelihood)\n- 5 short taglines, one per tone: inspirational, descriptive, challenging, humorous and luxury\n- Domain name suggestions for the top 3 names (when possible)\nRules:\n- Names must be short, memorable and easy to pronounce\n- Avoid names that copy big existing brands"
+        }
+      ]
+    },
+    {
+      "id": 20012,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": { "fa": "پرسونای مشتری بساز", "en": "Build a Customer Persona" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: تحلیلگر بازاریابی.\nوظیفه: برای [محصول/خدمت] یک پرسونای مشتری کامل بساز.\nخروجی:\n- مشخصات جمعیتی: سن، جنسیت، موقعیت مکانی، شغل و درآمد\n- مشخصات رفتاری: عادت‌های خرید، کانال‌های اطلاعاتی (اینستاگرام/تلگرام/گوگل)، ساعات آنلاین\n- دردها و نیازها: ۳ مشکل اصلی که محصول ما حل می‌کند و ۳ ترس/موانع خرید\n- انگیزه‌ها: چه چیزی او را به خرید ترغیب می‌کند\n- پیام بازاریابی: یک پیام کلیدی برای هر کانال (اینستاگرام، سایت، پیامک)\n- یک پاراگراف روایت (Story) از یک روز مشتری که محصول در آن نقش دارد\nنکات:\n- پرسونا واقع‌گرایانه باشد نه ایده‌آل\n- اگر داده/نظری از مشتریان واقعی داری، حتماً بده تا دقیق‌تر شود"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a marketing analyst.\nTask: build a complete customer persona for [product/service].\nOutput:\n- Demographics: age, gender, location, job and income\n- Behavioral profile: buying habits, information channels (Instagram/Telegram/Google), peak online hours\n- Pains and needs: 3 main problems our product solves and 3 fears/purchase barriers\n- Motivations: what drives them to buy\n- Marketing message: one key message per channel (Instagram, website, SMS)\n- A narrative paragraph (story) of a customer's day where the product plays a role\nRules:\n- Keep the persona realistic, not idealized\n- If you have data or feedback from real customers, share it for a sharper result"
+        }
+      ]
+    }
+  ]
+}
