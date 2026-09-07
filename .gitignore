@@ -4,6 +4,9 @@ tools/node_modules/
 package-lock.json
 *.log
 
+# Freebuff app local state
+.freebuff/
+
 # OS noise
 Thumbs.db
 .DS_Store
