@@ -1,0 +1,19 @@
+{
+  "name": "پرامپتوپیا — گالری پرامپت‌های آماده هوش مصنوعی",
+  "short_name": "پرامپتوپیا",
+  "description": "گالری پرامپت‌های آماده برای ساخت تصویر با هوش مصنوعی — کپی کن و در جیمینای یا چت‌جی‌پی‌تی استفاده کن.",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07080d",
+  "theme_color": "#0b0714",
+  "categories": ["productivity", "graphics", "education"],
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
