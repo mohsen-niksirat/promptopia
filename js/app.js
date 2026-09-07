@@ -305,10 +305,12 @@
     state.modal = { prompt: p, variant: 0 };
     fillModal();
     modal.showModal();
+    document.documentElement.classList.add('modal-open'); // lock page scroll behind the dialog
     if (!fromHash) history.replaceState(null, '', '#p' + id);
   }
   function closeModal() {
     modal.close();
+    document.documentElement.classList.remove('modal-open'); // unlock page scroll
     history.replaceState(null, '', location.pathname + location.search);
   }
   function fillModal() {
@@ -414,6 +416,7 @@
 
     // modal
     $('#modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('close', () => document.documentElement.classList.remove('modal-open'));
     modal.addEventListener('click', (ev) => { if (ev.target === modal) closeModal(); });
     modal.addEventListener('cancel', (ev) => { ev.preventDefault(); closeModal(); });
     document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && modal.open) closeModal(); });
@@ -459,10 +462,104 @@
       <div class="stat"><b>${fmt(cats)}</b><span>${esc(window.t('statCats'))}</span></div>
       <div class="stat"><b>${esc(window.t('statFreeVal'))}</b><span>${esc(window.t('statFree'))}</span></div>`;
   }
-  function renderMarquee() {
+  /* Showcase marquee: infinite auto-scroll that pauses on hover/touch and can be
+     dragged (mouse or touch) or scrolled left/right with the wheel. Two identical
+     copies are rendered and the offset wraps around half the strip width, so the
+     loop is seamless even while images are still loading. */
+  function initMarquee() {
+    const marquee = $('#marquee');
+    if (!marquee) return;
     const picks = DATA.slice(0, 14);
-    const imgs = picks.map((p) => `<img src="${p.img}" alt="" loading="lazy" decoding="async">`).join('');
-    $('#marquee').innerHTML = imgs + imgs; // duplicate for seamless loop
+    const imgs = picks.map((p) => `<img src="${p.img}" alt="" decoding="async" draggable="false">`).join('');
+    marquee.innerHTML = imgs + imgs; // duplicate for seamless loop
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const canHover = window.matchMedia('(hover: hover)').matches;
+    const SPEED = 0.05; // px per ms (~3px per frame at 60fps)
+
+    const M = {
+      x: 0, half: 0,
+      paused: false, hover: false,
+      pointers: new Set(), drag: null,
+      raf: null, last: null,
+    };
+
+    function wrap() {
+      if (M.half <= 0) return;
+      while (M.x <= -M.half) M.x += M.half;
+      while (M.x > 0) M.x -= M.half;
+    }
+    function render() { marquee.style.transform = `translateX(${M.x}px)`; }
+    function measure() {
+      M.half = marquee.scrollWidth / 2; // width of one copy = loop distance
+      wrap();
+    }
+    function setPaused(p) { M.paused = p; marquee.classList.toggle('paused', p); }
+    function updatePause() { setPaused(M.hover || M.pointers.size > 0); }
+
+    function frame(ts) {
+      M.raf = requestAnimationFrame(frame);
+      if (M.last == null) M.last = ts;
+      const dt = ts - M.last;
+      M.last = ts;
+      if (dt > 100) return; // tab was hidden -> don't jump ahead
+      if (M.paused || M.drag || reduceMotion) return;
+      M.x -= SPEED * dt;
+      wrap();
+      render();
+    }
+
+    // pause while hovered (mouse devices only, so touch never gets stuck)
+    if (canHover) {
+      marquee.addEventListener('mouseenter', () => { M.hover = true; updatePause(); });
+      marquee.addEventListener('mouseleave', () => { M.hover = false; updatePause(); });
+    }
+
+    // wheel -> horizontal scroll (prevents the page from scrolling over the strip)
+    marquee.addEventListener('wheel', (ev) => {
+      ev.preventDefault();
+      M.x -= ev.deltaY + ev.deltaX;
+      wrap();
+      render();
+    }, { passive: false });
+
+    // drag with mouse or touch
+    marquee.addEventListener('pointerdown', (ev) => {
+      M.drag = { id: ev.pointerId, startX: ev.clientX, startOffset: M.x };
+      M.pointers.add(ev.pointerId);
+      try { marquee.setPointerCapture(ev.pointerId); } catch { /* noop */ }
+      marquee.classList.add('dragging');
+      updatePause();
+    });
+    marquee.addEventListener('pointermove', (ev) => {
+      if (!M.drag || M.drag.id !== ev.pointerId) return;
+      M.x = M.drag.startOffset + (ev.clientX - M.drag.startX);
+      wrap();
+      render();
+    });
+    const endDrag = (ev) => {
+      if (!M.drag || M.drag.id !== ev.pointerId) return;
+      M.drag = null;
+      M.pointers.delete(ev.pointerId);
+      marquee.classList.remove('dragging');
+      if (marquee.hasPointerCapture && marquee.hasPointerCapture(ev.pointerId)) {
+        try { marquee.releasePointerCapture(ev.pointerId); } catch { /* noop */ }
+      }
+      updatePause();
+    };
+    marquee.addEventListener('pointerup', endDrag);
+    marquee.addEventListener('pointercancel', endDrag);
+
+    // keep the loop distance accurate while images/layout settle
+    window.addEventListener('resize', measure, { passive: true });
+    $$('img', marquee).forEach((img) => {
+      if (img.complete && img.naturalWidth) measure();
+      else img.addEventListener('load', measure, { once: true });
+    });
+
+    measure();
+    if (reduceMotion) render(); // static, still draggable/scrollable
+    else M.raf = requestAnimationFrame(frame);
   }
 
   /* ---------- scroll reveal ---------- */
@@ -481,7 +578,7 @@
   applyTheme();
   bind();
   applyI18n();
-  renderMarquee();
+  initMarquee();
   initReveal();
   registerSW();
 
