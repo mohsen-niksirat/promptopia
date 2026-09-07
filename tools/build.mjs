@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'node-html-parser';
-import { loadTextPrompts, isTextId } from './text-data.mjs';
+import { loadTextPrompts, coverSVG, isTextId } from './text-data.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -430,8 +430,12 @@ async function cmdBuild({ force = false } = {}) {
     });
   }
   if (missingEd) console.log(`auto-derived bilingual titles for ${missingEd} prompts (add entries in tools/editorial.json to override)`);
-  /* hand-curated text prompts (writing / coding / marketing) ride along with the photo gallery */
-  out.push(...loadTextPrompts());
+  /* hand-curated text prompts (writing / coding / marketing / ...) ride along with the photo gallery */
+  const textPrompts = loadTextPrompts();
+  for (const tp of textPrompts) {
+    fs.writeFileSync(path.join(IMG, `t-${tp.id}.svg`), coverSVG(tp.id, tp.cat));
+  }
+  out.push(...textPrompts);
   const catCount = {};
   for (const o of out) catCount[o.cat] = (catCount[o.cat] || 0) + 1;
   console.log('final category mix:', catCount);

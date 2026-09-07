@@ -200,6 +200,222 @@
       ]
     },
     {
+      "id": 20013,
+      "cat": "education",
+      "catFa": "آموزش",
+      "catEn": "Education",
+      "t": { "fa": "یک مفهوم را ساده توضیح بده", "en": "Explain a Concept Simply" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: معلم خصوصی باتجربه.\nوظیفه: مفهوم [موضوع/مفهوم] را طوری توضیح بده که یک مبتدی کاملاً بفهمد.\nخروجی:\n- توضیح با یک مثال از زندگی روزمره (قبل از تعریف رسمی)\n- تعریف ساده در یک جمله\n- ۳ نکته کلیدی که معمولاً اشتباه فهمیده می‌شود + رفع هر اشتباه\n- یک تشبیه یا استعاره برای ماندگاری در ذهن\n- سوال کوتاه برای سنجش فهم مخاطب + پاسخش\nنکات:\n- از اصطلاحات تخصصی بدون توضیح پرهیز کن\n- اگر سطح مخاطب [مبتدی/متوسط/پیشرفته] است، عمق را تنظیم کن\n- اگر بخواهم، ادامه توضیح را با جزئیات بیشتر بده"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as an experienced private tutor.\nTask: explain [topic/concept] so a complete beginner fully understands it.\nOutput:\n- An explanation starting with a real-life example (before the formal definition)\n- A one-sentence simple definition\n- 3 commonly misunderstood points, each with the correct understanding\n- A simile or metaphor to make it stick\n- A short comprehension question with its answer\nRules:\n- Avoid unexplained jargon\n- Adjust depth for the audience level: [beginner/intermediate/advanced]\n- If asked, continue with more detail"
+        }
+      ]
+    },
+    {
+      "id": 20014,
+      "cat": "education",
+      "catFa": "آموزش",
+      "catEn": "Education",
+      "t": { "fa": "تمرین و آزمون طراحی کن", "en": "Design Exercises & a Quiz" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: طراح محتوای آموزشی.\nوظیفه: برای موضوع [موضوع/درس] و سطح [سطح] تمرین و آزمون طراحی کن.\nخروجی:\n- ۵ تمرین تشریحی با پاسخ کامل (برای یادگیری تدریجی)\n- ۱۰ سوال چهارگزینه‌ای با گزینه‌های منطقی و پاسخ + توضیح کوتاه هر پاسخ\n- ۲ سوال ترکیبی که چند مفهوم را به هم ربط می‌دهد\n- راهنمای نمره‌دهی: هر بخش چند نمره دارد\n- جدول زمان‌بندی پیشنهادی برای حل\nنکات:\n- سختی سوالات تدریجی بالا برود\n- سوالات شبیه سوالات واقعی/امتحانی باشند\n- اگر سبک خاصی مدنظر داری (کتبی/آنلاین) بگو"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as an instructional designer.\nTask: design exercises and a quiz for the topic [topic/lesson] at [level].\nOutput:\n- 5 open-ended exercises with full answers (for gradual learning)\n- 10 multiple-choice questions with plausible options, answers and a short explanation for each\n- 2 combined questions linking several concepts\n- A scoring guide: points per section\n- A suggested time budget for solving\nRules:\n- Difficulty should ramp up gradually\n- Questions should mirror real/exam-style questions\n- Tell me if you have a specific format in mind (written/online)"
+        }
+      ]
+    },
+    {
+      "id": 20015,
+      "cat": "education",
+      "catFa": "آموزش",
+      "catEn": "Education",
+      "t": { "fa": "برنامه مطالعه بساز", "en": "Build a Study Plan" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مشاور تحصیلی.\nوظیفه: برای [هدف/آزمون] با [مدت زمان مثلاً ۳ ماه] و [ساعت مطالعه روزانه مثلاً ۳ ساعت] برنامه مطالعه بساز.\nخروجی:\n- برنامه هفتگی: کدام روز/ساعت چه مبحثی خوانده شود\n- اولویت‌بندی مباحث بر اساس اهمیت و ضعف‌های احتمالی\n- برنامه مرور: چه زمانی مطالب قبلی مرور شوند (با فاصله‌گذاری)\n- آزمون‌های آزمایشی: هر چند وقت یک‌بار و چطور تحلیل شوند\n- ۳ نکته برای حفظ انگیزه و جلوگیری از فرسودگی\nنکات:\n- برنامه واقع‌بینانه باشد، نه آرمانی\n- اگر درسی ضعیف‌تر است، زمان بیشتری به آن اختصاص بده\n- اگر بخواهی، برای یک هفته اول برنامه ساعت‌به‌ساعت بده"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as an academic advisor.\nTask: build a study plan for [goal/exam] with [duration, e.g. 3 months] and [daily study time, e.g. 3 hours].\nOutput:\n- A weekly schedule: which day/hour to study which topic\n- Priority ranking of topics by importance and likely weak spots\n- A spaced review schedule for previously covered material\n- Practice-test guidance: frequency and how to analyze results\n- 3 tips for staying motivated and avoiding burnout\nRules:\n- Keep the plan realistic, not idealistic\n- Allocate more time to weaker subjects\n- If asked, provide an hour-by-hour plan for the first week"
+        }
+      ]
+    },
+    {
+      "id": 20016,
+      "cat": "business",
+      "catFa": "کسب‌وکار",
+      "catEn": "Business",
+      "t": { "fa": "بیزینس پلن بنویس", "en": "Write a Business Plan" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مشاور راه‌اندازی کسب‌وکار.\nوظیفه: برای کسب‌وکاری که [شرح کسب‌وکار/ایده] است یک بیزینس پلن بنویس.\nخروجی (هر بخش ۳-۵ خط):\n- خلاصه اجرایی: ارزش پیشنهادی در دو جمله\n- تحلیل بازار: اندازه بازار، رقبا و تمایز ما\n- مدل درآمد: منابع درآمد و قیمت‌گذاری پیشنهادی\n- استراتژی بازاریابی: کانال‌های جذب مشتری\n- ساختار تیم: نقش‌های کلیدی موردنیاز\n- پیش‌بینی مالی ساده: هزینه راه‌اندازی، هزینه ماهانه و نقطه سر به سر\n- ریسک‌ها: ۳ ریسک اصلی + راه کاهش هرکدام\nنکات:\n- اعداد واقع‌بینانه باشند؛ اگر عددی را نمی‌دانی، فرض کن و بنویس «فرض»\n- برای جذب سرمایه‌گذار یا بانک، خلاصه اجرایی را قوی‌تر کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a startup consultant.\nTask: write a business plan for a venture described as [business/idea description].\nOutput (3–5 lines per section):\n- Executive summary: the value proposition in two sentences\n- Market analysis: market size, competitors and our differentiation\n- Revenue model: income streams and suggested pricing\n- Marketing strategy: customer acquisition channels\n- Team structure: key roles needed\n- Simple financial forecast: startup cost, monthly cost and break-even point\n- Risks: the 3 main risks and how to mitigate each\nRules:\n- Keep numbers realistic; where unknown, state an assumption and label it \"assumption\"\n- If the plan targets investors or a bank, strengthen the executive summary"
+        }
+      ]
+    },
+    {
+      "id": 20017,
+      "cat": "business",
+      "catFa": "کسب‌وکار",
+      "catEn": "Business",
+      "t": { "fa": "تحلیل SWOT انجام بده", "en": "Run a SWOT Analysis" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: تحلیلگر استراتژی.\nوظیفه: برای [شرح کسب‌وکار/پروژه] یک تحلیل SWOT کامل انجام بده.\nخروجی:\n- جدول/بخش چهارگانه:\n  • نقاط قوت (داخلی): ۵ مورد مشخص و قابل‌اثبات\n  • نقاط ضعف (داخلی): ۵ مورد با راهکار پیشنهادی برای هرکدام\n  • فرصت‌ها (بیرونی): ۵ مورد با اولویت اثرگذاری\n  • تهدیدها (بیرونی): ۵ مورد با راه مقابله\n- بعد از تحلیل: ۲ استراتژی SO (استفاده از قوت برای بهره‌برداری از فرصت) و ۲ استراتژی WT (غلبه بر ضعف برای کاهش تهدید)\n- یک جمع‌بندی یک‌خطی\nنکات:\n- آیتم‌ها مشخص و عملی باشند، نه کلی («کیفیت خوب» کافی نیست)\n- اگر صنعت/رقیب مشخصی داری بگو تا تحلیل دقیق‌تر شود"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a strategy analyst.\nTask: run a complete SWOT analysis for [business/project description].\nOutput:\n- A four-part breakdown:\n  • Strengths (internal): 5 concrete, verifiable items\n  • Weaknesses (internal): 5 items, each with a suggested fix\n  • Opportunities (external): 5 items ranked by impact\n  • Threats (external): 5 items with countermeasures\n- Then: 2 SO strategies (use strengths to seize opportunities) and 2 WT strategies (overcome weaknesses to reduce threats)\n- A one-line conclusion\nRules:\n- Items must be specific and actionable, not generic (\"good quality\" is not enough)\n- Sharing your industry/competitors makes the analysis sharper"
+        }
+      ]
+    },
+    {
+      "id": 20018,
+      "cat": "business",
+      "catFa": "کسب‌وکار",
+      "catEn": "Business",
+      "t": { "fa": "استراتژی قیمت‌گذاری", "en": "Pricing Strategy" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مشاور قیمت‌گذاری.\nوظیفه: برای [محصول/خدمت] با هزینه تولید [هزینه] و قیمت رقبا [قیمت رقبا] یک استراتژی قیمت‌گذاری پیشنهاد بده.\nخروجی:\n- ۳ مدل قیمت‌گذاری ممکن (مثلاً: قیمت‌گذاری بر اساس هزینه، رقابتی، ارزش‌محور) با مزایا و معایب هرکدام\n- قیمت پیشنهادی نهایی + محاسبه حاشیه سود\n- استراتژی تخفیف و بسته‌بندی (باندل)\n- سناریوی واکنش رقبا به قیمت ما و پاسخ ما\n- ۲ روش تست قیمت قبل از نهایی‌کردن\nنکات:\n- اگر مشتریان [B2B/B2C] هستند، منطق قیمت را متناسب کن\n- از کسری‌های اعشاری و اعداد روانشناسی استفاده کن اگر مناسب است"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a pricing consultant.\nTask: suggest a pricing strategy for [product/service] with a production cost of [cost] and competitor prices of [competitor prices].\nOutput:\n- 3 possible pricing models (e.g. cost-based, competitive, value-based) with pros and cons of each\n- A final recommended price with margin calculation\n- A discount and bundling strategy\n- A scenario for competitor reaction to our price and our response\n- 2 ways to test the price before finalizing\nRules:\n- Tailor the pricing logic to [B2B/B2C] customers\n- Use psychological and round numbers where appropriate"
+        }
+      ]
+    },
+    {
+      "id": 20019,
+      "cat": "career",
+      "catFa": "CV و مصاحبه",
+      "catEn": "CV & Interview",
+      "t": { "fa": "رزومه حرفه‌ای بساز", "en": "Build a Professional CV" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مشاور کاریابی و رزومه‌نویس.\nوظیفه: برای شغلی که [موقعیت شغلی] است و با سوابق زیر [خلاصه سوابق/تجربه‌ها] یک رزومه حرفه‌ای آماده کن.\nخروجی:\n- ساختار کامل رزومه: اطلاعات تماس، خلاصه حرفه‌ای (۲-۳ خط)، سوابق شغلی، تحصیلات، مهارت‌ها\n- بازنویسی هر تجربه با فرمت STAR یا «اقدام + نتیجه قابل‌سنجش»\n- مهارت‌ها دسته‌بندی‌شده: فنی، نرم و زبانی\n- ۲ نسخه از خلاصه حرفه‌ای: یکی برای شغل موردنظر و یکی عمومی\n- لیست کلمات کلیدی که برای ATS (سیستم‌های غربالگری) باید در رزومه باشد\nنکات:\n- اعداد و نتایج مشخص («افزایش ۲۰٪ فروش») بهتر از توصیف کلی است\n- رزومه حداکثر ۲ صفحه باشد"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a career and CV consultant.\nTask: prepare a professional CV for the role [job title] based on this background [summary of experience].\nOutput:\n- Full CV structure: contact info, professional summary (2–3 lines), work history, education, skills\n- Rewrite each experience using the STAR format or \"action + measurable result\"\n- Skills grouped into: technical, soft and language\n- 2 versions of the professional summary: one tailored to the target role, one general\n- A list of keywords to include for ATS screening systems\nRules:\n- Concrete numbers and results (\"+20% sales\") beat vague descriptions\n- Keep the CV to at most 2 pages"
+        }
+      ]
+    },
+    {
+      "id": 20020,
+      "cat": "career",
+      "catFa": "CV و مصاحبه",
+      "catEn": "CV & Interview",
+      "t": { "fa": "سوالات مصاحبه و پاسخ", "en": "Interview Q&A Prep" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مربی آمادگی مصاحبه شغلی.\nوظیفه: برای موقعیت [موقعیت شغلی] و با سوابق من [خلاصه سوابق] مصاحبه را شبیه‌سازی کن.\nخروجی:\n- ۱۰ سوال رایج مصاحبه برای این شغل\n- برای هر سوال: پاسخ پیشنهادی ۳-۴ خطی با روش STAR که از سوابق من استفاده کند\n- ۳ سوال رفتاری/سناریویی خاص این شغل + پاسخ نمونه\n- ۳ سوالی که باید از کارفرما بپرسد (نشان‌دهنده حرفه‌ای‌گری)\n- ۵ نکته درباره زبان بدن و لحن\nنکات:\n- پاسخ‌ها طبیعی به نظر برسند، نه حفظی\n- اگر سوالی نداشت، یک سوال دشوار دیگر هم اضافه کن و پاسخش را بده"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as an interview coach.\nTask: simulate a job interview for the role [job title] based on my background [summary of experience].\nOutput:\n- 10 common interview questions for this role\n- For each: a suggested 3–4 line answer using the STAR method that draws on my background\n- 3 role-specific behavioral/scenario questions with sample answers\n- 3 questions I should ask the employer (shows professionalism)\n- 5 tips on body language and tone\nRules:\n- Answers should sound natural, not rehearsed\n- If anything is missing, add one harder question with its answer"
+        }
+      ]
+    },
+    {
+      "id": 20021,
+      "cat": "career",
+      "catFa": "CV و مصاحبه",
+      "catEn": "CV & Interview",
+      "t": { "fa": "نامه انگیزشی بنویس", "en": "Write a Cover Letter" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: نگارنده حرفه‌ای نامه انگیزشی.\nوظیفه: برای درخواست شغل [موقعیت شغلی] در [شرکت] با توجه به سوابق من [خلاصه سوابق] یک نامه انگیزشی بنویس.\nخروجی:\n- نامه در ۳ پاراگراف:\n  ۱. معرفی کوتاه + چرا این شرکت/نقش (تحقیق‌شده و مشخص)\n  ۲. دو دستاورد کلیدی من که با نیازهای نقش هم‌خوان است (با عدد)\n  ۳. جمع‌بندی + دعوت به مصاحبه\n- نسخه دوم با لحن کوتاه‌تر برای ایمیل\n- خط موضوع ایمیل پیشنهادی\nنکات:\n- از قالب «من کیستم» کلیشه‌ای پرهیز کن؛ مستقیماً به نیاز شرکت برو\n- حداکثر ۲۵۰ کلمه\n- اگر آگهی شغل را بدهی، دقیقاً به الزامات آن اشاره می‌کنم"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a professional cover-letter writer.\nTask: write a cover letter applying for [job title] at [company], drawing on my background [summary of experience].\nOutput:\n- A letter in 3 paragraphs:\n  1. Short introduction + why this company/role (specific and researched)\n  2. Two of my key achievements aligned with the role's needs (with numbers)\n  3. Closing + invitation for an interview\n- A shorter email-length second version\n- A suggested email subject line\nRules:\n- Avoid the clichéd \"who I am\" template; go straight to the company's needs\n- Keep it under 250 words\n- If you share the job ad, I'll address its exact requirements"
+        }
+      ]
+    },
+    {
+      "id": 20022,
+      "cat": "seo",
+      "catFa": "سئو و محتوا",
+      "catEn": "SEO & Content",
+      "t": { "fa": "مقاله سئوشده بنویس", "en": "Write an SEO Article" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: نویسنده محتوای سئو.\nوظیفه: مقاله‌ای درباره [موضوع] برای کلمه کلیدی اصلی [کلمه کلیدی] بنویس.\nخروجی:\n- تیتر اصلی شامل کلمه کلیدی + ۳ تیتر جایگزین\n- ساختار با تیترهای H2/H3 شامل: مقدمه، بدنه (هر بخش به یک سوال کاربر پاسخ دهد)، جمع‌بندی\n- کلمه کلیدی و مترادف‌هایش به‌طور طبیعی در متن توزیع شوند (بدون پرکردن)\n- ۱۲۰۰-۱۵۰۰ کلمه، جمله‌های کوتاه و پاراگراف‌های ۳-۴ خطی\n- سوالات متداول (FAQ) با پاسخ کوتاه (مناسب اسکیمای سوالات)\n- متای توضیحات و پیشنهاد لینک داخلی\nنکات:\n- متن برای کاربر بنویس، نه فقط موتور جستجو\n- از منابع قابل اعتماد داده و آمار بده (با ذکر منبع)"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as an SEO content writer.\nTask: write an article about [topic] targeting the primary keyword [keyword].\nOutput:\n- A main headline including the keyword + 3 alternative headlines\n- Structure with H2/H3 headings: intro, body (each section answers a user question), conclusion\n- The keyword and its variants distributed naturally (no keyword stuffing)\n- 1200–1500 words, short sentences, 3–4 line paragraphs\n- An FAQ section with short answers (suitable for FAQ schema)\n- Meta description and internal-link suggestions\nRules:\n- Write for users first, not just the search engine\n- Include data and statistics from reliable sources, with attribution"
+        }
+      ]
+    },
+    {
+      "id": 20023,
+      "cat": "seo",
+      "catFa": "سئو و محتوا",
+      "catEn": "SEO & Content",
+      "t": { "fa": "متا تایتل و دیسکریپشن بساز", "en": "Write Meta Title & Description" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: متخصص سئو تکنیکال.\nوظیفه: برای صفحه [صفحه/محتوای صفحه] با کلمه کلیدی [کلمه کلیدی] متا تایتل و متا دیسکریپشن بنویس.\nخروجی:\n- ۵ متا تایتل (حداکثر ۶۰ کاراکتر) هرکدام با کلمه کلیدی و ارزش پیشنهادی\n- ۵ متا دیسکریپشن (حداکثر ۱۵۵ کاراکتر) با کلمه کلیدی، مزیت و دعوت به کلیک\n- ۳ پیشنهاد URL اسلاگ کوتاه و سئوپسند\n- ۳ ایده تیتر H1\n- بررسی: کدام ترکیب تایتل/دیسکریپشن بیشترین نرخ کلیک احتمالی را دارد و چرا\nنکات:\n- از تکرار کلمه کلیدی در هر تایتل پرهیز کن\n- دیسکریپشن‌ها حس کنجکاوی ایجاد کنند اما گمراه‌کننده نباشند"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a technical SEO specialist.\nTask: write meta titles and descriptions for the page [page/page content] targeting the keyword [keyword].\nOutput:\n- 5 meta titles (max 60 characters), each with the keyword and a value proposition\n- 5 meta descriptions (max 155 characters) with the keyword, benefit and a click incentive\n- 3 short, SEO-friendly URL slug suggestions\n- 3 H1 headline ideas\n- An assessment: which title/description pairing is most likely to get clicks and why\nRules:\n- Avoid repeating the keyword in every title\n- Descriptions should spark curiosity without being misleading"
+        }
+      ]
+    },
+    {
+      "id": 20024,
+      "cat": "seo",
+      "catFa": "سئو و محتوا",
+      "catEn": "SEO & Content",
+      "t": { "fa": "تقویم محتوا بساز", "en": "Build a Content Calendar" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: استراتژیست محتوا.\nوظیفه: برای کسب‌وکاری که [شرح کسب‌وکار] است و کانال‌های [کانال‌ها] یک تقویم محتوای یک‌ماهه بساز.\nخروجی:\n- جدول هفتگی (۴ هفته): هر روز یک ایده محتوا با نوع آن (پست آموزشی/تبلیغی/سرگرمی/تعاملی)\n- برای هر ایده: هدف (آگاهی/تعامل/فروش) و کانال مناسب\n- ۵ ایده محتوای تکراری/سریالی برای وفادارسازی مخاطب\n- ۳ ایده محتوای تولیدی سنگین (ویدیو/مقاله) برای هفته آینده\n- تعادل ۸۰/۲۰: ۸۰٪ ارزش‌محور، ۲۰٪ فروش‌محور\nنکات:\n- ایده‌ها متناسب با [مخاطب] باشد\n- اگر مناسبت خاصی (تعطیلات/رویداد) نزدیک است، در تقویم لحاظ کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a content strategist.\nTask: build a one-month content calendar for a business described as [business description] on channels [channels].\nOutput:\n- A weekly table (4 weeks): one content idea per day with its type (educational/promotional/entertainment/interactive)\n- For each idea: the goal (awareness/engagement/sales) and best channel\n- 5 recurring/series content ideas to build audience loyalty\n- 3 heavy-production ideas (video/article) for the coming weeks\n- An 80/20 balance: 80% value-driven, 20% sales-driven\nRules:\n- Ideas must fit the [audience]\n- Include nearby occasions (holidays/events) if relevant"
+        }
+      ]
+    },
+    {
       "id": 20012,
       "cat": "marketing",
       "catFa": "مارکتینگ و کپی‌رایتینگ",
