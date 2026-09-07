@@ -316,8 +316,12 @@
   function fillModal() {
     const p = state.modal.prompt;
     const v = p.variants[state.modal.variant] || p.variants[0];
+    const isText = !!p.text;
+    modal.classList.toggle('text-prompt', isText);
     $('#modalImg').src = p.img;
     $('#modalImg').alt = title(p);
+    $('#modalIcon').src = isText ? p.img : '';
+    $('#modalIcon').alt = catLabel(p);
     $('#modalCat').textContent = catLabel(p);
     $('#modalDate').textContent = p.date || '';
     $('#modalTitle').textContent = title(p);
@@ -421,9 +425,34 @@
     modal.addEventListener('cancel', (ev) => { ev.preventDefault(); closeModal(); });
     document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && modal.open) closeModal(); });
     $('#modalFav').addEventListener('click', () => { if (state.modal.prompt) toggleFav(state.modal.prompt.id); });
+    const selectedText = () => { const p = state.modal.prompt; return p ? p.variants[state.modal.variant].text : null; };
     $('#modalCopy').addEventListener('click', async () => {
-      const p = state.modal.prompt;
-      if (p && (await copyText(p.variants[state.modal.variant].text))) toast(window.t('copied'));
+      const t = selectedText();
+      if (t && (await copyText(t))) toast(window.t('copied'));
+    });
+    /* “ساخت با این پرامپت”: copy + open ChatGPT with the prompt prefilled
+       (window.open first, while still inside the click gesture, so popups aren't blocked) */
+    $('#modalBuild').addEventListener('click', () => {
+      const t = selectedText();
+      if (!t) return;
+      window.open('https://chatgpt.com/?q=' + encodeURIComponent(t), '_blank', 'noopener');
+      copyText(t).then((ok) => { if (ok) toast(window.t('copied')); });
+    });
+    /* site links carry the selected prompt along: ChatGPT gets it prefilled,
+       Gemini can't take a prefill URL so the text is copied for pasting */
+    $('#siteChatgpt').addEventListener('click', (ev) => {
+      const t = selectedText();
+      if (!t) return;
+      ev.preventDefault();
+      window.open('https://chatgpt.com/?q=' + encodeURIComponent(t), '_blank', 'noopener');
+      copyText(t);
+    });
+    $('#siteGemini').addEventListener('click', (ev) => {
+      const t = selectedText();
+      if (!t) return;
+      ev.preventDefault();
+      window.open('https://gemini.google.com/app', '_blank', 'noopener');
+      copyText(t).then((ok) => { if (ok) toast(window.t('copiedPaste')); });
     });
     $('#modalShare').addEventListener('click', async () => {
       const p = state.modal.prompt;

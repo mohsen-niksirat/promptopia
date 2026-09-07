@@ -367,6 +367,14 @@ html.modal-open, html.modal-open body { overflow: hidden; }
 .modal-meta { display: flex; align-items: center; gap: 10px; }
 .modal-meta .badge { position: static; background: var(--grad-soft); color: var(--text); border-color: var(--border); }
 .modal-date { color: var(--muted); font-size: .8rem; }
+
+/* text prompts: category icon instead of the media panel, prompt text as the hero */
+.modal-icon { display: none; width: 56px; height: 70px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border); box-shadow: 0 6px 18px rgba(0, 0, 0, .35); }
+.modal.text-prompt .modal-icon { display: block; }
+.modal.text-prompt .modal-media { display: none; }
+.modal.text-prompt .modal-grid { grid-template-columns: 1fr; }
+.modal.text-prompt .prompt-box { font-size: .95rem; line-height: 1.9; max-height: none; min-height: 190px; }
+.modal.text-prompt .modal-title { font-size: 1.5rem; }
 .modal-title { font-size: 1.35rem; font-weight: 900; }
 
 .variant-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
