@@ -8,9 +8,18 @@
     set: (k, v) => { try { localStorage.setItem('promptopia:' + k, JSON.stringify(v)); } catch { /* private mode */ } },
   };
 
+  const THEMES = [
+    { id: 'dark',     fa: 'تیره',   en: 'Dark',     mode: 'dark',  dots: ['#8b5cf6', '#d946ef', '#fb923c'], color: '#07080d' },
+    { id: 'light',    fa: 'روشن',   en: 'Light',    mode: 'light', dots: ['#c4b5fd', '#f0abfc', '#fdba74'], color: '#f4f5fa' },
+    { id: 'midnight', fa: 'نیمه‌شب', en: 'Midnight', mode: 'dark',  dots: ['#2563eb', '#7c3aed', '#ec4899'], color: '#060913' },
+    { id: 'emerald',  fa: 'زمردی',  en: 'Emerald',  mode: 'dark',  dots: ['#059669', '#10b981', '#a3e635'], color: '#051410' },
+    { id: 'sunset',   fa: 'غروب',   en: 'Sunset',   mode: 'dark',  dots: ['#e11d48', '#f97316', '#f59e0b'], color: '#150806' },
+    { id: 'cream',    fa: 'کرم',    en: 'Cream',    mode: 'light', dots: ['#f43f5e', '#f97316', '#d97706'], color: '#faf6f0' },
+  ];
+  const savedTheme = LS.get('theme', 'dark');
   const state = {
     lang: LS.get('lang', 'fa'),
-    theme: LS.get('theme', 'dark'),
+    theme: THEMES.some((t) => t.id === savedTheme) ? savedTheme : 'dark',
     q: '',
     cat: 'all',
     sort: 'new',
@@ -65,15 +74,35 @@
     $('#langToggle').textContent = L.langSwitch;
     $$('[data-i18n]').forEach((el) => { el.textContent = window.t(el.getAttribute('data-i18n')); });
     $$('[data-i18n-ph]').forEach((el) => { el.placeholder = window.t(el.getAttribute('data-i18n-ph')); });
-    $('#themeToggle').setAttribute('aria-label', state.theme === 'dark' ? window.t('themeLight') : window.t('themeDark'));
+    $('#themeToggle').setAttribute('aria-label', window.t('chooseTheme'));
+    renderThemeMenu();
     renderStats();
     renderChips();
     renderGrid();
   }
 
   function applyTheme() {
-    document.documentElement.dataset.theme = state.theme;
+    const t = THEMES.find((x) => x.id === state.theme) || THEMES[0];
+    document.documentElement.dataset.theme = t.id;
+    document.documentElement.dataset.mode = t.mode;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = t.color;
     LS.set('theme', state.theme);
+    renderThemeMenu();
+  }
+  function renderThemeMenu() {
+    const menu = $('#themeMenu');
+    if (!menu) return;
+    menu.innerHTML = THEMES.map((t) => {
+      const active = t.id === state.theme;
+      const label = state.lang === 'fa' ? t.fa : t.en;
+      const dots = t.dots.map((c) => `<i style="background:${c}"></i>`).join('');
+      return `<button class="theme-opt ${active ? 'active' : ''}" type="button" role="menuitemradio" aria-checked="${active}" data-theme="${t.id}">
+        <span class="theme-dots" aria-hidden="true">${dots}</span>
+        <span>${esc(label)}</span>
+        <span class="theme-check" aria-hidden="true">${active ? '✓' : ''}</span>
+      </button>`;
+    }).join('');
   }
 
   /* ---------- data views ---------- */
@@ -413,9 +442,27 @@
       LS.set('lang', state.lang);
       applyI18n();
     });
-    $('#themeToggle').addEventListener('click', () => {
-      state.theme = state.theme === 'dark' ? 'light' : 'dark';
+
+    // theme picker
+    const themeToggle = $('#themeToggle');
+    const themeMenu = $('#themeMenu');
+    const setMenu = (open) => {
+      themeMenu.hidden = !open;
+      themeToggle.setAttribute('aria-expanded', String(open));
+    };
+    themeToggle.addEventListener('click', () => setMenu(themeMenu.hidden));
+    document.addEventListener('click', (ev) => {
+      if (!ev.target.closest('.theme-wrap')) setMenu(false);
+    });
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && !themeMenu.hidden) { setMenu(false); ev.stopPropagation(); }
+    });
+    themeMenu.addEventListener('click', (ev) => {
+      const btn = ev.target.closest('.theme-opt');
+      if (!btn) return;
+      state.theme = btn.dataset.theme;
       applyTheme();
+      setMenu(false);
     });
 
     // modal
