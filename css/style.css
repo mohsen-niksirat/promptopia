@@ -494,13 +494,13 @@ html[data-mode="light"] .ic-moon { display: none; }
 }
 .card.in { opacity: 1; animation: cardIn .55s cubic-bezier(.2, .7, .2, 1) backwards; }
 @keyframes cardIn { from { opacity: 0; transform: translateY(18px) scale(.97); } }
-.card:hover, .card:focus-visible { transform: translateY(-5px); border-color: var(--border-strong); box-shadow: var(--shadow); }
+.card:hover, .card:focus-visible { border-color: var(--border-strong); box-shadow: var(--shadow); }
 .card-media { position: relative; aspect-ratio: 4 / 5; background: var(--surface-2); background-size: cover; background-position: center; }
 /* img is positioned so it paints above the skeleton placeholder; the blur
    background shows through the translucent shimmer until the photo loads */
 .card-media img { position: relative; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s ease, transform .5s ease; }
 .card-media img.loaded { opacity: 1; }
-.card:hover .card-media img.loaded { transform: scale(1.05); }
+
 .card-media::after {
   content: ''; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(to top, rgba(7, 8, 13, .78), rgba(7, 8, 13, 0) 52%);
@@ -552,14 +552,17 @@ html[data-theme="light"] .card-media::after { background: linear-gradient(to top
 .card.touched .card-title { opacity: 1; transform: translateY(0); }
 
 .card-foot {
+  position: absolute; bottom: 0; inset-inline: 0; z-index: 3;
   display: flex; gap: 8px; padding: 12px;
-  border-top: 1px solid var(--border);
-  max-height: 0; padding: 0 12px; opacity: 0;
-  transition: max-height .3s ease, padding .3s ease, opacity .3s ease;
-  overflow: hidden;
+  background: linear-gradient(to top, rgba(7, 8, 13, .85), rgba(7, 8, 13, 0));
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+html[data-theme="light"] .card-foot {
+  background: linear-gradient(to top, rgba(23, 25, 35, .8), rgba(23, 25, 35, 0));
 }
 .card:hover .card-foot, .card:focus-visible .card-foot, .card.touched .card-foot {
-  max-height: 60px; padding: 12px; opacity: 1;
+  opacity: 1; transform: translateY(0);
 }
 .card-foot .btn-copy, .card-foot .btn-use {
   flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px;

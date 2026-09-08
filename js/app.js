@@ -399,8 +399,7 @@
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.7 3.5 7 5.6 5 8.2 5c1.5 0 3 .7 3.8 2 .8-1.3 2.3-2 3.8-2 2.6 0 4.7 2 4.7 4.7 0 3.6-3.5 6.8-8.5 10.8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         </button>
         <span class="card-title">${esc(title(p))}</span>
-      </div>
-      <div class="card-foot">
+        <div class="card-foot">
         <button class="btn-copy" type="button" data-id="${p.id}">
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V6.5A2.5 2.5 0 0 1 7.5 4H15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <span>${esc(window.t('copy'))}</span>
@@ -409,6 +408,7 @@
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 2l2.1 5.6L20 9.4l-5.4 2.4L12 18l-2.6-6.2L12 2z" fill="currentColor"/></svg>
           <span>${esc(window.t('useFree'))}</span>
         </a>
+        </div>
       </div>
     </article>`;
   }
