@@ -55,11 +55,30 @@ if (data) {
   if (missing.length) missing.slice(0, 10).forEach(fail); else ok('all prompts have image, titles and text');
 }
 
-/* 4. share pages exist for every prompt */
+/* 4. share pages exist for every prompt + og:image PNGs + sitemap coverage */
 if (data) {
   const missingShare = data.prompts.filter((p) => !fs.existsSync(path.join(ROOT, 'p', String(p.id), 'index.html')));
   if (missingShare.length) fail(`${missingShare.length} share pages missing (e.g. #${missingShare[0].id})`);
   else ok('share pages: all present');
+
+  const missingOg = data.prompts.filter((p) => !fs.existsSync(path.join(ROOT, 'assets', 'og', `p-${p.id}.png`)));
+  if (missingOg.length) fail(`${missingOg.length} og:image PNGs missing (e.g. #${missingOg[0].id}) — run: node tools/og-images.mjs`);
+  else ok(`og images: all present (${data.prompts.length + 1} PNGs incl. home)`);
+
+  const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
+  const urlCount = (sitemap.match(/<url>/g) || []).length;
+  if (urlCount < data.prompts.length + 1) fail(`sitemap.xml lists ${urlCount} urls but data has ${data.prompts.length} prompts — run: node tools/gen-share.mjs`);
+  else ok(`sitemap: ${urlCount} urls`);
+
+  /* landing pages must contain JSON-LD + real content (not the old redirect stub) */
+  const sample = fs.readFileSync(path.join(ROOT, 'p', String(data.prompts[0].id), 'index.html'), 'utf8');
+  if (!sample.includes('application/ld+json')) fail('landing pages lack JSON-LD structured data — re-run gen-share.mjs');
+  else if (sample.includes('http-equiv="refresh"')) fail('landing pages are still redirect stubs — re-run gen-share.mjs');
+  else ok('landing pages: JSON-LD + full content');
+
+  /* premium integrity: premium prompts must keep flag through the pipeline */
+  const premiumCount = data.prompts.filter((p) => p.premium).length;
+  ok(`premium prompts: ${premiumCount}${premiumCount ? ' (demo pack active)' : ''}`);
 }
 
 /* 5. editorial.json is well-formed */

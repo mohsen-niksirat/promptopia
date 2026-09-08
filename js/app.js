@@ -175,6 +175,10 @@
       list = titleHits.concat(bodyHits);
     }
     if (state.sort === 'old') list = list.slice().reverse();
+    else if (state.sort === 'popular' && window.PromptopiaCounter) {
+      const top = new Map(window.PromptopiaCounter.top(10000).map((x) => [x.id, x.count]));
+      list = list.slice().sort((a, b) => (top.get(b.id) || 0) - (top.get(a.id) || 0));
+    }
     return list;
   }
 
@@ -372,14 +376,25 @@
     $(`[data-section="${key}"]`).scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  /* ---------- premium ---------- */
+  function isLocked(p) {
+    return !!(p && p.premium && window.PromptopiaPremium && !window.PromptopiaPremium.isUnlocked());
+  }
+
+  function countCopy(id) {
+    if (window.PromptopiaCounter) window.PromptopiaCounter.bump(id);
+  }
+
   function cardHTML(p) {
     const iv = imgVariants(p);
     const srcset = iv.srcset ? ` srcset="${iv.srcset}" sizes="${CARD_SIZES}"` : '';
+    const locked = isLocked(p);
     return `<article class="card" data-id="${p.id}" tabindex="0" role="button" aria-label="${esc(title(p))}">
       <div class="card-media" style="background-image:url('${iv.blur}')">
         <span class="skeleton" aria-hidden="true"></span>
         <img data-lazy src="${iv.src}"${srcset} alt="${esc(title(p))}" loading="lazy" decoding="async">
         <span class="badge">${esc(catLabel(p))}</span>
+        ${p.premium ? '<span class="badge badge-premium" title="' + esc(window.t('premiumBadge')) + '">★</span>' : ''}
         <button class="fav" type="button" data-fav="${p.id}" aria-label="${window.t('favorites')}">
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.7 3.5 7 5.6 5 8.2 5c1.5 0 3 .7 3.8 2 .8-1.3 2.3-2 3.8-2 2.6 0 4.7 2 4.7 4.7 0 3.6-3.5 6.8-8.5 10.8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         </button>
@@ -458,7 +473,23 @@
     $('#modalCat').textContent = catLabel(p);
     $('#modalDate').textContent = p.date || '';
     $('#modalTitle').textContent = title(p);
-    $('#promptBox').textContent = v.text;
+    const locked = isLocked(p);
+    const box = $('#promptBox');
+    if (locked) {
+      /* teaser: first ~2 lines visible, rest blurred behind the lock note.
+         Buttons are handled by the delegated #promptBox listener in bind(). */
+      box.classList.add('locked');
+      box.innerHTML = '<div class="lock-teaser">' + esc(v.text.slice(0, 90)) + '</div>' +
+        '<div class="lock-note"><span class="lock-star">★</span>' +
+        '<p>' + esc(window.t('premiumLocked')) + '</p>' +
+        '<div class="lock-actions"><button class="btn btn-primary btn-sm" id="lockBuy" type="button">' + esc(window.t('premiumBuy')) + '</button>' +
+        '<button class="btn btn-ghost btn-sm" id="lockCode" type="button">' + esc(window.t('premiumHaveCode')) + '</button></div>' +
+        '<div class="code-row" hidden><input id="codeInput" class="input code-input" autocomplete="off" spellcheck="false" placeholder="PRO....">' +
+        '<button class="btn btn-primary btn-sm" id="codeGo" type="button">' + esc(window.t('premiumActivate')) + '</button></div></div>';
+    } else {
+      box.classList.remove('locked');
+      box.textContent = v.text;
+    }
     syncFavBtn($('#modalFav'), p.id);
     const tabs = $('#variantTabs');
     if (p.variants.length > 1) {
@@ -483,7 +514,7 @@
   /* ---------- events ---------- */
   function bind() {
     const sections = $('#sections');
-    sections.addEventListener('click', (ev) => {
+    sections.addEventListener('click', async (ev) => {
       const pageButton = ev.target.closest('.section-pagination .page-btn');
       if (pageButton && !pageButton.disabled) {
         goToSectionPage(pageButton.closest('.section-pagination').dataset.section, Number(pageButton.dataset.page));
@@ -498,7 +529,18 @@
         return;
       }
       const card = ev.target.closest('.card');
-      if (!card || ev.target.closest('.fav, .btn-copy, .btn-use')) return;
+      if (!card) return;
+      /* card copy button (delegated) — blocked for locked premium prompts */
+      const copyBtn = ev.target.closest('.btn-copy');
+      if (copyBtn) {
+        ev.stopPropagation();
+        const p = DATA.find((x) => x.id === Number(copyBtn.dataset.id));
+        if (!p) return;
+        if (isLocked(p)) { toast(window.t('premiumCopyBlocked')); openModal(p.id); return; }
+        if (await copyText(p.variants[0].text)) { toast(window.t('copied')); countCopy(p.id); }
+        return;
+      }
+      if (ev.target.closest('.fav, .btn-use')) return;
       openModal(Number(card.dataset.id));
     });
     sections.addEventListener('keydown', (ev) => {
@@ -570,16 +612,57 @@
       setMenu(false);
     });
 
+    /* ---------- premium (delegated: the lock UI is rebuilt per fill) ---------- */
+    async function onBuyClick() {
+      const P = window.PromptopiaPremium;
+      if (!P) return;
+      const res = P.startPurchase();
+      if (!res.ok) {
+        /* no merchant id yet: point to Telegram for manual purchase */
+        window.open(res.fallback, '_blank', 'noopener');
+        toast(window.t('premiumTelegram'));
+      }
+    }
+    async function onActivateClick() {
+      const P = window.PromptopiaPremium;
+      const code = $('#codeInput') ? $('#codeInput').value : '';
+      if (!P || !code) return;
+      const res = await P.activate(code);
+      if (res.ok) {
+        toast(window.t('premiumUnlocked', { n: P.daysLeft() }));
+        renderSections();
+        fillModal();
+      } else {
+        toast(window.t('premiumBadCode'));
+      }
+    }
+    $('#promptBox').addEventListener('click', (ev) => {
+      if (ev.target.closest('#lockBuy')) { ev.stopPropagation(); onBuyClick(); return; }
+      if (ev.target.closest('#lockCode')) {
+        ev.stopPropagation();
+        const row = $('.code-row', $('#promptBox'));
+        row.hidden = !row.hidden;
+        if (!row.hidden) $('#codeInput').focus();
+        return;
+      }
+      if (ev.target.closest('#codeGo')) { ev.stopPropagation(); onActivateClick(); }
+    });
+
     $('#modalClose').addEventListener('click', closeModal);
     modal.addEventListener('close', () => document.documentElement.classList.remove('modal-open'));
     modal.addEventListener('click', (ev) => { if (ev.target === modal) closeModal(); });
     modal.addEventListener('cancel', (ev) => { ev.preventDefault(); closeModal(); });
     document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && modal.open) closeModal(); });
     $('#modalFav').addEventListener('click', () => { if (state.modal.prompt) toggleFav(state.modal.prompt.id); });
-    const selectedText = () => { const p = state.modal.prompt; return p ? p.variants[state.modal.variant].text : null; };
+    const selectedText = () => {
+      const p = state.modal.prompt;
+      if (!p) return null;
+      if (isLocked(p)) { toast(window.t('premiumCopyBlocked')); return null; }
+      return p.variants[state.modal.variant].text;
+    };
     $('#modalCopy').addEventListener('click', async () => {
       const t = selectedText();
-      if (t && (await copyText(t))) toast(window.t('copied'));
+      if (t && (await copyText(t))) { toast(window.t('copied')); countCopy(state.modal.prompt.id); }
     });
     $('#modalBuild').addEventListener('click', () => {
       const t = selectedText();

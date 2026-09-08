@@ -25,10 +25,13 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="پرامپتوپیا · Promptopia">
   <meta property="og:description" content="گالری پرامپت‌های آماده هوش مصنوعی — کپی کن، در جیمینای یا چت‌جی‌پی‌تی بساز. / Ready-made AI prompts — copy and create in Gemini or ChatGPT.">
-  <meta property="og:image" content="assets/og.jpg">
+  <meta property="og:image" content="assets/og/home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/og/home.png">
   <link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/style.css?v=17">
 </head>
 <body>
   <div class="aurora" aria-hidden="true">
@@ -94,6 +97,7 @@
         <select id="sortSelect" class="select" aria-label="Sort">
           <option value="new" data-i18n="sortNew">جدیدترین</option>
           <option value="old" data-i18n="sortOld">قدیمی‌ترین</option>
+          <option value="popular" data-i18n="sortPopular">محبوب‌ترین</option>
         </select>
         <button class="btn btn-ghost btn-sm dice-btn" id="randomBtn" type="button">
           <span class="dice" aria-hidden="true">🎲</span>
@@ -224,10 +228,12 @@
       }, 800);
     })();
   </script>
-  <!-- ?v=16: cache-busting — bump together with sw.js VERSION on every release so
+  <!-- ?v=17: cache-busting — bump together with sw.js VERSION on every release so
        stale service-worker/caches never serve old code to returning visitors -->
-  <script src="data/prompts.js?v=16"></script>
-  <script src="js/i18n.js?v=16"></script>
-  <script src="js/app.js?v=16"></script>
+  <script src="js/premium.js?v=17"></script>
+  <script src="js/counter.js?v=17"></script>
+  <script src="data/prompts.js?v=17"></script>
+  <script src="js/i18n.js?v=17"></script>
+  <script src="js/app.js?v=17"></script>
 </body>
 </html>

@@ -1,18 +1,30 @@
-name: Validate data
+name: Validate
 
 on:
   push:
     branches: [main]
   pull_request:
-  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Validate shipped data
+
+      - name: Syntax-check all JS
+        run: |
+          for f in js/*.js sw.js; do
+            node --check "$f"
+          done
+          echo "syntax OK"
+
+      - name: Validate data integrity
         run: node tools/validate.mjs

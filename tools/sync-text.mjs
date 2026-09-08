@@ -80,16 +80,14 @@ fs.writeFileSync(
     ';\n'
 );
 
-/* 5. share pages for text prompts */
-let pages = 0;
-for (const p of textPrompts) {
-  const dir = path.join(SHARE_DIR, String(p.id));
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), sharePageHTML(p));
-  pages++;
-}
+/* 5. regenerate ALL landing pages + sitemap (full SEO pages, not stubs) */
+const { execFileSync } = await import('node:child_process');
+execFileSync(process.execPath, [path.join(__dirname, 'gen-share.mjs')], { stdio: 'inherit' });
+
+/* 6. og:image PNG for any new prompt that lacks one */
+execFileSync(process.execPath, [path.join(__dirname, 'og-images.mjs')], { stdio: 'inherit' });
 
 const catCount = {};
 for (const p of textPrompts) catCount[p.cat] = (catCount[p.cat] || 0) + 1;
-console.log(`merged ${textPrompts.length} text prompts -> data/prompts.js (total ${merged.length}); wrote ${pages} share pages`);
+console.log(`merged ${textPrompts.length} text prompts -> data/prompts.js (total ${merged.length})`);
 console.log('text mix:', catCount);

@@ -32,6 +32,7 @@ export function normalizeTextPrompt(p) {
       text: String(v.text || '').trim(),
     })),
     text: true,
+    ...(p.premium ? { premium: true } : {}),
   };
 }
 
