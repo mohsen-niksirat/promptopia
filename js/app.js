@@ -27,10 +27,12 @@
     q: '',
     sort: 'new',
     sectionPages: Object.create(null),
+    expanded: Object.create(null),
     favs: new Set(LS.get('favs', [])),
     modal: { prompt: null, variant: 0, returnHash: '' },
   };
   const PER_PAGE = 24;
+  const PREVIEW_COUNT = 6; /* cards shown in a collapsed section's preview row */
   const CATEGORY_ICONS = {
     writing: '✍️', coding: '⌘', marketing: '📣', education: '📚', business: '💼', career: '🚀', seo: '⌕',
     portrait: '✦', family: '♡', travel: '✈️', vehicles: '🚘', food: '🍜', animals: '🐾', fantasy: '🪄',
@@ -178,6 +180,11 @@
     state.sectionPages = Object.create(null);
   }
 
+  /* a section is expanded either by the user or implicitly while searching */
+  function isExpanded(key) {
+    return !!state.q || !!state.expanded[key];
+  }
+
   function renderCategoryNav() {
     const nav = $('#categoryNav');
     if (!nav) return;
@@ -204,6 +211,7 @@
         <a class="section-top" href="#categoryNav">${esc(window.t('backToCategories'))}</a>
       </div>
       <div class="grid section-grid" id="grid-${esc(key)}"></div>
+      <div class="section-more-row"><button class="btn btn-ghost btn-sm section-more" type="button" data-more="${esc(key)}" hidden></button></div>
       <nav class="pagination section-pagination" data-section="${esc(key)}" aria-label="${esc(label)} ${esc(window.t('pagination'))}"></nav>
     </section>`;
   }
@@ -297,18 +305,31 @@
     const section = $(`[data-section="${key}"]`);
     if (!section) return;
     const grid = $('.section-grid', section);
+    const pag = $('.section-pagination', section);
+    const moreRow = $('.section-more-row', section);
     const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
-    const page = Math.min(state.sectionPages[key] || 1, pages);
-    state.sectionPages[key] = page;
-    const slice = list.slice((page - 1) * PER_PAGE, page * PER_PAGE);
     $('.section-count', section).textContent = window.t('sectionCount', { n: fmt(list.length) });
-    grid.innerHTML = slice.map(cardHTML).join('');
+
+    if (!isExpanded(key) && list.length > PREVIEW_COUNT) {
+      /* preview row: top cards only, full grid behind the "view all" button */
+      state.sectionPages[key] = 1;
+      grid.innerHTML = list.slice(0, PREVIEW_COUNT).map(cardHTML).join('');
+      pag.hidden = true;
+      pag.innerHTML = '';
+      moreRow.hidden = false;
+      $('.section-more', section).textContent = window.t('viewAllN', { n: fmt(list.length) });
+    } else {
+      const page = Math.min(state.sectionPages[key] || 1, pages);
+      state.sectionPages[key] = page;
+      grid.innerHTML = list.slice((page - 1) * PER_PAGE, page * PER_PAGE).map(cardHTML).join('');
+      renderPagination(pag, pages, page, key);
+      moreRow.hidden = true;
+      prefetchNextPage(list, page, pages);
+    }
     $$('.card', grid).forEach((card, i) => {
       card.style.animationDelay = (i % 12) * 38 + 'ms';
       revealer.observe(card);
     });
-    renderPagination($('.section-pagination', section), pages, page, key);
-    prefetchNextPage(list, page, pages);
     $$('img[data-lazy]', grid).forEach((img) => {
       const done = () => img.classList.add('loaded');
       if (img.complete && img.naturalWidth) done(); else img.addEventListener('load', done, { once: true });
@@ -434,6 +455,14 @@
       const pageButton = ev.target.closest('.section-pagination .page-btn');
       if (pageButton && !pageButton.disabled) {
         goToSectionPage(pageButton.closest('.section-pagination').dataset.section, Number(pageButton.dataset.page));
+        return;
+      }
+      const moreBtn = ev.target.closest('.section-more');
+      if (moreBtn) {
+        const key = moreBtn.dataset.more;
+        state.expanded[key] = true;
+        renderSection(key, filteredSection(key));
+        pulseGrid($(`[data-section="${key}"] .section-grid`));
         return;
       }
       const card = ev.target.closest('.card');
@@ -680,6 +709,7 @@
     const pageMatch = /^#s-([a-z0-9-]+)-page-(\d+)$/.exec(location.hash);
     if (pageMatch && sectionKeys().includes(pageMatch[1])) {
       const key = pageMatch[1];
+      state.expanded[key] = true; /* a page deep-link implies the full grid */
       state.sectionPages[key] = Math.max(1, Number(pageMatch[2]));
       renderSections();
       requestAnimationFrame(() => $(`[data-section="${key}"]`)?.scrollIntoView({ behavior: 'auto', block: 'start' }));

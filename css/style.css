@@ -475,6 +475,11 @@ html[data-mode="light"] .ic-moon { display: none; }
 }
 .section-top:hover { color: var(--text); border-color: var(--border-strong); }
 .section-pagination { margin-top: 24px; }
+/* collapsed sections: preview row + centered "view all" button */
+.section-more-row { display: flex; justify-content: center; margin-top: 22px; }
+.section-more-row[hidden] { display: none; }
+.section-more { padding: 10px 22px; font-size: .86rem; }
+.section-more:hover { border-color: var(--violet); color: var(--violet); }
 
 /* ---------- grid & cards ---------- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); gap: 18px; transition: opacity .18s ease, transform .18s ease; }
