@@ -299,21 +299,59 @@ function score(p, medianDate) {
   return s;
 }
 
-async function cmdParse() {
-  const html = fs.readFileSync(path.join(WORK, 'messages.html'), 'utf8');
+/* one export per work/exp* directory; ids are namespaced per chat because
+   every Telegram export restarts its message ids at 1. exp1 keeps base 0 so
+   the existing shipped ids/images stay stable; text prompts live at 20000+. */
+function exportDirs() {
+  if (!fs.existsSync(WORK)) return [];
+  return fs.readdirSync(WORK, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && /^exp\d+$/.test(d.name))
+    .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }))
+    .map((d) => d.name);
+}
+
+function parseExport(dir, base) {
+  const dirPath = path.join(WORK, dir);
+  /* exports may sit directly in expN/ or one folder deeper (expN/ChatExport_2026-09-07/) */
+  const walk = (p) => fs.readdirSync(p, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory() ? walk(path.join(p, e.name)) : (e.name.match(/^messages\d*\.html$/) ? [path.join(p, e.name)] : [])
+  );
+  const htmlFiles = walk(dirPath).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+  const html = htmlFiles.map((f) => fs.readFileSync(f, 'utf8')).join('');
+  const relBase = path.dirname(htmlFiles[0] || dirPath); // photos resolve relative to the html
   const root = parse(html);
   const msgs = root.querySelectorAll('.message.default');
-  console.log(`messages in export: ${msgs.length}`);
+  console.log(`  ${dir}: ${htmlFiles.length} file(s), ${msgs.length} messages`);
 
   const items = [];
-  const seen = new Set();
+  let idx = 0;
   for (const m of msgs) {
-    const p = parseMessage(m, items.length);
+    const p = parseMessage(m, idx);
     if (!p) continue;
-    const dupKey = p.variants[0].text.slice(0, 120);
-    if (seen.has(dupKey)) continue;
-    seen.add(dupKey);
+    p.msgId += base;      // namespaced id used everywhere downstream
+    p.srcDir = path.relative(WORK, relBase); // photos resolve relative to the html's folder
     items.push(p);
+    idx++;
+  }
+  return items;
+}
+
+async function cmdParse() {
+  const dirs = exportDirs();
+  if (!dirs.length) {
+    console.error('no work/exp* directories found — put Telegram exports in work/exp1, work/exp2, ...');
+    process.exit(1);
+  }
+  const bases = { exp1: 0, exp2: 300000, exp3: 600000, exp4: 900000 };
+  const items = [];
+  const seen = new Set();
+  for (const dir of dirs) {
+    for (const p of parseExport(dir, bases[dir] || 0)) {
+      const dupKey = p.variants[0].text.slice(0, 120);
+      if (seen.has(dupKey)) continue;   // same prompt posted in several chats
+      seen.add(dupKey);
+      items.push(p);
+    }
   }
 
   const withPhoto = items.filter((p) => p.photoFull);
@@ -386,12 +424,23 @@ async function cmdBuild({ force = false } = {}) {
     const imgName = `p${p.msgId}.webp`;
     const imgPath = path.join(IMG, imgName);
     if (force || !fs.existsSync(imgPath)) {
-      const src = path.join(WORK, p.photoFull);
-      await sharp(src)
-        .rotate()
-        .resize({ width: 1024, height: 1024, fit: 'inside', withoutEnlargement: true })
-        .webp({ quality: 74, effort: 5 })
+      const src = path.join(WORK, p.srcDir || '', p.photoFull);
+      const pipe = sharp(src).rotate();
+      /* full: 900px @ q70 e6 — modal / og:image */
+      await pipe.clone()
+        .resize({ width: 900, height: 900, fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: 70, effort: 6 })
         .toFile(imgPath);
+      /* card: 480px @ q72 — srcset candidate for grid cards */
+      await pipe.clone()
+        .resize({ width: 480, height: 480, fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: 72, effort: 6 })
+        .toFile(path.join(IMG, imgName.replace('.webp', '-480.webp')));
+      /* blur: 40px @ q50 — instant blur-up placeholder */
+      await pipe.clone()
+        .resize({ width: 40, height: 40, fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: 50, effort: 4 })
+        .toFile(path.join(IMG, imgName.replace('.webp', '-blur.webp')));
     }
 
     const cat = catMeta(overrides[String(id)] || p.category);
@@ -484,6 +533,22 @@ async function cmdBuild({ force = false } = {}) {
     fs.writeFileSync(path.join(shareDir, String(o.id), 'index.html'), html);
   }
   console.log(`wrote ${out.length} share pages under /p/`);
+
+  /* clean stale generated images (old ids, replaced sizes, removed prompts) */
+  const ref = new Set();
+  for (const o of out) {
+    ref.add(o.img.split('/').pop());
+    if (!o.text) {
+      ref.add(o.img.split('/').pop().replace('.webp', '-480.webp'));
+      ref.add(o.img.split('/').pop().replace('.webp', '-blur.webp'));
+    }
+  }
+  let removed = 0;
+  for (const f of fs.readdirSync(IMG)) {
+    if (!/^(p\d+\.webp|t-\d+\.svg)$/.test(f)) continue;
+    if (!ref.has(f)) { fs.rmSync(path.join(IMG, f), { force: true }); removed++; }
+  }
+  if (removed) console.log(`removed ${removed} stale image files`);
 }
 
 /* ------------------------------------------------------------------ */

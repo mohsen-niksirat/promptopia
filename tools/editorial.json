@@ -1,157 +1,3649 @@
 {
-  "_note": "id -> [title_fa, title_en, category_override?]. Authored by hand from prompt bodies.",
-  "896": ["تو در دهه‌های مختلف", "You Across the Decades"],
-  "841": ["پرتره ادیتوریال فضای باز", "Outdoor Editorial Portrait"],
-  "826": ["نمای ادیتوریال از بالا", "Top-Down Fashion Editorial", "portrait"],
-  "819": ["پرتره ادیتوریال زنانه", "Feminine Editorial Portrait"],
-  "801": ["عکس آینه‌ای دخترونه", "Girly Mirror Selfie"],
-  "802": ["سلفی آینه‌ای پسرونه", "Guys' Mirror Selfie"],
-  "795": ["سلفی واقعی و خودمونی", "Real & Casual Selfie"],
-  "789": ["حل مشکل تغییر چهره در پرامپت‌ها", "Identity-Lock Prefix", "utility"],
-  "788": ["عکس کنار کودکیِ خودت", "You & Your Younger Self"],
-  "783": ["پرتره انیمه نوستالژیک", "Nostalgic Anime Portrait"],
-  "777": ["کلوزآپ چشم عسلی", "Hazel-Eyes Close-Up"],
-  "771": ["سلفی رمانتیک کاپل", "Romantic Couple Selfie"],
-  "776": ["سلفی شبانه دخترانه", "Night City Girl Selfie"],
-  "769": ["دختر در اقیانوس شب", "Midnight Ocean Portrait"],
-  "761": ["سلفی آینه با لیلیوم", "Lily Bouquet Mirror Selfie"],
-  "767": ["کلاژ سه‌تایی تولد", "Birthday Triptych"],
-  "749": ["سلفی چتری درهم", "Messy-Bang Selfie"],
-  "751": ["دختر زیر پتو", "Cozy Blanket Portrait"],
-  "755": ["ببین در پیری چه شکلی می‌شوی", "See Yourself Age", "utility"],
-  "753": ["سلفی کاپل در کافه", "Couple Selfie in a Café"],
-  "758": ["نسخه بچگی و نسخه شیک تو", "Kid You vs. Elegant You"],
-  "747": ["اسنپ‌شات دیجیکم دهه ۲۰۰۰", "2000s Digicam Snapshot", "portrait"],
-  "735": ["پرتره با دسته‌گل رز", "Portrait with Red Roses"],
-  "740": ["پرتره سیاه‌وسفید هالیوودی", "Hollywood B&W Portrait"],
-  "744": ["هدشات سینمایی طبیعی", "Natural Cinematic Headshot"],
-  "717": ["پرتره استودیویی کاپل", "Studio Couple Portrait"],
-  "724": ["پرتره اکیوئه ژاپنی", "Japanese Ukiyo-e Portrait", "fantasy"],
-  "700": ["سلفی کاپل در آسانسور", "Elevator Couple Selfie"],
-  "699": ["حذف افراد از پس‌زمینه", "Remove Background People"],
-  "702": ["جذاب‌تر کردن عکس", "Make Your Photo Pop", "utility"],
-  "690": ["پرتره سیاه‌وسفید رسمی", "Formal B&W Portrait"],
-  "696": ["سلفی موهای درهم", "Tousled-Hair Selfie"],
-  "688": ["پرتره سپیا با دوربین قدیمی", "Sepia Retro-Camera Portrait"],
-  "693": ["پرتره کنسرت با استیک نورانی", "Concert Light-Stick Portrait"],
-  "685": ["پرتره سیاه‌وسفید دخترونه", "B&W Studio Portrait"],
-  "686": ["پرتره در دل کوهستان", "Mountain-Landscape Portrait"],
-  "687": ["شب با چراغ‌های شهر", "City Lights at Night"],
-  "682": ["جادوگر هاگوارتز باش", "Become a Hogwarts Wizard", "fantasy"],
-  "681": ["پرتره سپیای کاپل", "Sepia Couple Close-Up"],
-  "677": ["پشت دسته‌گل رز سرخ", "Behind the Rose Bouquet"],
-  "678": ["سلفی با کاستوم اسپایدرمن", "Spider-Suit Mirror Selfie", "fantasy"],
-  "675": ["سلفی ساعت آبی", "Blue-Hour Selfie"],
-  "668": ["کارتونی به سبک ریک و مورتی", "Rick & Morty Style", "fantasy"],
-  "666": ["فتوبوث دهه ۹۰ کاپل", "90s Photobooth Couple"],
-  "662": ["عکس در جاده شمال", "On the Northern Road"],
-  "660": ["خیابان شب با فلاش گوشی", "Night Street Flash", "travel"],
-  "645": ["پرتره اتاق خواب با بافت مو", "Bedroom Braids Portrait"],
-  "653": ["پاک‌سازی لکه‌های آینه", "Clean the Mirror", "utility"],
-  "661": ["کلوزآپ با شاخه‌های گل", "Floral Close-Up", "portrait"],
-  "648": ["کلاژ فتوبوث کاپل", "Photobooth Collage"],
-  "647": ["افزودن نور خورشید سینمایی", "Cinematic Sunlight Boost", "utility"],
-  "635": ["کلاژ پولاروید دیواری", "Polaroid Wall Collage"],
-  "638": ["کلوزآپ طبیعی صورت", "Natural Face Close-Up", "portrait"],
-  "641": ["پشت شاخه‌های گل سرخ", "Behind Crimson Blooms", "portrait"],
-  "634": ["کاپل زیر آسمان آبی", "Couple Against Blue Sky"],
-  "643": ["پرتره با آرایش چشم سیرن", "Siren-Eyes Portrait"],
-  "632": ["تبدیل به سیاه‌وسفید هنری", "Artistic B&W Conversion"],
-  "627": ["آزمایش ریش و سبیل", "Beard Style Try-On", "utility"],
-  "630": ["خیابانی با عینک آفتابی", "Street Style with Shades"],
-  "616": ["پرتره سیاه‌وسفید کلوزآپ", "B&W Close-Up"],
-  "619": ["پرتره با کلاه کپ", "Baseball-Cap B&W"],
-  "622": ["فلاش پاپارازی Y2K", "Y2K Paparazzi Flash"],
-  "615": ["کاپل و گربه", "Couple with Cat"],
-  "617": ["سلفی کاپل کنار دیوار", "Casual Couple Selfie"],
-  "623": ["بوسه روی گونه", "Cheek-Kiss Selfie"],
-  "624": ["تعویض لباس با عکس مرجع", "Outfit Swap", "utility"],
-  "612": ["اصلاح نور و رنگ حرفه‌ای", "Pro Light & Color Fix", "utility"],
-  "608": ["موج‌های مسی در نور طلایی", "Copper Curls, Golden Hour"],
-  "611": ["پرتره با موی باب", "Bob-Hair Film Portrait"],
-  "609": ["نیم‌رخ سیاه‌وسفید کاپل", "B&W Profile Couple"],
-  "613": ["فتوبوث بوسه رترو", "Retro Photobooth Kiss"],
-  "606": ["موی رها در باد", "Windswept Portrait"],
-  "589": ["سلفی در ماشین، شب", "Car Night Selfie"],
-  "596": ["دختر موتورسوار", "Biker Girl Portrait"],
-  "595": ["پرتره در مسیر باغ", "Garden-Path Portrait"],
-  "583": ["پرتره زاویه‌پایین", "Low-Angle Portrait"],
-  "581": ["کاپل به سبک خیابانی", "Street-Style Couple"],
-  "598": ["سلفی دونفره در ماشین", "Couple Car Selfie"],
-  "600": ["موی افشان در نسیم", "Flowing Hair in the Breeze"],
-  "592": ["پرتره مدرن سینمایی", "Modern Cinematic Portrait"],
-  "594": ["شبانه روی پشت‌بام", "Rooftop at Midnight", "portrait"],
-  "555": ["عکس استودیویی ورزشی", "Tracksuit Studio Shot", "portrait"],
-  "575": ["پرتره سایه‌روشن داخلی", "Low-Key Indoor Portrait"],
-  "563": ["روی فرش با گربه خاکستری", "On the Rug with a Cat"],
-  "573": ["پرتره استودیویی دونفره", "Two-in-One Studio Portrait"],
-  "579": ["پوستر تحلیل شخصیت", "Character Analysis Poster", "utility"],
-  "549": ["عکس سه‌تایی سفارشی", "Personal Triptych", "portrait"],
-  "539": ["استودیو لاکچری با عینک", "Luxury Studio Shades"],
-  "541": ["کاپل در غروب ساحل", "Sunset-Beach Couple"],
-  "545": ["پرتره مزرعه در ساعت طلایی", "Golden-Field Portrait"],
-  "531": ["پشت گربه سیاه", "Behind the Black Cat"],
-  "535": ["به سبک آرکین", "Arcane Style"],
-  "534": ["نمای قهرمانانه از پایین", "Low-Angle Hero Shot"],
-  "514": ["کلاژ سه‌قلوی نچرال", "Natural Triple Close-Up"],
-  "528": ["هدشات وینتیج سیاه‌وسفید", "Vintage B&W Headshot"],
-  "512": ["پرتره فشن سیاه‌وسفید", "B&W Fashion Portrait"],
-  "523": ["حذف واترمارک", "Watermark Remover"],
-  "501": ["کلاژ سه‌تایی با گل", "Flower Triptych"],
-  "498": ["پوستر کلاژ فشن", "Fashion Poster Collage"],
-  "500": ["باتریِ تمام در ایران", "Low-Battery Life in Iran"],
-  "503": ["سلفی واید فضای باز", "Wide-Angle Outdoor Selfie"],
-  "497": ["سلبریتی به‌عنوان پارتنر تو", "Your Celebrity Partner", "fantasy"],
-  "495": ["کنار ماشین، سیاه‌وسفید", "Beside the Car, B&W"],
-  "485": ["کدام مدل مو به تو می‌آید؟", "Which Hairstyle Suits You?", "utility"],
-  "482": ["پرتره عروس و داماد مدرن", "Modern Wedding Portrait"],
-  "476": ["داخل ماشین لاکچری", "Luxury-Car Interior"],
-  "475": ["پرتره احساسی سیاه‌وسفید", "Emotional B&W Fashion"],
-  "473": ["کلاژ سه‌تایی کاپل", "Couple Triptych"],
-  "477": ["کدام شخصیت شاهنامه هستی؟", "Which Shahnameh Hero Are You?", "fantasy"],
-  "468": ["کلیدآویز عروسکی خودت", "Plush Keychain of You", "fantasy"],
-  "470": ["کلوزآپ سیاه‌وسفید دونفره", "B&W Couple Close-Up"],
-  "455": ["سوار بر هوندا", "On the Honda"],
-  "453": ["فلاش از زاویه پایین", "Flash from Below"],
-  "449": ["تحلیل رنگ و مدل مو", "Color & Cut Analysis", "utility"],
-  "447": ["انعکاس در آینه گرد", "Round-Mirror Reflection"],
-  "444": ["پوستر موزیک نسل‌زد", "Gen-Z Music Poster"],
-  "436": ["سایه کرکره روی چهره", "Window-Blind Shadows"],
-  "437": ["پرتره صمیمی کاپل", "Intimate Indoor Couple"],
-  "438": ["سلفی با فرزند آینده‌ات", "Selfie with Your Future Kid"],
-  "441": ["کانورتیبل سفید لاکچری", "White Convertible", "vehicles"],
-  "428": ["شبیه کدام سلبریتی هستی؟", "Which Celebrity Do You Resemble?", "utility"],
-  "433": ["استودیوی مینیمال", "Minimal-Studio Portrait"],
-  "422": ["کوادبایک در کویر", "Desert Quad Bike"],
-  "420": ["سلفی محو Y2K", "Hazy Y2K Selfie"],
-  "419": ["نوار فتوبوث رترو", "Retro Photobooth Strip"],
-  "418": ["سلفی زاویه‌پایین", "Low-Angle Selfie"],
-  "373": ["پرتره فشن لاکچری", "Luxury Fashion Portrait", "portrait"],
-  "363": ["هودی کرم و رز قرمز", "Cream Hoodie & Roses", "portrait"],
-  "253": ["خیابانی سیاه‌وسفید کاپل", "B&W Street Couple"],
-  "246": ["کاپل با حس فیلم قدیمی", "Vintage-Film Couple"],
-  "221": ["کاپل در پاییز", "Autumn Couple"],
-  "205": ["استودیو سیاه‌وسفید دونفره", "B&W Studio Couple"],
-  "193": ["کاپل مینیمال سیاه‌وسفید", "Minimal B&W Couple"],
-  "181": ["کاپلی زمستان، کلبه چوبی", "Winter-Cabin Couple"],
-  "127": ["عکس پرسنلی حرفه‌ای", "Pro Headshot"],
-  "98": ["عکاسی در تخت جمشید", "Persepolis Editorial"],
-  "82": ["تله‌کابین در جنگل برفی", "Snowy Gondola Ride", "travel"],
-  "88": ["پرتره دوربین دیجیتال ۲۰۰۰", "2000s Digicam Portrait"],
-  "77": ["۹ مدل مو برای خانم‌ها", "9-Hairstyle Grid", "utility"],
-  "69": ["پرتره پروفایل جذاب", "Killer Profile Portrait"],
-  "64": ["آرایش طبیعی ملایم", "Natural Makeup Enhance", "utility"],
-  "63": ["عکس عروسی، ورژن اول", "Wedding Portrait V1"],
-  "53": ["فریاد زیر آب", "Underwater Scream"],
-  "29": ["افزودن برف به عکس", "Snowfall Overlay"],
-  "28": ["پرتره سینمایی جذاب", "Cinematic Self-Portrait"],
-  "17": ["مجسمه لاوا", "Lava Sculpture"],
-  "14": ["پرتره احساسی با گربه", "Emotional Cat Portrait"],
-  "13": ["عروسک پارچه‌ای", "Felted Wool Puppet"],
-  "11": ["تکیه بر دیوار آینه‌ای", "Mirror-Wall Lean"],
-  "12": ["پرتره مشکی با نور سبز", "Black-on-Green Portrait"],
-  "87": ["پرتره روی صندلی چوبی", "Wooden-Chair Portrait"],
-  "83": ["پرتره خانوادگی با حفظ چهره‌ها", "Family Faces, Preserved"],
-  "68": ["لم دادن روی سطح مشکی", "On Glossy Black"],
-  "51": ["پرتره لوکی با کت مشکی", "Low-Key in Black Suit"]
+  "5": [
+    "سلفی نور طلایی",
+    "Couple Selfie Photo"
+  ],
+  "7": [
+    "عکس",
+    "Draw me as if an obsessed fan artist filled an entire"
+  ],
+  "9": [
+    "عروسی سینمایی",
+    "Portrait Cinematic"
+  ],
+  "11": [
+    "تکیه بر دیوار آینه‌ای",
+    "Mirror-Wall Lean"
+  ],
+  "12": [
+    "پرتره مشکی با نور سبز",
+    "Black-on-Green Portrait"
+  ],
+  "13": [
+    "عروسک پارچه‌ای",
+    "Felted Wool Puppet"
+  ],
+  "14": [
+    "پرتره احساسی با گربه",
+    "Emotional Cat Portrait"
+  ],
+  "17": [
+    "مجسمه لاوا",
+    "Lava Sculpture"
+  ],
+  "28": [
+    "پرتره سینمایی جذاب",
+    "Cinematic Self-Portrait"
+  ],
+  "29": [
+    "افزودن برف به عکس",
+    "Snowfall Overlay"
+  ],
+  "40": [
+    "عروسک استودیویی",
+    "{ \"subject\": { \"identity\": { \"biometric_reference\":"
+  ],
+  "51": [
+    "پرتره لوکی با کت مشکی",
+    "Low-Key in Black Suit"
+  ],
+  "52": [
+    "عکس",
+    "Portrait & Poses"
+  ],
+  "53": [
+    "فریاد زیر آب",
+    "Underwater Scream"
+  ],
+  "55": [
+    "مدل مو استودیویی",
+    "Woman Studio Realistic"
+  ],
+  "60": [
+    "کلاژ سینمایی",
+    "Man Portrait Collage"
+  ],
+  "63": [
+    "عکس عروسی، ورژن اول",
+    "Wedding Portrait V1"
+  ],
+  "64": [
+    "آرایش طبیعی ملایم",
+    "Natural Makeup Enhance",
+    "utility"
+  ],
+  "65": [
+    "استایل",
+    "Wide surreal fashion shot, woman sitting cross-legged"
+  ],
+  "68": [
+    "لم دادن روی سطح مشکی",
+    "On Glossy Black"
+  ],
+  "69": [
+    "پرتره پروفایل جذاب",
+    "Killer Profile Portrait"
+  ],
+  "73": [
+    "Prompt: For women",
+    "Creative lifestyle photography in the style of Instagram"
+  ],
+  "77": [
+    "۹ مدل مو برای خانم‌ها",
+    "9-Hairstyle Grid",
+    "utility"
+  ],
+  "82": [
+    "تله‌کابین در جنگل برفی",
+    "Snowy Gondola Ride",
+    "travel"
+  ],
+  "83": [
+    "پرتره خانوادگی با حفظ چهره‌ها",
+    "Family Faces, Preserved"
+  ],
+  "87": [
+    "پرتره روی صندلی چوبی",
+    "Wooden-Chair Portrait"
+  ],
+  "88": [
+    "پرتره دوربین دیجیتال ۲۰۰۰",
+    "2000s Digicam Portrait"
+  ],
+  "95": [
+    "کافه خیابانی",
+    "Face Photo Street"
+  ],
+  "98": [
+    "عکاسی در تخت جمشید",
+    "Persepolis Editorial"
+  ],
+  "100": [
+    "عکس",
+    "{ \"type\": \"image_prompt\", \"description\": { \"subject\": {"
+  ],
+  "103": [
+    "عکس سینمایی",
+    "Cinematic Color"
+  ],
+  "108": [
+    "عکس سیاه‌وسفید",
+    "Child Photo Studio"
+  ],
+  "110": [
+    "کلاژ سیاه‌وسفید",
+    "Palm Collage Studio"
+  ],
+  "112": [
+    "مرد استودیویی",
+    "Man Photo"
+  ],
+  "115": [
+    "مدل مو نور طلایی",
+    "{ \"reference_image\": \"uploaded_image\", \"prompt\": \"Recreate"
+  ],
+  "126": [
+    "پرتره استودیویی",
+    "Ultra-realistic candid smartphone snapshot in 3:4 vertical"
+  ],
+  "127": [
+    "عکس پرسنلی حرفه‌ای",
+    "Pro Headshot"
+  ],
+  "131": [
+    "پرتره وینتیج",
+    "Man Portrait Fall"
+  ],
+  "134": [
+    "عکس خیابانی",
+    "Child Photo Street"
+  ],
+  "146": [
+    "اسب شبانه",
+    "{ \"prompt\": \"Ultra-realistic lifestyle portrait of a young"
+  ],
+  "150": [
+    "ماشین نور طلایی",
+    "{ \"type\": \"image_prompt\", \"description\": { \"subject\": {"
+  ],
+  "155": [
+    "گربه انیمه‌ای",
+    "Woman Photo Anime"
+  ],
+  "157": [
+    "سلفی آینه‌ای سیاه‌وسفید",
+    "Girl Selfie Photo"
+  ],
+  "160": [
+    "سلفی نور طلایی",
+    "{ “type”: “image_prompt”, “aspect_ratio”: “4:5”, “style”: ["
+  ],
+  "164": [
+    "کلاژ وینتیج",
+    "Hairstyle Portrait Collage"
+  ],
+  "166": [
+    "مدل مو",
+    "{ \"type\": \"image_prompt\", \"description\": { \"subject\": {"
+  ],
+  "173": [
+    "سلفی شبانه با فلش آیفون",
+    "Night Selfie With iPhone Flash"
+  ],
+  "181": [
+    "کاپلی زمستان، کلبه چوبی",
+    "Winter-Cabin Couple"
+  ],
+  "182": [
+    "کلاژ سیاه‌وسفید",
+    "Black-and-White Editorial Collage"
+  ],
+  "183": [
+    "کلاژ انیمه‌ای",
+    "Collage Anime"
+  ],
+  "193": [
+    "کاپل مینیمال سیاه‌وسفید",
+    "Minimal B&W Couple"
+  ],
+  "194": [
+    "کلاژ سیاه‌وسفید",
+    "Man Portrait Collage"
+  ],
+  "196": [
+    "سلفی انیمه‌ای",
+    "Girl Selfie Anime"
+  ],
+  "203": [
+    "سلفی استودیویی",
+    "Woman Selfie Photo"
+  ],
+  "205": [
+    "استودیو سیاه‌وسفید دونفره",
+    "B&W Studio Couple"
+  ],
+  "211": [
+    "مدل مو نئون",
+    "Man Portrait Neon"
+  ],
+  "221": [
+    "کاپل در پاییز",
+    "Autumn Couple"
+  ],
+  "224": [
+    "سلفی آینه‌ای وینتیج",
+    "{ \"title\": \"Street Style Mirror-Selfie Edit\", \"style\":"
+  ],
+  "225": [
+    "مدل مو خیابانی",
+    "Hairstyle Portrait Photo"
+  ],
+  "238": [
+    "واترمارک وینتیج",
+    "{ \"prompt\": \"Ultra-realistic lifestyle portrait of a young"
+  ],
+  "246": [
+    "کاپل با حس فیلم قدیمی",
+    "Vintage-Film Couple"
+  ],
+  "248": [
+    "گل سینمایی",
+    "Palm Cinematic Color"
+  ],
+  "249": [
+    "ادیت ادیتوریال فشن",
+    "High-Fashion Editorial Edit"
+  ],
+  "251": [
+    "دختر وینتیج",
+    "Portrait & Poses"
+  ],
+  "253": [
+    "خیابانی سیاه‌وسفید کاپل",
+    "B&W Street Couple"
+  ],
+  "258": [
+    "کلاژ سپیا",
+    "Woman Photo Collage"
+  ],
+  "265": [
+    "عکس وینتیج",
+    "Um retrato espontâneo e fotorrealista em plano médio, com"
+  ],
+  "271": [
+    "کاپل نور طلایی",
+    "Couple Cinematic Color"
+  ],
+  "275": [
+    "پرتره استودیویی",
+    "Woman Portrait Studio"
+  ],
+  "278": [
+    "عکس",
+    "Both characters have large expressive eyes, smooth"
+  ],
+  "289": [
+    "عروسک استودیویی",
+    "Palm Photo Studio"
+  ],
+  "293": [
+    "مدل مو وینتیج",
+    "Masterpiece, best quality, ultra realistic photography, RAW"
+  ],
+  "295": [
+    "مدل مو بارانی",
+    "Man Portrait Summer"
+  ],
+  "300": [
+    "سلفی داخل‌خانه",
+    "{ \"type\": \"image_prompt\", \"version\": \"1"
+  ],
+  "304": [
+    "پرتره نور طلایی",
+    "A contemporary, lifestyle portrait photography capturing"
+  ],
+  "313": [
+    "مدل مو لاکچری",
+    "Palm Photo Cinematic"
+  ],
+  "319": [
+    "کافه خیابانی",
+    "Ultra-realistic street style portrait of a young"
+  ],
+  "324": [
+    "کافه دنج",
+    "Cozy Cafe Scene"
+  ],
+  "330": [
+    "عکس سینمایی",
+    "Portrait & Poses"
+  ],
+  "335": [
+    "عکس",
+    "Face Realistic Cafe"
+  ],
+  "350": [
+    "مدل مو سیاه‌وسفید",
+    "Man Portrait Studio"
+  ],
+  "358": [
+    "گل وینتیج",
+    "{ \"type\": \"image_prompt\", \"version\": \"1"
+  ],
+  "363": [
+    "هودی کرم و رز قرمز",
+    "Cream Hoodie & Roses",
+    "portrait"
+  ],
+  "364": [
+    "کلاژ",
+    "Type: A vertical three-shot collage in an authentic 35mm"
+  ],
+  "365": [
+    "کلاژ خیابانی",
+    ": A grid of nine images that make up a travel profile"
+  ],
+  "366": [
+    "پرتره سیاه‌وسفید",
+    "Palm Portrait Studio"
+  ],
+  "367": [
+    "کاپل سیاه‌وسفید",
+    "Layout: a single vertical sheet with a clean 4-grid (2x2)"
+  ],
+  "369": [
+    "مدل مو استودیویی",
+    "Woman Portrait Photo"
+  ],
+  "373": [
+    "پرتره فشن لاکچری",
+    "Luxury Fashion Portrait",
+    "portrait"
+  ],
+  "378": [
+    "مدل مو برفی",
+    "Woman Portrait Street"
+  ],
+  "381": [
+    "پوستر سینمایی",
+    "Nature & Travel"
+  ],
+  "382": [
+    "عکس",
+    "Realistic"
+  ],
+  "384": [
+    "مینیاتورهای چیبی",
+    "Chibi Miniature Artwork"
+  ],
+  "396": [
+    "کلیدآویز",
+    "Portrait & Poses"
+  ],
+  "400": [
+    "کلاژ استودیویی",
+    "Child Portrait Collage"
+  ],
+  "402": [
+    "وایب قدیمی",
+    "Hairstyle Vintage Cinematic"
+  ],
+  "411": [
+    "پرتره نور طلایی",
+    "Portrait Street"
+  ],
+  "414": [
+    "پرتره نور طلایی",
+    "Eyes Photo Fall"
+  ],
+  "416": [
+    "پوستر استودیویی",
+    "Palm Portrait Studio"
+  ],
+  "418": [
+    "سلفی زاویه‌پایین",
+    "Low-Angle Selfie"
+  ],
+  "419": [
+    "نوار فتوبوث رترو",
+    "Retro Photobooth Strip"
+  ],
+  "420": [
+    "سلفی محو Y2K",
+    "Hazy Y2K Selfie"
+  ],
+  "421": [
+    "مدل مو لاکچری",
+    "Luxury Hairstyle Portrait"
+  ],
+  "422": [
+    "کوادبایک در کویر",
+    "Desert Quad Bike"
+  ],
+  "428": [
+    "شبیه کدام سلبریتی هستی؟",
+    "Which Celebrity Do You Resemble?",
+    "utility"
+  ],
+  "433": [
+    "استودیوی مینیمال",
+    "Minimal-Studio Portrait"
+  ],
+  "436": [
+    "سایه کرکره روی چهره",
+    "Window-Blind Shadows"
+  ],
+  "437": [
+    "پرتره صمیمی کاپل",
+    "Intimate Indoor Couple"
+  ],
+  "438": [
+    "سلفی با فرزند آینده‌ات",
+    "Selfie with Your Future Kid"
+  ],
+  "441": [
+    "کانورتیبل سفید لاکچری",
+    "White Convertible",
+    "vehicles"
+  ],
+  "442": [
+    "پرتره وینتیج",
+    "Man Portrait Fall"
+  ],
+  "444": [
+    "پوستر موزیک نسل‌زد",
+    "Gen-Z Music Poster"
+  ],
+  "447": [
+    "انعکاس در آینه گرد",
+    "Round-Mirror Reflection"
+  ],
+  "449": [
+    "تحلیل رنگ و مدل مو",
+    "Color & Cut Analysis",
+    "utility"
+  ],
+  "452": [
+    "عکس",
+    "Yüzü degistirme, benzerlik %100 korunsun"
+  ],
+  "453": [
+    "فلاش از زاویه پایین",
+    "Flash from Below"
+  ],
+  "455": [
+    "سوار بر هوندا",
+    "On the Honda"
+  ],
+  "458": [
+    "تحلیل شخصیت",
+    "از روی عکس چهره ای که فرستادم، یک «پوستر تحلیل شخصیت» فوق"
+  ],
+  "459": [
+    "پرتره دختر عروسکی",
+    "Doll-Face Girl Portrait"
+  ],
+  "461": [
+    "شخصیت شاهنامه",
+    "Persian Epic Poster From Your Photo"
+  ],
+  "462": [
+    "مادر فرزندی",
+    "Mother Portrait Photo"
+  ],
+  "468": [
+    "کلیدآویز عروسکی خودت",
+    "Plush Keychain of You",
+    "fantasy"
+  ],
+  "469": [
+    "پینترستی",
+    "Serve the elements in the photo and add meaningful"
+  ],
+  "470": [
+    "کلوزآپ سیاه‌وسفید دونفره",
+    "B&W Couple Close-Up"
+  ],
+  "473": [
+    "کلاژ سه‌تایی کاپل",
+    "Couple Triptych"
+  ],
+  "474": [
+    "مدل مو نور طلایی",
+    "Hairstyle Cinematic Fashion"
+  ],
+  "475": [
+    "پرتره احساسی سیاه‌وسفید",
+    "Emotional B&W Fashion"
+  ],
+  "476": [
+    "داخل ماشین لاکچری",
+    "Luxury-Car Interior"
+  ],
+  "477": [
+    "کدام شخصیت شاهنامه هستی؟",
+    "Which Shahnameh Hero Are You?",
+    "fantasy"
+  ],
+  "481": [
+    "تخصصی تحلیل شخصیت",
+    "Girl Photo"
+  ],
+  "482": [
+    "پرتره عروس و داماد مدرن",
+    "Modern Wedding Portrait"
+  ],
+  "483": [
+    "تحلیل شخصیت کاریکاتوری",
+    "Caricature Vintage Fashion"
+  ],
+  "485": [
+    "کدام مدل مو به تو می‌آید؟",
+    "Which Hairstyle Suits You?",
+    "utility"
+  ],
+  "486": [
+    "آنالیز مو",
+    "Important: - Write all text only in Persian/Farsi"
+  ],
+  "487": [
+    "دهه پنجاه",
+    "Woman Portrait Photo"
+  ],
+  "488": [
+    "چقد خوشگلی",
+    "Include a simple drawing of the facial contour, an honest"
+  ],
+  "491": [
+    "سلفی هاتو قشنگ کن",
+    "Upload one reference image before generating"
+  ],
+  "493": [
+    "عکس",
+    "Eyes Photo Black & White"
+  ],
+  "495": [
+    "کنار ماشین، سیاه‌وسفید",
+    "Beside the Car, B&W"
+  ],
+  "496": [
+    "سینمایی",
+    "Girl Night Cinematic"
+  ],
+  "497": [
+    "سلبریتی به‌عنوان پارتنر تو",
+    "Your Celebrity Partner",
+    "fantasy"
+  ],
+  "498": [
+    "پوستر کلاژ فشن",
+    "Fashion Poster Collage"
+  ],
+  "500": [
+    "باتریِ تمام در ایران",
+    "Low-Battery Life in Iran"
+  ],
+  "501": [
+    "کلاژ سه‌تایی با گل",
+    "Flower Triptych"
+  ],
+  "503": [
+    "سلفی واید فضای باز",
+    "Wide-Angle Outdoor Selfie"
+  ],
+  "505": [
+    "گربه وینتیج کلاژ",
+    "Cat Collage Vintage"
+  ],
+  "506": [
+    "مادر فرزند",
+    "Mother Portrait Nature"
+  ],
+  "510": [
+    "وایرال شده این روزا",
+    "‏Use the downloaded photo of a person as an exact reference"
+  ],
+  "512": [
+    "پرتره فشن سیاه‌وسفید",
+    "B&W Fashion Portrait"
+  ],
+  "514": [
+    "کلاژ سه‌قلوی نچرال",
+    "Natural Triple Close-Up"
+  ],
+  "517": [
+    "عکس",
+    "Henb3A MeHATb IMo"
+  ],
+  "519": [
+    "سلفی",
+    "Child Selfie Photo"
+  ],
+  "522": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "523": [
+    "حذف واترمارک",
+    "Watermark Remover"
+  ],
+  "528": [
+    "هدشات وینتیج سیاه‌وسفید",
+    "Vintage B&W Headshot"
+  ],
+  "531": [
+    "پشت گربه سیاه",
+    "Behind the Black Cat"
+  ],
+  "534": [
+    "نمای قهرمانانه از پایین",
+    "Low-Angle Hero Shot"
+  ],
+  "535": [
+    "به سبک آرکین",
+    "Arcane Style"
+  ],
+  "536": [
+    "عکس",
+    "Keeptheface100%identicaltothereference"
+  ],
+  "538": [
+    "پرتره",
+    "Man Portrait Photo"
+  ],
+  "539": [
+    "استودیو لاکچری با عینک",
+    "Luxury Studio Shades"
+  ],
+  "541": [
+    "کاپل در غروب ساحل",
+    "Sunset-Beach Couple"
+  ],
+  "545": [
+    "پرتره مزرعه در ساعت طلایی",
+    "Golden-Field Portrait"
+  ],
+  "549": [
+    "عکس سه‌تایی سفارشی",
+    "Personal Triptych",
+    "portrait"
+  ],
+  "550": [
+    "گل سیاه‌وسفید",
+    "Woman Portrait Anime"
+  ],
+  "551": [
+    "عکس",
+    "Face Makeup"
+  ],
+  "555": [
+    "عکس استودیویی ورزشی",
+    "Tracksuit Studio Shot",
+    "portrait"
+  ],
+  "562": [
+    "عکس",
+    "Keeptheface100%identicaltothereference"
+  ],
+  "563": [
+    "روی فرش با گربه خاکستری",
+    "On the Rug with a Cat"
+  ],
+  "569": [
+    "پرتره نور طلایی",
+    "[SUBJECT, replace with photo], standing behind window"
+  ],
+  "571": [
+    "عکس استودیویی",
+    "Top-down studio full body photo of an adult man curled up"
+  ],
+  "573": [
+    "پرتره استودیویی دونفره",
+    "Two-in-One Studio Portrait"
+  ],
+  "575": [
+    "پرتره سایه‌روشن داخلی",
+    "Low-Key Indoor Portrait"
+  ],
+  "576": [
+    "نور عکساتونو خیلی طبیعی میتونین درست کنین",
+    "Face Cinematic Fashion"
+  ],
+  "578": [
+    "کاپل شبانه",
+    "Couple Photo Night"
+  ],
+  "579": [
+    "پوستر تحلیل شخصیت",
+    "Character Analysis Poster",
+    "utility"
+  ],
+  "580": [
+    "گل وینتیج",
+    "Girl Vintage"
+  ],
+  "581": [
+    "کاپل به سبک خیابانی",
+    "Street-Style Couple"
+  ],
+  "583": [
+    "پرتره زاویه‌پایین",
+    "Low-Angle Portrait"
+  ],
+  "585": [
+    "کاپلی",
+    "Ultra-realistic Instagram-style collage of a young"
+  ],
+  "587": [
+    "پرتره",
+    "Hairstyle Portrait Night"
+  ],
+  "589": [
+    "سلفی در ماشین، شب",
+    "Car Night Selfie"
+  ],
+  "590": [
+    "کیفیت 4K",
+    "4K Quality Enhancement"
+  ],
+  "592": [
+    "پرتره مدرن سینمایی",
+    "Modern Cinematic Portrait"
+  ],
+  "594": [
+    "شبانه روی پشت‌بام",
+    "Rooftop at Midnight",
+    "portrait"
+  ],
+  "595": [
+    "پرتره در مسیر باغ",
+    "Garden-Path Portrait"
+  ],
+  "596": [
+    "دختر موتورسوار",
+    "Biker Girl Portrait"
+  ],
+  "598": [
+    "سلفی دونفره در ماشین",
+    "Couple Car Selfie"
+  ],
+  "599": [
+    "عکس",
+    "A photorealistic vertical shot 9:16, an extremely large"
+  ],
+  "600": [
+    "موی افشان در نسیم",
+    "Flowing Hair in the Breeze"
+  ],
+  "602": [
+    "کاپل",
+    "Couple Realistic"
+  ],
+  "603": [
+    "پرتره",
+    "Extreme close-up macro beauty portrait of [SUBJECT, replace"
+  ],
+  "604": [
+    "پرتره استودیویی",
+    "High-End Studio Portrait"
+  ],
+  "606": [
+    "موی رها در باد",
+    "Windswept Portrait"
+  ],
+  "608": [
+    "موج‌های مسی در نور طلایی",
+    "Copper Curls, Golden Hour"
+  ],
+  "609": [
+    "نیم‌رخ سیاه‌وسفید کاپل",
+    "B&W Profile Couple"
+  ],
+  "611": [
+    "پرتره با موی باب",
+    "Bob-Hair Film Portrait"
+  ],
+  "612": [
+    "اصلاح نور و رنگ حرفه‌ای",
+    "Pro Light & Color Fix",
+    "utility"
+  ],
+  "613": [
+    "فتوبوث بوسه رترو",
+    "Retro Photobooth Kiss"
+  ],
+  "615": [
+    "کاپل و گربه",
+    "Couple with Cat"
+  ],
+  "616": [
+    "پرتره سیاه‌وسفید کلوزآپ",
+    "B&W Close-Up"
+  ],
+  "617": [
+    "سلفی کاپل کنار دیوار",
+    "Casual Couple Selfie"
+  ],
+  "618": [
+    "پرتره سینمایی",
+    "Face Portrait Photo"
+  ],
+  "619": [
+    "پرتره با کلاه کپ",
+    "Baseball-Cap B&W"
+  ],
+  "621": [
+    "تغییر رنگ عکس",
+    "Golden Hour Backlight Edit"
+  ],
+  "622": [
+    "فلاش پاپارازی Y2K",
+    "Y2K Paparazzi Flash"
+  ],
+  "623": [
+    "بوسه روی گونه",
+    "Cheek-Kiss Selfie"
+  ],
+  "624": [
+    "تعویض لباس با عکس مرجع",
+    "Outfit Swap",
+    "utility"
+  ],
+  "627": [
+    "آزمایش ریش و سبیل",
+    "Beard Style Try-On",
+    "utility"
+  ],
+  "630": [
+    "خیابانی با عینک آفتابی",
+    "Street Style with Shades"
+  ],
+  "632": [
+    "تبدیل به سیاه‌وسفید هنری",
+    "Artistic B&W Conversion"
+  ],
+  "634": [
+    "کاپل زیر آسمان آبی",
+    "Couple Against Blue Sky"
+  ],
+  "635": [
+    "کلاژ پولاروید دیواری",
+    "Polaroid Wall Collage"
+  ],
+  "636": [
+    "افکت انیمه",
+    "Anime style transformation, convert the reference image"
+  ],
+  "638": [
+    "کلوزآپ طبیعی صورت",
+    "Natural Face Close-Up",
+    "portrait"
+  ],
+  "641": [
+    "پشت شاخه‌های گل سرخ",
+    "Behind Crimson Blooms",
+    "portrait"
+  ],
+  "643": [
+    "پرتره با آرایش چشم سیرن",
+    "Siren-Eyes Portrait"
+  ],
+  "645": [
+    "پرتره اتاق خواب با بافت مو",
+    "Bedroom Braids Portrait"
+  ],
+  "647": [
+    "افزودن نور خورشید سینمایی",
+    "Cinematic Sunlight Boost",
+    "utility"
+  ],
+  "648": [
+    "کلاژ فتوبوث کاپل",
+    "Photobooth Collage"
+  ],
+  "650": [
+    "واترمارک استودیویی",
+    "Caricature Portrait Photo"
+  ],
+  "653": [
+    "پاک‌سازی لکه‌های آینه",
+    "Clean the Mirror",
+    "utility"
+  ],
+  "654": [
+    "کاربردی حذف واترمارک",
+    "با حذف واترمارکی که به تصویر اضافه شده است، نسخه اصلی این"
+  ],
+  "659": [
+    "میکاپ",
+    "Carefully analyze the person’s face and preserve their"
+  ],
+  "660": [
+    "خیابان شب با فلاش گوشی",
+    "Night Street Flash",
+    "travel"
+  ],
+  "661": [
+    "کلوزآپ با شاخه‌های گل",
+    "Floral Close-Up",
+    "portrait"
+  ],
+  "662": [
+    "عکس در جاده شمال",
+    "On the Northern Road"
+  ],
+  "663": [
+    "ورزشی پسرونه",
+    "Ultra-realistic fitness editorial photography, muscular"
+  ],
+  "664": [
+    "فانتزی و شکلاتی",
+    "Premium Handmade Collectible Doll, Adorable, Slightly Large"
+  ],
+  "666": [
+    "فتوبوث دهه ۹۰ کاپل",
+    "90s Photobooth Couple"
+  ],
+  "667": [
+    "ماشین نئون",
+    "Girl Photo Mirror"
+  ],
+  "668": [
+    "کارتونی به سبک ریک و مورتی",
+    "Rick & Morty Style",
+    "fantasy"
+  ],
+  "669": [
+    "پرتره سینمایی",
+    "Palm Portrait Close-Up"
+  ],
+  "671": [
+    "نچرال با گربه",
+    "پرتره ای واقع گرایانه کلوز آپ از فرد با چهره مشابه عکس مرجع"
+  ],
+  "675": [
+    "سلفی ساعت آبی",
+    "Blue-Hour Selfie"
+  ],
+  "677": [
+    "پشت دسته‌گل رز سرخ",
+    "Behind the Rose Bouquet"
+  ],
+  "678": [
+    "سلفی با کاستوم اسپایدرمن",
+    "Spider-Suit Mirror Selfie",
+    "fantasy"
+  ],
+  "681": [
+    "پرتره سپیای کاپل",
+    "Sepia Couple Close-Up"
+  ],
+  "682": [
+    "جادوگر هاگوارتز باش",
+    "Become a Hogwarts Wizard",
+    "fantasy"
+  ],
+  "685": [
+    "پرتره سیاه‌وسفید دخترونه",
+    "B&W Studio Portrait"
+  ],
+  "686": [
+    "پرتره در دل کوهستان",
+    "Mountain-Landscape Portrait"
+  ],
+  "687": [
+    "شب با چراغ‌های شهر",
+    "City Lights at Night"
+  ],
+  "688": [
+    "پرتره سپیا با دوربین قدیمی",
+    "Sepia Retro-Camera Portrait"
+  ],
+  "690": [
+    "پرتره سیاه‌وسفید رسمی",
+    "Formal B&W Portrait"
+  ],
+  "691": [
+    "عکس",
+    "کلاژ سبک زندگی که حول محور علاقه به یک آهنگ ساخته شده است"
+  ],
+  "692": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "693": [
+    "پرتره کنسرت با استیک نورانی",
+    "Concert Light-Stick Portrait"
+  ],
+  "694": [
+    "عکس",
+    "Face Fall"
+  ],
+  "696": [
+    "سلفی موهای درهم",
+    "Tousled-Hair Selfie"
+  ],
+  "698": [
+    "پرتره استودیویی",
+    "Girl Portrait Studio"
+  ],
+  "699": [
+    "حذف افراد از پس‌زمینه",
+    "Remove Background People"
+  ],
+  "700": [
+    "سلفی کاپل در آسانسور",
+    "Elevator Couple Selfie"
+  ],
+  "702": [
+    "جذاب‌تر کردن عکس",
+    "Make Your Photo Pop",
+    "utility"
+  ],
+  "704": [
+    "عکس",
+    "Man Photo Realistic"
+  ],
+  "707": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "708": [
+    "پرتره",
+    "Eyes Portrait Photo"
+  ],
+  "711": [
+    "سلفی",
+    "Woman Selfie Evening"
+  ],
+  "717": [
+    "پرتره استودیویی کاپل",
+    "Studio Couple Portrait"
+  ],
+  "719": [
+    "تخمین ویژگی‌های چهره",
+    "Estimate Facial Features & Ethnicity"
+  ],
+  "722": [
+    "کلاژ وینتیج",
+    "Photo Collage"
+  ],
+  "724": [
+    "پرتره اکیوئه ژاپنی",
+    "Japanese Ukiyo-e Portrait",
+    "fantasy"
+  ],
+  "726": [
+    "وایب قدیمی",
+    "Palm Neon Vintage"
+  ],
+  "735": [
+    "پرتره با دسته‌گل رز",
+    "Portrait with Red Roses"
+  ],
+  "738": [
+    "عکس",
+    "«عکس آپلودشده را به یک پرتره سینمایی طلایی ساعت تبدیل کن؛"
+  ],
+  "740": [
+    "پرتره سیاه‌وسفید هالیوودی",
+    "Hollywood B&W Portrait"
+  ],
+  "741": [
+    "مدل مو انیمه‌ای",
+    "Hairstyle Photo Anime"
+  ],
+  "744": [
+    "هدشات سینمایی طبیعی",
+    "Natural Cinematic Headshot"
+  ],
+  "746": [
+    "گربه خیابانی",
+    "Cat Photo Street"
+  ],
+  "747": [
+    "اسنپ‌شات دیجیکم دهه ۲۰۰۰",
+    "2000s Digicam Snapshot",
+    "portrait"
+  ],
+  "749": [
+    "سلفی چتری درهم",
+    "Messy-Bang Selfie"
+  ],
+  "751": [
+    "دختر زیر پتو",
+    "Cozy Blanket Portrait"
+  ],
+  "753": [
+    "سلفی کاپل در کافه",
+    "Couple Selfie in a Café"
+  ],
+  "754": [
+    "تبدیل به قاب فیلم سینمایی",
+    "Transform Into a Cinematic Film Still"
+  ],
+  "755": [
+    "ببین در پیری چه شکلی می‌شوی",
+    "See Yourself Age",
+    "utility"
+  ],
+  "756": [
+    "گل نور طلایی",
+    "Woman Photo Sunset"
+  ],
+  "758": [
+    "نسخه بچگی و نسخه شیک تو",
+    "Kid You vs. Elegant You"
+  ],
+  "759": [
+    "مدل مو وینتیج",
+    "Palm Portrait Fashion"
+  ],
+  "761": [
+    "سلفی آینه با لیلیوم",
+    "Lily Bouquet Mirror Selfie"
+  ],
+  "766": [
+    "پوستر وینتیج",
+    "Hairstyle Portrait Photo"
+  ],
+  "767": [
+    "کلاژ سه‌تایی تولد",
+    "Birthday Triptych"
+  ],
+  "768": [
+    "کلوزآپ مدل با آیفون",
+    "iPhone 17 Style Close-Up"
+  ],
+  "769": [
+    "دختر در اقیانوس شب",
+    "Midnight Ocean Portrait"
+  ],
+  "771": [
+    "سلفی رمانتیک کاپل",
+    "Romantic Couple Selfie"
+  ],
+  "773": [
+    "پرتره فضای باز با حفظ چهره",
+    "Outdoor Portrait With Face Lock"
+  ],
+  "774": [
+    "سینمایی",
+    "Girl Photo Night"
+  ],
+  "776": [
+    "سلفی شبانه دخترانه",
+    "Night City Girl Selfie"
+  ],
+  "777": [
+    "کلوزآپ چشم عسلی",
+    "Hazel-Eyes Close-Up"
+  ],
+  "779": [
+    "عکس",
+    "Durgun bir nehirde mor bir kanonun içinde oturan, arkasına"
+  ],
+  "780": [
+    "مدل مو ساحلی",
+    "Horse Portrait Beach"
+  ],
+  "783": [
+    "پرتره انیمه نوستالژیک",
+    "Nostalgic Anime Portrait"
+  ],
+  "788": [
+    "عکس کنار کودکیِ خودت",
+    "You & Your Younger Self"
+  ],
+  "789": [
+    "حل مشکل تغییر چهره در پرامپت‌ها",
+    "Identity-Lock Prefix",
+    "utility"
+  ],
+  "791": [
+    "تولدی",
+    "Close-up: Portrait of a woman sitting at night at a white"
+  ],
+  "792": [
+    "تولد استودیویی",
+    "Woman Studio Fall"
+  ],
+  "793": [
+    "مدل مو لاکچری",
+    "Woman Fall Cinematic"
+  ],
+  "795": [
+    "سلفی واقعی و خودمونی",
+    "Real & Casual Selfie"
+  ],
+  "796": [
+    "پسر",
+    "Portrait & Poses"
+  ],
+  "801": [
+    "عکس آینه‌ای دخترونه",
+    "Girly Mirror Selfie"
+  ],
+  "802": [
+    "سلفی آینه‌ای پسرونه",
+    "Guys' Mirror Selfie"
+  ],
+  "803": [
+    "تبدیل به کارتون",
+    "Turn a Photo Into a Cartoon"
+  ],
+  "808": [
+    "سلفی",
+    "Man Selfie Photo"
+  ],
+  "809": [
+    "سلفی",
+    "Couple Selfie Photo"
+  ],
+  "810": [
+    "پرتره",
+    "Eyes Portrait Summer"
+  ],
+  "812": [
+    "سلفی",
+    "Couple Selfie Photo"
+  ],
+  "814": [
+    "عکس",
+    "Girl Photo Color"
+  ],
+  "816": [
+    "Prompt: پسر",
+    "Man Golden Hour"
+  ],
+  "818": [
+    "سلفی گرفتن با شخصیت های فیلم",
+    "High-quality stylized 3D CGI Pixar-style render, vertical"
+  ],
+  "819": [
+    "پرتره ادیتوریال زنانه",
+    "Feminine Editorial Portrait"
+  ],
+  "826": [
+    "نمای ادیتوریال از بالا",
+    "Top-Down Fashion Editorial",
+    "portrait"
+  ],
+  "827": [
+    "کاپل",
+    "Couple Photo"
+  ],
+  "828": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "830": [
+    "پاک کردن لکه‌های آینه",
+    "Clean Mirror Smudges From a Photo"
+  ],
+  "832": [
+    "کیفیت 4K",
+    "4K Quality Enhancement"
+  ],
+  "833": [
+    "پرتره نور طلایی",
+    "A hyper-realistic, extreme close-up portrait of a young"
+  ],
+  "836": [
+    "عکس استودیویی",
+    "Palm Photo Studio"
+  ],
+  "841": [
+    "پرتره ادیتوریال فضای باز",
+    "Outdoor Editorial Portrait"
+  ],
+  "845": [
+    "عکس پرسنلی",
+    "Face Portrait Photo"
+  ],
+  "846": [
+    "تولد وینتیج",
+    "Girl Portrait Mirror"
+  ],
+  "847": [
+    "عکس پرتره",
+    "Luxury editorial portrait"
+  ],
+  "848": [
+    "عکس پرتره",
+    "Luxury black-and-white fashion editorial portrait"
+  ],
+  "850": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "853": [
+    "موتور سینمایی",
+    "Man Cinematic"
+  ],
+  "854": [
+    "ده پنجاه: Woman",
+    "Woman Portrait"
+  ],
+  "859": [
+    "موتور خیابانی",
+    "Face Photo Street"
+  ],
+  "863": [
+    "پرتره استودیویی",
+    "Girl Portrait Studio"
+  ],
+  "864": [
+    "پرتره سیاه‌وسفید",
+    "A close-up, high-contrast black and white portrait of a man"
+  ],
+  "865": [
+    "پرتره وینتیج با حفظ چهره",
+    "Vintage Portrait With Face Lock"
+  ],
+  "869": [
+    "مدل مو وینتیج",
+    "Woman Portrait Photo"
+  ],
+  "875": [
+    "عکس سینمایی",
+    "Girl Photo Cinematic"
+  ],
+  "876": [
+    "عکس",
+    "یک سلفی آینه ای فوتورئالیستی عمودی با نسبت تصویر 9:16 ایجاد"
+  ],
+  "877": [
+    "عکس",
+    "Portrait & Poses"
+  ],
+  "882": [
+    "سلفی",
+    "Child Selfie Photo"
+  ],
+  "884": [
+    "عکس",
+    "Child Photo Evening"
+  ],
+  "888": [
+    "پرتره دختر 4K",
+    "4K Portrait of a Young Girl"
+  ],
+  "896": [
+    "تو در دهه‌های مختلف",
+    "You Across the Decades"
+  ],
+  "899": [
+    "پرتره سیاه‌وسفید",
+    "Man Portrait"
+  ],
+  "900": [
+    "عکس سینمایی",
+    "Face Photo Cinematic"
+  ],
+  "902": [
+    "عکس",
+    "Girl Photo Black & White"
+  ],
+  "909": [
+    "پرتره کلاه قرمز",
+    "Moody Portrait in a Red Beret"
+  ],
+  "912": [
+    "مردونه",
+    "Ultra-photorealistic portrait of a handsome man in his late"
+  ],
+  "914": [
+    "پرتره دختر",
+    "Portrait of a Girl, 3:4"
+  ],
+  "915": [
+    "پرتره سینمایی",
+    "Eyes Portrait Cinematic"
+  ],
+  "918": [
+    "پرتره",
+    "Vertical Mid-Shot Portrait (4:5): Female Sitting in Lush"
+  ],
+  "920": [
+    "گربه خیابانی",
+    "Cat Photo Street"
+  ],
+  "927": [
+    "مدل مو سینمایی",
+    "Palm Portrait Cinematic"
+  ],
+  "928": [
+    "کافه لاکچری",
+    "Girl Cinematic Luxury"
+  ],
+  "932": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "933": [
+    "ماشین سیاه‌وسفید",
+    "Man Photo Cinematic"
+  ],
+  "934": [
+    "آنالیز چهره",
+    "Eyes Photo Luxury"
+  ],
+  "937": [
+    "کاپل سیاه‌وسفید",
+    "Couple Portrait Studio"
+  ],
+  "940": [
+    "پرتره وینتیج",
+    "Face Portrait Photo"
+  ],
+  "942": [
+    "میتونى عزیزى که دیگه نداریش و دلتنگشى رو بغل کنى",
+    "Mother Portrait Cinematic"
+  ],
+  "943": [
+    "طبیعت",
+    "Girl Photo Nature"
+  ],
+  "945": [
+    "دخترونه تنیسور",
+    "Hairstyle"
+  ],
+  "946": [
+    "پرتره",
+    "Woman Portrait Realistic"
+  ],
+  "952": [
+    "مدل مو سینمایی",
+    "Man Cinematic"
+  ],
+  "955": [
+    "عکس شبانه",
+    "Face Photo Night"
+  ],
+  "958": [
+    "رو با عکس خودت بده به ChatGPT و میاد با رنگ های مختلف لباس تصویرت رو میسازه و میگه چه رنگی بیشتر بهت میاد",
+    "Portrait"
+  ],
+  "959": [
+    "مینیاتورهای چیبی از خودت",
+    "Chibi Miniatures of Yourself"
+  ],
+  "960": [
+    "تحلیل بیومتریک چهره",
+    "Biometric Face Analysis"
+  ],
+  "969": [
+    "سلفی شبانه",
+    "A wide-angle, slightly distorted first-person perspective"
+  ],
+  "970": [
+    "تصویر فشن",
+    "Eyes Portrait Studio"
+  ],
+  "972": [
+    "مدل مو برفی",
+    "Hairstyle Portrait Street"
+  ],
+  "977": [
+    "عکس",
+    "Sinematik etki ve ekstra grenli"
+  ],
+  "979": [
+    "آنالیز پیج اینستاگرام",
+    "I want you to act as both a senior Instagram data analyst"
+  ],
+  "980": [
+    "کاپل شبانه",
+    "Couple Photo Night"
+  ],
+  "981": [
+    "سلفی",
+    "Eyes Selfie Portrait"
+  ],
+  "982": [
+    "پرتره نور طلایی",
+    "Woman Portrait Sunset"
+  ],
+  "983": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "985": [
+    "پرتره",
+    "Couple Portrait Photo"
+  ],
+  "986": [
+    "عکس",
+    "بدون تغییر ویژگی های صورت و با استفاده از تصویر های مرجع ،"
+  ],
+  "987": [
+    "پوستر سیاه‌وسفید",
+    "Palm Portrait Neon"
+  ],
+  "989": [
+    "کاپل استودیویی سیاه‌وسفید",
+    "B&W Studio Couple Portrait"
+  ],
+  "990": [
+    "سلفی آینه‌ای",
+    "Child Selfie Mirror"
+  ],
+  "993": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "995": [
+    "سلفی",
+    "Selfie Photo"
+  ],
+  "998": [
+    "استیکر شغلی",
+    "I will provide my brand logo, my profession/business"
+  ],
+  "999": [
+    "دختر",
+    "Girl Makeup"
+  ],
+  "1000": [
+    "سلفی",
+    "Man Selfie Photo"
+  ],
+  "1002": [
+    "عکس",
+    "شخصیت اصلی یک دختر / پسر با استایل[استایل دلخواه] باشد"
+  ],
+  "1005": [
+    "پرتره شبانه",
+    "Woman Portrait Photo"
+  ],
+  "1016": [
+    "شخصیت شناسی",
+    "از روی ویژگی های شخصیتی من یک پوستر فانتزی / استایل آناتومی"
+  ],
+  "1026": [
+    "بچه آینده تون چه شکلی میشه",
+    "Upload one photo of yourself, or a photo of you and your"
+  ],
+  "1027": [
+    "علاوه بر اینکه تبدیلت می کنه به کاریکاتور، یه سری چیزای مرتبط با عکستم برات اضافه می کنه و مینویسه",
+    "Caricature"
+  ],
+  "1029": [
+    "مدل مو سینمایی",
+    "Eyes Portrait Cinematic"
+  ],
+  "1030": [
+    "مدل مو نور طلایی",
+    "Woman Portrait Studio"
+  ],
+  "1036": [
+    "عکس",
+    "ظاهر ها را دقیقاً مطابق عکس های آپلود شده، با نسبت ۱:۱ حفظ"
+  ],
+  "1037": [
+    "پرتره وینتیج",
+    "INTERSECTION, SMILING BRIGHTLY WHILE LOOKING BACK OVER HER"
+  ],
+  "1040": [
+    "دختر خیابانی",
+    "Photo Street"
+  ],
+  "1043": [
+    "سلفی",
+    "Man Selfie Photo"
+  ],
+  "1045": [
+    "پرتره جنگلی",
+    "Eyes Portrait Photo"
+  ],
+  "1051": [
+    "پرتره نور طلایی",
+    "Hairstyle Portrait Beach"
+  ],
+  "1055": [
+    "تبدیل به کاراکتر ریک و مورتی",
+    "Turn Yourself Into Rick and Morty"
+  ],
+  "1060": [
+    "عکس حرفه ای از محصولات مناسب برای آنلاین شاپ ها",
+    "یک صحنه لایف استایل لوکس و گرم با نور طبیعی، نمای نزدیک از"
+  ],
+  "1062": [
+    "ماه تو روز تولدتون چه شکلی بوده و مشخصاتش چی بوده",
+    "Night Cinematic"
+  ],
+  "1064": [
+    "تحلیل اختصاصی اجزای چهره",
+    "Background: warm cream color"
+  ],
+  "1065": [
+    "چهرت متعلق به کدوم دوره هستش",
+    "No beautification or facial changes"
+  ],
+  "1071": [
+    "سلفی آینه‌ای سینمایی",
+    "Couple Selfie Portrait"
+  ],
+  "1072": [
+    "وایب چهرتون رو بهتون میگه",
+    "Eyes Portrait Photo"
+  ],
+  "1075": [
+    "وینتیج سینمایی",
+    "Vintage Cinematic"
+  ],
+  "1077": [
+    "اینجوری نسخه مینی خودتو بساز",
+    "Eyes Photo Collage"
+  ],
+  "1079": [
+    "وایب اسم",
+    "Capture the energy, personality, mood, and emotional vibe"
+  ],
+  "1080": [
+    "روتوش پوست صورت",
+    "Professional Skin Retouching"
+  ],
+  "1081": [
+    "حذف ادم ها در بکگراند",
+    "Reconstruct the background naturally where the people were"
+  ],
+  "1082": [
+    "بازسازی عکس قدیمی",
+    "Restore an Old Photo"
+  ],
+  "1083": [
+    "حذف واترمارک عکس",
+    "Utility & Tools"
+  ],
+  "1084": [
+    "کاپل وینتیج",
+    "Couple Portrait Vintage"
+  ],
+  "1085": [
+    "شبیه به کدوم هنرمندی",
+    "Eyes Portrait Photo"
+  ],
+  "1086": [
+    "باز کردن چشم‌های بسته",
+    "Open Closed Eyes in a Photo"
+  ],
+  "1088": [
+    "افزایش کیفیت 4K",
+    "4K Quality Enhancement"
+  ],
+  "1089": [
+    "کاپل وینتیج",
+    "Couple Vintage Cinematic"
+  ],
+  "1091": [
+    "ادیت کافه با دست‌نوشته",
+    "Cozy Cafe Edit With Doodles"
+  ],
+  "1092": [
+    "پرتره نور طلایی",
+    "Eyes Portrait Photo"
+  ],
+  "1093": [
+    "استیکر با خط سفید",
+    "White-Outline Sticker Edit"
+  ],
+  "1096": [
+    "کاپل سیاه‌وسفید",
+    "Wedding Portrait Photo"
+  ],
+  "1097": [
+    "مدل مو استودیویی",
+    "Eyes Portrait Studio"
+  ],
+  "1098": [
+    "گل فانتزی",
+    "Palm Photo Color"
+  ],
+  "1099": [
+    "کاپلی",
+    "Couple Portrait Studio"
+  ],
+  "1103": [
+    "ترند این روزا",
+    "یک صحنه کاملاً سینمایی و فوق واقع گرایانه از کافه شهری با"
+  ],
+  "1106": [
+    "سن تخمینی چهره",
+    "يك پرتره فوق واقعى و باكيفيت بالا بر اساس **(عكس شما)** بساز"
+  ],
+  "1108": [
+    "مدل مو",
+    "Eyes Portrait Fall"
+  ],
+  "1109": [
+    "کاپلی",
+    "Extreme macro close-up of two individuals, capturing"
+  ],
+  "1111": [
+    "عکس شبانه",
+    "Girl Photo Night"
+  ],
+  "1112": [
+    "پرتره دختر با حفظ چهره",
+    "Candid Portrait With Locked Identity"
+  ],
+  "1116": [
+    "از غذات ساده عکس نگیر",
+    "Food & Cafe"
+  ],
+  "1120": [
+    "کلاژ سینمایی",
+    "Palm Portrait Collage"
+  ],
+  "1122": [
+    "گذر عمر",
+    "Child Portrait Photo"
+  ],
+  "1130": [
+    "سلفی شبانه",
+    "Woman Selfie Photo"
+  ],
+  "1131": [
+    "Prompt: عکسِ دختر",
+    "Portrait Cinematic"
+  ],
+  "1133": [
+    "پشمکی",
+    "Hairstyle"
+  ],
+  "1134": [
+    "عکس",
+    "Girl Photo Evening"
+  ],
+  "1136": [
+    "اگه گربه بودم چه شکلی میشدم",
+    "Cat Portrait Color"
+  ],
+  "1142": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1157": [
+    "آنالیز چهره",
+    "Eyes Photo"
+  ],
+  "1163": [
+    "عکس",
+    "A hilarious, extreme 0"
+  ],
+  "1165": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "1172": [
+    "مدل مو ایده آل چهره تو: مناسب خانم ها",
+    "Girl Portrait Beach"
+  ],
+  "1173": [
+    "سلفی",
+    "Child Selfie Photo"
+  ],
+  "1176": [
+    "افزایش کیفیت عکس 8k",
+    "Only allow subtle feature cleanup without altering who they"
+  ],
+  "1182": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "1186": [
+    "سلفی داخل‌خانه با گربه",
+    "Indoor Selfie With a Cat"
+  ],
+  "1187": [
+    "گربه خیابانی",
+    "Cat Street"
+  ],
+  "1200": [
+    "بهترین ورژن صورتت",
+    "این پرامپت باید خروجی آن فقط یک تصویر نهایی باشد"
+  ],
+  "1205": [
+    "نشون میده شبیه به کدوم سلبریتی هستی",
+    "Face Photo Cinematic"
+  ],
+  "1209": [
+    "کاور هایلایت مخصوص شغلت رو بساز",
+    "Product & Ads"
+  ],
+  "1211": [
+    "بدون ریش چطوری",
+    "Man Photo Color"
+  ],
+  "1212": [
+    "عکس",
+    "یک پرتره ی نیم تنه با نورپردازی دراماتیک از زن که چشمانش را"
+  ],
+  "1214": [
+    "پرتره کلوزآپ زن جوان",
+    "Close-Up Raw Portrait of a Young Woman"
+  ],
+  "1215": [
+    "عکس",
+    "یک عکس با کیفیت و طبیعی که در آن کریستیانو رونالدو و یک"
+  ],
+  "1223": [
+    "پرتره",
+    "Eyes Portrait Makeup"
+  ],
+  "1226": [
+    "عکس",
+    "Eyes Photo"
+  ],
+  "1228": [
+    "پرتره سینمایی",
+    "Girl Portrait Cinematic"
+  ],
+  "1231": [
+    "دیگه استوری هات رو ساده نزار",
+    "Palm Photo"
+  ],
+  "1239": [
+    "عکس",
+    "CABEÇA GRANDE ESTILIZADO EM UMA PROPORÇÃO DE ASPECTO DE 1:1"
+  ],
+  "1241": [
+    "حیوان درونت چیه",
+    "Horse Portrait Cinematic"
+  ],
+  "1243": [
+    "پرتره",
+    "A striking, portrait of a an Create svmmetricallv split"
+  ],
+  "1246": [
+    "عکس سینمایی",
+    "Face Photo Cinematic"
+  ],
+  "1252": [
+    "کلاژ وینتیج",
+    "Palm Collage Sunset"
+  ],
+  "1258": [
+    "مدل مو نور طلایی",
+    "Portrait & Poses"
+  ],
+  "1260": [
+    "عکس",
+    "Girl Photo Rain"
+  ],
+  "1266": [
+    "عکس شبانه",
+    "Girl Photo Beach"
+  ],
+  "1280": [
+    "مدل مو",
+    "Hair blowing in the wind, partially covering the face"
+  ],
+  "1287": [
+    "مدل مو سیاه‌وسفید",
+    "Eyes Portrait Cinematic"
+  ],
+  "1289": [
+    "ساخت تصویر پیری لاکچری",
+    "Instead, generate a believable, highly attractive older"
+  ],
+  "1294": [
+    "محصول با مدل",
+    "Lifestyle Product Photo With a Model"
+  ],
+  "1295": [
+    "کیفیت عکست رو بدون تغییر جزئیات، چند برابر کن",
+    "Hairstyle Sunset Cinematic"
+  ],
+  "1304": [
+    "پروفایل مخصوص شغلت رو بساز",
+    "Portrait & Poses"
+  ],
+  "1308": [
+    "عکس شبانه",
+    "Child Photo Night"
+  ],
+  "1310": [
+    "پرتره",
+    "Realistic 9:16 portrait of a woman standing with her body"
+  ],
+  "1314": [
+    "عکس",
+    "Portrait & Poses"
+  ],
+  "1330": [
+    "شبیه کدوم چهره مشهوری",
+    "Top: antique black-gold vintage mirror with my portrait"
+  ],
+  "1331": [
+    "سلفی آینه‌ای نور طلایی",
+    "SETTINGS Sunglasses Color: Black Phone Color: Black Car"
+  ],
+  "1332": [
+    "اگه تو دربار هخامنشی بودی شغلت چی بود",
+    "Compare all historically documented Achaemenid court roles"
+  ],
+  "1333": [
+    "شما هم این مشکلو دارید",
+    "میتونید ابتدای همه پرامپتاتون برای تاکید بیشتر روی این"
+  ],
+  "1335": [
+    "پوستر وینتیج",
+    "Woman Portrait Photo"
+  ],
+  "1337": [
+    "کاپل وینتیج",
+    "Couple Photo Street"
+  ],
+  "1339": [
+    "پرتره سیاه‌وسفید",
+    "- Create an Ultra-realistic editorial fashion portrait,"
+  ],
+  "1347": [
+    "لاکچری",
+    "Cat Portrait Fashion"
+  ],
+  "1348": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1356": [
+    "میری به دنیای وینتج",
+    "Woman Portrait Studio"
+  ],
+  "1365": [
+    "مدل مو نور طلایی",
+    "Hairstyle Portrait Sunset"
+  ],
+  "1380": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1381": [
+    "پرتره",
+    "Close-up side-profile portrait of a young woman with subtle"
+  ],
+  "1386": [
+    "دسته گل",
+    "Car Photo Street"
+  ],
+  "1388": [
+    "اگه ورژن هفتاد سالگیت باهات حرف میزد بهت چی میگفت",
+    "Woman Portrait Photo"
+  ],
+  "1392": [
+    "لوگو مخصوص شغلت رو بساز",
+    "Luxury Realistic"
+  ],
+  "1393": [
+    "تبدیل به دنیای فانتزی",
+    "Doodle World Fantasy Edit"
+  ],
+  "1398": [
+    "میتونی گذر عمرتو ببینی",
+    "Portrait Studio"
+  ],
+  "1406": [
+    "کاپل در شب",
+    "Candid Night Photo of a Couple"
+  ],
+  "1408": [
+    "کاپلی",
+    "یک عکس واقع گرایانه با موبایل از یک مرد که زنی را در یک"
+  ],
+  "1412": [
+    "عروسی لاکچری",
+    "Man Portrait Cinematic"
+  ],
+  "1413": [
+    "سلفی یهویی: پرامپت عکس اول",
+    "Inspired by Image 1 Use my uploaded reference image"
+  ],
+  "1417": [
+    "عکس",
+    "یک پرتره فوتورئالیستی خلق کن، بدون اینکه هیچ تغییری در"
+  ],
+  "1419": [
+    "سلفی",
+    "Girl Selfie Portrait"
+  ],
+  "1425": [
+    "عکس",
+    "Eyes Makeup"
+  ],
+  "1428": [
+    "واسه ترمیم عکسهای قدیمی و رنگی کردنشون",
+    "Increase sharpness"
+  ],
+  "1432": [
+    "مو چتری",
+    "A person with sleek hair styled in a high messy bun, paired"
+  ],
+  "1433": [
+    "خودت و پارتنرت وقتی پیر میشین چه شکلی میشین",
+    "Wedding Portrait Cinematic"
+  ],
+  "1439": [
+    "ورزشی مردونه",
+    "Editorial fitness portrait of a muscular athletic man"
+  ],
+  "1442": [
+    "کاپلی",
+    "Couple Portrait Photo"
+  ],
+  "1444": [
+    "مدل مو وینتیج",
+    "Hairstyle Anime Street"
+  ],
+  "1447": [
+    "عکس",
+    "Portrait & Poses"
+  ],
+  "1448": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1449": [
+    "پسرونه",
+    "Man Selfie Photo"
+  ],
+  "1451": [
+    "کاپل لاکچری",
+    "Wedding Portrait Cinematic"
+  ],
+  "1452": [
+    "عکس",
+    "A professional camera"
+  ],
+  "1453": [
+    "پرتره سیاه‌وسفید سینمایی",
+    "Cinematic Black-and-White Portrait"
+  ],
+  "1454": [
+    "سلفی",
+    "Child Selfie Photo"
+  ],
+  "1456": [
+    "تولد پسرونه",
+    "A cinematic, moody lifestyle portrait of the man provided"
+  ],
+  "1459": [
+    "سلفی سیاه‌وسفید",
+    "Woman Selfie Portrait"
+  ],
+  "1461": [
+    "عکس",
+    "Face Photo"
+  ],
+  "1462": [
+    "مدل مو نور طلایی",
+    "Eyes Portrait Golden Hour"
+  ],
+  "1471": [
+    "ی که عکساتو حرفه ای ادیت میکنه",
+    "Photo Rain"
+  ],
+  "1481": [
+    "کاپلی",
+    "Couple Photo Street"
+  ],
+  "1487": [
+    "کاملن طبیعی صورتت رو روتوش کن",
+    "- Temporary-imperfection cleanup: Remove only temporary"
+  ],
+  "1488": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1490": [
+    "کافه لاکچری",
+    "Child Photo Luxury"
+  ],
+  "1494": [
+    "عکس",
+    "بدون تغییر در هویت فرد:پرتره فوتورئال عمودی اکستریم کلوزآپ"
+  ],
+  "1500": [
+    "دختر شبانه ساحلی",
+    "Girl Beach Night"
+  ],
+  "1501": [
+    "سلفی",
+    "Cat Selfie Photo"
+  ],
+  "1509": [
+    "عکس",
+    "Girl Photo"
+  ],
+  "1511": [
+    "عکس سینمایی",
+    "Photo Cinematic"
+  ],
+  "1515": [
+    "ادیت رنگ عکس",
+    "Cinematic Color"
+  ],
+  "1522": [
+    "ادیت رنگ بندی عکس",
+    "Golden Hour Vintage"
+  ],
+  "1525": [
+    "چهره ات بیشتر یادآور کدوم کشوره",
+    "Portrait Studio"
+  ],
+  "1528": [
+    "کلاسیک",
+    "Palm Portrait Cinematic"
+  ],
+  "1530": [
+    "عکس شبانه",
+    "Girl Photo Night"
+  ],
+  "1531": [
+    "عکس",
+    "Girl Photo Realistic"
+  ],
+  "1532": [
+    "گذر عمر یکی از جالب ترین پرامپتایی بود که ترند شد",
+    "Reate realistic aging with newborn roundness, childhood"
+  ],
+  "1533": [
+    "سینمایی",
+    "Girl Night Cinematic"
+  ],
+  "1534": [
+    "می تونه آنالیز رنگی کاملی از چهره ات انجام بده",
+    "Face Photo Color"
+  ],
+  "1536": [
+    "عکس",
+    "Face Photo"
+  ],
+  "1537": [
+    "عروس داماد",
+    "Place the groom extremely close to the camera in the left"
+  ],
+  "1538": [
+    "سلفی",
+    "Girl Selfie Portrait"
+  ],
+  "1542": [
+    "اکسسوری",
+    "Palm Studio Fashion"
+  ],
+  "1546": [
+    "عکس خیابانی",
+    "Full-body candid street photo outside a modern café"
+  ],
+  "1560": [
+    "ماشین",
+    "A candid, natural-light photograph captures a young woman"
+  ],
+  "1561": [
+    "کاپلی",
+    "Girl Selfie Portrait"
+  ],
+  "1570": [
+    "پرتره استودیویی",
+    "Cat Portrait Studio"
+  ],
+  "1571": [
+    "گربه لاکچری",
+    "Girl Portrait Photo"
+  ],
+  "1572": [
+    "وایب اسمت",
+    "Aesthetic Collage of Your Name Vibe"
+  ],
+  "1574": [
+    "پرتره",
+    "Face Portrait"
+  ],
+  "1600": [
+    "عروسک پارچه ای",
+    "Style: stop-motion LAIKA/Coraline aesthetic, soft felt"
+  ],
+  "1601": [
+    "اسپایدرزن و اسپایدرمن",
+    "Spider-Man Mirror Selfie Duo"
+  ],
+  "1606": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1607": [
+    "کف‌خوانی با عکس کف دست",
+    "Palm Reading From Your Hand Photo"
+  ],
+  "1610": [
+    "برنامه ورزشی (هم باشگاه هم خونه)",
+    "اینم متنی که باید پر کنی اسکرین شاتشو بدی جنسیت: سن: x سال"
+  ],
+  "1618": [
+    "هنر با چشم‌های واقعی",
+    "Iris Art From Real Eye Photos"
+  ],
+  "1629": [
+    "Prompt: Girl",
+    "Recreate the exact pose and composition from the reference:"
+  ],
+  "1630": [
+    "سلفی شبانه",
+    "Child Selfie Night"
+  ],
+  "1631": [
+    "خمیری",
+    "Absurdist Claymation Portrait"
+  ],
+  "1634": [
+    "کافیه این پرامپت رو به هوش مصنوعی بدی تا تصویرت بدون افت کیفیت، به هر ابعادی که بخوای تبدیل بشه",
+    "تا حالا شده یه عکس داشته باشی ولی اندازه ش برای استوری، پست"
+  ],
+  "1642": [
+    "کلیدآویز خیابانی",
+    "Woman Portrait Street"
+  ],
+  "1646": [
+    "پرتره",
+    "Man Portrait Photo"
+  ],
+  "1652": [
+    "عکس شبانه",
+    "Girl Photo Night"
+  ],
+  "1653": [
+    "عکس پرسنلی",
+    "Professional ID Photo Edit"
+  ],
+  "1658": [
+    "ترند جدید بچگی",
+    "Child Portrait Cinematic"
+  ],
+  "1661": [
+    "سلفی زنانه کلوزآپ",
+    "Female Close-Up Selfie"
+  ],
+  "1662": [
+    "پیکسل",
+    "Car Photo Anime"
+  ],
+  "1670": [
+    "پرتره سینمایی",
+    "Man Portrait"
+  ],
+  "1672": [
+    "اگه داخل انیمیشن inside out بودی احساس غالبت چی می شد",
+    "پرامپت اینسایداوت🏖🪄 Use my uploaded photo as the visual"
+  ],
+  "1673": [
+    "مدل مو",
+    "Hairstyle Photo Beach"
+  ],
+  "1674": [
+    "تبلیغ محصول",
+    "پرامپت تبلیغ لوکس محصول روی مدل ULTIMATE UNIVERSAL LUXURY"
+  ],
+  "1680": [
+    "افزایش کیفیت",
+    "Only allow subtle feature cleanup without altering who they"
+  ],
+  "1694": [
+    "مادر فرزند",
+    "Palm Portrait Photo"
+  ],
+  "1696": [
+    "دختر شبانه",
+    "Girl Night Evening"
+  ],
+  "1698": [
+    "عکس",
+    "یک پرتره عمودی واقع گرایانه از یک زن جوان شیک پوش در یک"
+  ],
+  "1699": [
+    "برنامه ورزشی از روی عکس بدنت",
+    "Workout Plan From Your Body Photo"
+  ],
+  "1700": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "1702": [
+    "عکس",
+    "He photographed in an atmospheric, lowlight setting"
+  ],
+  "1703": [
+    "پرتره فارغ‌التحصیلی",
+    "Graduation Story Portrait"
+  ],
+  "1704": [
+    "بازسازی عکسای قدیمی",
+    "Photo Realistic"
+  ],
+  "1705": [
+    "کاپل شبانه",
+    "Couple Photo Night"
+  ],
+  "1706": [
+    "پسرانه",
+    "Man Portrait Photo"
+  ],
+  "1712": [
+    "نور طلایی",
+    "Face Golden Hour Makeup"
+  ],
+  "1717": [
+    "رنگ مو",
+    "Goal: Showcase 12 different hair colors while strictly"
+  ],
+  "1729": [
+    "عکس استودیویی",
+    "Child Photo Studio"
+  ],
+  "1734": [
+    "پرتره",
+    "Eyes Portrait Photo"
+  ],
+  "1738": [
+    "واترمارک سیاه‌وسفید",
+    "(BOTH): Preserve each person's identity 100% exactly"
+  ],
+  "1750": [
+    "استایل",
+    "A vertical 3:4 smartphone-style photo: a woman is"
+  ],
+  "1751": [
+    "عکس",
+    "سوژه، ترکیب بندی و نورپردازی اصلی را بدون تغییر هویت یا"
+  ],
+  "1756": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1758": [
+    "عکس",
+    "سال تولد به (میلادی) ماه تولد به (میلادی) روز تولد : ساعت"
+  ],
+  "1766": [
+    "عکس لاکچری",
+    "Girl Studio Fashion"
+  ],
+  "1768": [
+    "کاپلی",
+    "Couple Portrait Photo"
+  ],
+  "1771": [
+    "مدل مو سیاه‌وسفید",
+    "My face must remain 100% recognizable"
+  ],
+  "1776": [
+    "کاپلی",
+    "Visible skin pores, tiny imperfections, natural lip"
+  ],
+  "1777": [
+    "مدل مو شبانه",
+    "Woman Photo Studio"
+  ],
+  "1780": [
+    "مدل مو سیاه‌وسفید",
+    "Eyes Portrait Fashion"
+  ],
+  "1782": [
+    "آیینه",
+    "Girl Selfie Photo"
+  ],
+  "1784": [
+    "عکس",
+    "Face Photo Realistic"
+  ],
+  "1787": [
+    "مدل مو شبانه",
+    "Girl Night Summer"
+  ],
+  "1790": [
+    "عکس وینتیج",
+    "Eyes Winter Snow"
+  ],
+  "1801": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1802": [
+    "عکس",
+    "Girl Photo Makeup"
+  ],
+  "1807": [
+    "قبل بعد چطوری یه عکس معمولی تبدیل به یه عکس مناسب برای سایت و اینستاگرام میشه",
+    "Product Lock: Use the uploaded product image as the ONLY"
+  ],
+  "1811": [
+    "پرتره",
+    "Girl Portrait Makeup"
+  ],
+  "1823": [
+    "لگویی",
+    "Ultra-realistic 3D image of an entire room completely made"
+  ],
+  "1824": [
+    "(sad)",
+    "Man Photo Mirror"
+  ],
+  "1829": [
+    "عکس",
+    "از تصویر مرجعِ بارگذاری شده تنها به عنوان مرجع هویت چهره"
+  ],
+  "1833": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1835": [
+    "پرتره",
+    "Woman Portrait Studio"
+  ],
+  "1837": [
+    "پرتره نور طلایی",
+    "Child Portrait Photo"
+  ],
+  "1839": [
+    "پرتره",
+    "Girl Photo Portrait"
+  ],
+  "1845": [
+    "عکسی که قراره همه جا بزاریش :)",
+    "Woman Portrait Photo"
+  ],
+  "1850": [
+    "سلفی",
+    "Girl Selfie"
+  ],
+  "1852": [
+    "چشای خودت و پارتنرت",
+    "Eyes Photo Night"
+  ],
+  "1854": [
+    "سلفی آینه‌ای شبانه",
+    "Palm Selfie Night"
+  ],
+  "1857": [
+    "پرتره مردانه",
+    "A man with wavy copper-red hair"
+  ],
+  "1859": [
+    "نوزادی",
+    "Child Photo Luxury"
+  ],
+  "1863": [
+    "عکس شبانه",
+    "Child Photo Night"
+  ],
+  "1864": [
+    "کاریکاتور بامزه خودت رو بساز",
+    "Portrait Color"
+  ],
+  "1865": [
+    "عکس آینه‌ای با حفظ چهره",
+    "Mirror Photo With Face Lock"
+  ],
+  "1867": [
+    "کاراکتر شیت",
+    "Eyes Portrait Studio"
+  ],
+  "1868": [
+    "عکس کاپلی",
+    "Couple Cinematic Close-Up"
+  ],
+  "1873": [
+    "معرفی محصول",
+    "Street Realistic"
+  ],
+  "1877": [
+    "عکس",
+    "Girl Photo"
+  ],
+  "1879": [
+    "فقط با یک عکس از محصول و یک پرامپت، عکس های حرفه ای و مناسب سایت بساز",
+    "Extract the product exactly as it appears in the original"
+  ],
+  "1881": [
+    "ساخت لوگو",
+    "Portrait & Poses"
+  ],
+  "1882": [
+    "عکس استودیویی",
+    "Girl Photo Studio"
+  ],
+  "1884": [
+    "رو بده به Ai تا همیشه محتوا رو جوری بنویسه که انگار یه آدم نوشته",
+    "<role> You're a skilled human writer who naturally connects"
+  ],
+  "1886": [
+    "پرتره",
+    "Child Portrait Photo"
+  ],
+  "1889": [
+    "پرتره",
+    "Woman Portrait Close-Up"
+  ],
+  "1891": [
+    "عکسِ رزومه ت رو شبیه مدیرعامل ها میکنه",
+    "Eyes Portrait Studio"
+  ],
+  "1894": [
+    "کاپل سیاه‌وسفید مدرن",
+    "Candid B&W Couple in a Modern Apartment"
+  ],
+  "1900": [
+    "سلفی شبانه در کابریولت",
+    "Evening Selfie in a Convertible"
+  ],
+  "1903": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "1904": [
+    "فانتزی",
+    "Fantasy & Art"
+  ],
+  "1905": [
+    "ساخت لوگو",
+    "Do Not Redesign Or Distort The Logo In Any Way Material:"
+  ],
+  "1907": [
+    "گرید سیاه‌وسفید",
+    "Woman Portrait Nature"
+  ],
+  "1909": [
+    "پوستر وینتیج",
+    "Position the subject in a dramatic side-profile portrait"
+  ],
+  "1912": [
+    "پرتره کلاژ",
+    "Eyes Portrait Collage"
+  ],
+  "1916": [
+    "مدل مو جنگلی",
+    "Girl Photo Nature"
+  ],
+  "1917": [
+    "کاپلی",
+    "Couple Selfie Studio"
+  ],
+  "1918": [
+    "تو در ۱۵ دهه تاریخی",
+    "You Through 15 Historical Decades"
+  ],
+  "1919": [
+    "عکس",
+    "پرترهٔ سینمایی فوق واقع گرایانه و تک رنگ از یک مرد جوان طبق"
+  ],
+  "1921": [
+    "اسب سیاه‌وسفید",
+    "{ \"image_generation_prompt\": { \"style\": \"Hyper-realistic"
+  ],
+  "1925": [
+    "عکس",
+    "Girl Photo"
+  ],
+  "1927": [
+    "پوستر وینتیج",
+    "Woman Night Evening"
+  ],
+  "1928": [
+    "بهت نشون میده که اگه گربه بودی چه شکلی میشدی و عکستو با همون گربه میسازه",
+    "Eyes Portrait"
+  ],
+  "1930": [
+    "عکس زاویه‌پایین",
+    "Palm Color"
+  ],
+  "1934": [
+    "من و اخلاق سگم",
+    "Recreate the scene as closely as possible to the provided"
+  ],
+  "1936": [
+    "دختر سینمایی",
+    "Girl Summer Cinematic"
+  ],
+  "1938": [
+    "مدل مو",
+    "A woman (use uploaded photo as face, hair reference), seen"
+  ],
+  "1941": [
+    "کله سوسیسی",
+    "3D Cartoon Character Portrait"
+  ],
+  "1945": [
+    "عکس",
+    "Girl Photo Realistic"
+  ],
+  "1947": [
+    "کودک شبانه",
+    "Child Night"
+  ],
+  "1948": [
+    "پوستت رو سیاه کن",
+    "Dark Skin Tone Transformation"
+  ],
+  "1951": [
+    "سلفی وینتیج",
+    "Girl Selfie Portrait"
+  ],
+  "1952": [
+    "دختر مناسب پروفایل",
+    "Reproduce the lighting pattern of the target reference"
+  ],
+  "1957": [
+    "حوزه Skincare",
+    "Hero Banner لوکس و سینمایی skincare: محصول سمت راست روی سنگ"
+  ],
+  "1959": [
+    "آشپزی",
+    "Girl Photo Realistic"
+  ],
+  "1961": [
+    "سلفی",
+    "Girl Selfie Portrait"
+  ],
+  "1967": [
+    "دختر استودیویی کلاژ",
+    "Girl Collage Studio"
+  ],
+  "1970": [
+    "پرتره",
+    "Eyes Portrait Photo"
+  ],
+  "1974": [
+    "کورالین",
+    "Cinematic horror fantasy atmosphere, warm tungsten elevator"
+  ],
+  "1975": [
+    "با موبایلت از محصولت عکس بگیر و کاتالوگیش کن",
+    "Studio Luxury"
+  ],
+  "1980": [
+    "کاپلی",
+    "Ultra-photorealistic vertical 9:16 black-and-white"
+  ],
+  "1982": [
+    "میتونی هر عکسی رو به یه پوستر مینیمال و لوکس تبدیل کنی",
+    "Photo Color"
+  ],
+  "1985": [
+    "عکس",
+    "A natural candid smartphone photo of a young woman standing"
+  ],
+  "1987": [
+    "دختر شبانه ساحلی",
+    "Girl Beach Night"
+  ],
+  "1989": [
+    "مدل مو",
+    "Hairstyle"
+  ],
+  "1992": [
+    "هر چیزیو که دوست داشتی دست نویس کن",
+    "فقط کافیه عکست رو آپلود کنی و در بخش Image اول متنت رو"
+  ],
+  "1997": [
+    "شیر ورژن مرد",
+    "Extreme close-up portrait, tight framing"
+  ],
+  "1999": [
+    "انیمه‌ای",
+    "Anime Style Edit"
+  ],
+  "2002": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "2005": [
+    "چطور از این عکسا درست کنیم؟! به راحتی",
+    "A Large Map, All Landmarks Set On A Vintage (IRAN) Map"
+  ],
+  "2006": [
+    "سینمایی",
+    "Eyes Night Cinematic"
+  ],
+  "2007": [
+    "پروفایل پسرونه",
+    "PRINT, FACE PARTIALLY HIDDEN, HANDS NEAR COLLAR, DRAMATIC"
+  ],
+  "2011": [
+    "چهرتو تحلیل میکنه و بهت پیشنهاد عینک افتابی مناسب صورتتو میده",
+    "نقش و هدف تصویر آپلودشده را به یک گزارش تصویری حرفه ای برای"
+  ],
+  "2014": [
+    "دوست داری همچین لوگوهای پشمالو و بامزه ای درست کنی",
+    "Cinematic"
+  ],
+  "2016": [
+    "عکس",
+    "Girl Photo Realistic"
+  ],
+  "2017": [
+    "عکس",
+    "What is the biggest lie I may be telling myself about my"
+  ],
+  "2029": [
+    "اینم یه پرامپت جذاب واسه کاپلای چنل",
+    "کافیه دوتا عکس از چشم خودتون + چشم پارتنر یا کسی که دوستش"
+  ],
+  "2034": [
+    "عکستو میدی به استایلت نمره میده",
+    "I will upload a photo of myself"
+  ],
+  "2036": [
+    "اصلاح پوست طبیعی",
+    "Natural Skin Retouch"
+  ],
+  "2038": [
+    "می تونی بفهمی خودت و دوستات به درد مسافرت رفتن می خورید یا نه",
+    "خودت تستش کن، بعد بفرست برای رفیقات تا اونا هم تست کنن؛"
+  ],
+  "2041": [
+    "نقشه تصویری غذای ایرانی",
+    "FOOD: [اسم غذا رو وارد کن] The food above is the only input"
+  ],
+  "2045": [
+    "هرعکسی رو تبدیل به یه پوستر سطح بالا میکنه",
+    "Please create a separate high-end design poster for each"
+  ],
+  "2050": [
+    "رنگ عکساتو حرفه ای ادیت کن",
+    "Color Realistic"
+  ],
+  "2054": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "2063": [
+    "عکساتو فیگور کن",
+    "Couple Photo Cinematic"
+  ],
+  "2065": [
+    "اگر سگ بودی چه شکلی می‌شدی",
+    "What Dog Breed Would You Be"
+  ],
+  "2071": [
+    "به عکسات درخشش بده",
+    "Fantasy & Art"
+  ],
+  "2080": [
+    "کافه ای",
+    "Palm Portrait Cinematic"
+  ],
+  "2084": [
+    "ادیت رنگ سینمایی",
+    "Nature & Travel"
+  ],
+  "2091": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "2095": [
+    "عکس کلاژ",
+    "Girl Photo Collage"
+  ],
+  "2096": [
+    "موزیک",
+    "Girl Portrait Night"
+  ],
+  "2100": [
+    "آیینه ای",
+    "No espelho ultrarrealista de uma jovem linda em ambiente"
+  ],
+  "2101": [
+    "اگه دوست نداری چهره خیلی مشخص باشه این خوراکه استوریاته",
+    "Child Selfie Photo"
+  ],
+  "2105": [
+    "خیابون",
+    "Realistic 3:4 photo"
+  ],
+  "2112": [
+    "پرتره سینمایی",
+    "Girl Portrait Cinematic"
+  ],
+  "2116": [
+    "عکس شبانه",
+    "Girl Photo Night"
+  ],
+  "2117": [
+    "عکس بچگی خودت و پارتنرتو اینطوری درست کن",
+    "Child Photo Night"
+  ],
+  "2122": [
+    "عکس لاکچری با حفظ چهره",
+    "Luxury Portrait Edit With Face Lock"
+  ],
+  "2124": [
+    "مدل مو نور طلایی",
+    "Face Evening Sunset"
+  ],
+  "2126": [
+    "مدل مو استودیویی",
+    "Face Portrait Studio"
+  ],
+  "2128": [
+    "مورد نیاز پسرا",
+    "Man Color"
+  ],
+  "2139": [
+    "این روزها iPhone 17 Pro، تحت عملیات شرکت سازنده قاب موبایل Rhino Shield، یک رکورد جهانی را به ثبت رساند",
+    "آنها iPhone 17 Pro را به ارتفاع ۳۰ هزار متری فرستادند، بعد"
+  ],
+  "2141": [
+    "پرتره گنگ استایل",
+    "Gangster-Style Selfie Portrait"
+  ],
+  "2146": [
+    "اصلاح رنگ و نور عکس",
+    "Nature & Travel"
+  ],
+  "2151": [
+    "کانتور و کانسیلر",
+    "Eyes Photo Makeup"
+  ],
+  "2154": [
+    "اگه موقع ساخت عکس، هر بار یه قیافه جدید بهتون می ده و عکساتون شبیه خودتون نیست، راه حلش ساختن Character Sheet از خودتونه",
+    "یه بار درست و اصولی می سازیش و بعد می تونی برای همه عکس هات"
+  ],
+  "2157": [
+    "پینترستی",
+    "پرامپت پینترستی • Analyze the uploaded photo first"
+  ],
+  "2164": [
+    "میتونی صداتو آنالیز کنی و ببینی از دید بقیه چجوری به نظر میرسی",
+    "ROLE You are an elite AI Voice Analyst, Public Speaking"
+  ],
+  "2165": [
+    "خانواده سیاه‌وسفید",
+    "Family Portrait Studio"
+  ],
+  "2173": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "2179": [
+    "جدیدا خیلی ترند شده",
+    "Palm Vintage Cinematic"
+  ],
+  "2181": [
+    "مدل مو جنگلی",
+    "Woman Portrait Color"
+  ],
+  "2184": [
+    "تبدیل به سبک GTA ۶",
+    "Transform Into GTA VI Style"
+  ],
+  "2188": [
+    "کلی اطلاعات جذاب از محصولت به مخاطب میده",
+    "از تصویر محصولی که آپلود کرده ام به عنوان سوژه اصلی استفاده"
+  ],
+  "2189": [
+    "عکس بچگیتو بفرس اینو تحویل بگیر",
+    "Face Photo"
+  ],
+  "2192": [
+    "عکس با موتور",
+    "Crie uma imagem minha [foto enviada em anexo] um retrato"
+  ],
+  "2196": [
+    "میتونی طرز تهیه وسایل هایی که درست میکنی رو مرتب رویه عکس پیاده کنی",
+    "یک اینفوگرافیک/بنر آموزشی عمودی فارسی با طراحی مدرن و"
+  ],
+  "2199": [
+    "ترند جدید مخصوص ماشین بازا؛",
+    "Wedding Portrait Color"
+  ],
+  "2203": [
+    "ی که عکساتو رویایی میکنه",
+    "First, intelligently analyze the scene and determine"
+  ],
+  "2208": [
+    "سینمایی",
+    "Girl Collage Cinematic"
+  ],
+  "2211": [
+    "ترند این روزا",
+    "Palm Vintage Color"
+  ],
+  "2214": [
+    "جدیدا خیلی ترند شده",
+    "Child Photo"
+  ],
+  "2220": [
+    "مخصوص عکس پروفایل فامیل",
+    "Child Photo"
+  ],
+  "2224": [
+    "کاراکتر اسکوبی دو",
+    "Velma from scooby-doo, beautiful charismatic girl, showing"
+  ],
+  "2228": [
+    "پسرونه جذاب",
+    "A young gym boy standing in the forest and ice falling"
+  ],
+  "2230": [
+    "کاریکاتوری رو به دوست ورزشکارت هدیه بده",
+    "Funny caricature, ultra-fit enthusiast caricature, adult"
+  ],
+  "2234": [
+    "پرتره خیابانی",
+    "Ultra-realistic vertical 9:16 street portrait"
+  ],
+  "2237": [
+    "برچسب فانتزی مدرسه",
+    "Family Portrait Photo"
+  ],
+  "2238": [
+    "نگین چسبوندن به هر چیزی",
+    "SUBJECT, COMPOSITION OR PHOTOGRAPHY"
+  ],
+  "2240": [
+    "یهویی",
+    "Girl Selfie Portrait"
+  ],
+  "2242": [
+    "عکساتو این مدلی استوری کن",
+    "Palm Anime"
+  ],
+  "2247": [
+    "مخصوص دخترا",
+    "A sophisticated young woman photographed in an elegant"
+  ],
+  "2254": [
+    "روزنامه ای: پسرونه",
+    "Man Portrait Collage"
+  ],
+  "2259": [
+    "مدل مو شبانه",
+    "Hairstyle Night Color"
+  ],
+  "2263": [
+    "پرتره استریتویر وینتیج",
+    "Vintage Streetwear Portrait"
+  ],
+  "2269": [
+    "مدل مو سینمایی",
+    "Face Portrait Cinematic"
+  ],
+  "2272": [
+    "یه استایل کابوی برای خودت بزن",
+    "An edgy conceptual portrait for an alternative fashion label"
+  ],
+  "2275": [
+    "مدل مو سیاه‌وسفید",
+    "Palm Cinematic Realistic"
+  ],
+  "2276": [
+    "پرتره وینتیج",
+    "A stylish young woman photographed in a sophisticated"
+  ],
+  "2277": [
+    "ماشین لاکچری",
+    "Man Portrait Photo"
+  ],
+  "300070": [
+    "کاپلی",
+    "Copyright-safe ultra-realistic black-and-white night"
+  ],
+  "300071": [
+    "گرانج توکیو کنار بی ام و",
+    "زن 4:5 ultra-realistic grunge-analog portrait of one young"
+  ],
+  "300072": [
+    ": یادداشت کاغذی زن",
+    "Young adult female transformed into a grotesque humorous"
+  ],
+  "300073": [
+    ": پرتره رازآلود زن: Vertical 9:16 cinematic portrait of one young adult female before a bright sheer-curtained window, built 100% from the unaltered facial features of the reference image; preserve the original face 100% exactly, hair unchanged. Black hoodie, thin chain necklace, white cloth blindfold fully covering both eyes. Low upward angle; blurred Polaroids float around her, evoking memory and time. Blue-teal natural/cinematic color grading, subtle haze, deep shadows, streaming window light, introspective mysterious mood, high-end cinematic photography, professional depth of field. STRICT FEMININE LOCK: elegant feminine styling only, graceful female outfit, soft feminine proportions, refined pose, tasteful feminine accessory, no masculine tailoring, no boxy menswear, no masculine body language, no facial or hair alteration. Gender expression comes only from outfit/styling/pose/body presentation; never alter identity/hair. Single person only, one subject, no extra people, no duplicate face, no cloned body; natural anatomy, realistic hands, realistic eyes, no distorted face, no extra fingers, no warped body; young adult only, not teenage or older adult; realistic skin texture, natural facial shadows, realistic lens rendering, no plastic skin, over-retouching, male-coded body language, facial modification, hair modification, or over-beautification. completely clean and soft background, smooth uniform gradient, no noise, no grain, no film grain, no sensor noise, no compression artifacts, no banding, perfectly smooth color transitions, extremely high and sharp image quality, soft clean bokeh, no noisy texture in the background مرد: Vertical 9:16 portrait of one young adult male before a sheer-curtained window, built 100% from the unaltered facial features of the reference image; preserve the original face 100% exactly, hair unchanged. Black hoodie, masculine chain, white cloth blindfold covering both eyes. Low upward angle; blurred Polaroids float around him, evoking memory and time. Blue-teal natural/cinematic color grading, haze, deep shadows, window light, high-end cinematic photography, professional depth of field. STRICT MASCULINE LOCK: strictly masculine styling only, menswear tailoring, structured shoulders, straighter silhouette, boxier fit, men’s fit, masculine proportions, sharp lines, minimal masculine accessory: metal watch OR signet ring OR thick chain, no feminine elements, no makeup. Grooming consistent with the reference image; keep facial hair if present; if not, clean-shaven. Gender expression comes only from outfit/styling/pose/body presentation; never alter identity/hair. Single person only, one subject, no extra people, no duplicate face, no cloned body; natural anatomy, realistic hands, realistic eyes, no distorted face, no extra fingers, no warped body; young adult, never teenage or older; realistic skin/shadows/lens rendering, no plastic skin or over-retouching; no lipstick, no eyeliner, no nail polish, no long manicured nails, no dress, no skirt, no corset, no lace lingerie vibe, no delicate jewelry, no handbag/purse, no feminine pose or feminine body language. completely clean and soft background, smooth uniform gradient, no noise, no grain, no film grain, no sensor noise, no compression artifacts, no banding, perfectly smooth color transitions, extremely high and sharp image quality, soft clean bokeh, no noisy texture in the background",
+    "اول بزن روی متن بالا تا کپی بشه"
+  ],
+  "300075": [
+    "بازسازی صحنه",
+    "Realistic Scene Recreation"
+  ],
+  "300076": [
+    "خفن برای کاپلا",
+    "A vintage-style photo booth strip featuring three warm"
+  ],
+  "300077": [
+    ": فیگور وینیل کلکسیونی زن",
+    "Premium collectible vinyl figure portrait of a young adult"
+  ],
+  "300078": [
+    ": پوستر موسیقی صورتی زن",
+    "Gen-Z music poster of a young adult female: uploaded-face"
+  ],
+  "300081": [
+    "بر اساس چهرتون بهتون میگه چه تایپ شخصیتی با توجه به صورتتون بهتون میخوره   پرامپتش",
+    "Eyes Photo Color"
+  ],
+  "300083": [
+    "خفن دخترونه",
+    "Ethereal medium-close-up portrait of a young woman"
+  ],
+  "300084": [
+    ": موتور سوار زن",
+    "Ultra-realistic DSLR portrait of one young adult female"
+  ],
+  "300088": [
+    "جدید زن",
+    "Moody aesthetic portrait of a young woman with long messy"
+  ],
+  "300089": [
+    "بهتون میگه اگه تو هر کشوری جز ایران بدنیا میومدید چه شکلی میشد قیافتون پرامپت",
+    "Eyes Collage Fashion"
+  ],
+  "300093": [
+    "عکساتونو تبدیل به پوستر های سال 1950 میکنه. پرامپت",
+    "Hand-painted gouache and oil painting style, retro American"
+  ],
+  "300095": [
+    "عکستونو مثله عکس سمت سمت راستی درست می کنه و میتونید استوری یا حتی پستش کنید   پرامپت",
+    "Palm Photo Color"
+  ],
+  "300097": [
+    "با بچه آینده ت سلفی بگیر پرامپت",
+    "Child Selfie Photo"
+  ],
+  "300098": [
+    "زن سیاه‌وسفید",
+    "B&W Cinematic Portrait of a Woman"
+  ],
+  "300099": [
+    "سلفی استودیویی",
+    "Face Selfie Portrait"
+  ],
+  "300100": [
+    "کاپلی",
+    "Family & Wedding"
+  ],
+  "300101": [
+    "خیلی به کارتون میاد میتونید باهاش عکس های 3 در 4 درست کنید و نیازی به آتلیه رفتن نداشته باشید مرد",
+    "عکس ۳×۲ پاسپورتی عکس رفرنس پاسپورتی ۳×۲ این عکس رو تبدیل کن"
+  ],
+  "300104": [
+    "مناسب واسه استوری و پست",
+    "Cat Cinematic Color"
+  ],
+  "300108": [
+    "دسته گل می زاره تو دستتون و خوراک پست و استوریه",
+    "A breathtakingly beautiful young woman taking a natural"
+  ],
+  "300113": [
+    "کاپلی",
+    "Single integrated couple illustration, young adult female"
+  ],
+  "300125": [
+    "کاپلی",
+    "Ultra-realistic intimate iPhone night-flash couple portrait"
+  ],
+  "300127": [
+    "نتیجه خیلی خوبی برای بازسازی عکس های قدیمی میده",
+    "Recover lost details, remove blur, reduce noise, repair"
+  ],
+  "300132": [
+    "خیلی کاربردی :   آنالیز فیس صورت و انتخاب بهترین مدل مو برا شما توسط هوش مصنوعی",
+    "Man Portrait Color"
+  ],
+  "300133": [
+    "هم خیلی ترند و وایرال شده بود یه مدت",
+    "Face Photo"
+  ],
+  "300136": [
+    "گل نور طلایی",
+    "Flowers Photo Beach"
+  ],
+  "300137": [
+    "پرتره سینمایی",
+    "Face Portrait Cinematic"
+  ],
+  "300141": [
+    "پوستر سینمایی",
+    "Realistic"
+  ],
+  "300142": [
+    "کاپلی",
+    "Ultra-realistic black-and-white studio couple portrait,"
+  ],
+  "300144": [
+    "اینجوریه که یه شات از پیجت میدی و این عکسو از پیجت میسازه که خیلی به درد کسب و کار های مجازی میاد",
+    "Place her standing confidently beside a giant 3D Instagram"
+  ],
+  "300152": [
+    "دختر",
+    "A woman ( use my upload image) in traditional 19th-century"
+  ],
+  "300154": [
+    "کاپلی",
+    "Ultra-realistic cozy mirror selfie of a young adult couple"
+  ],
+  "300155": [
+    "بهت نشون میده که چه پارتنری بهت میاد",
+    "Step 2: Design a partner • Create a complementary partner"
+  ],
+  "300157": [
+    "بهت میگه اگه تو شاهنامه بودی کدوم شخصیت می شدی",
+    "Hairstyle Mountain Cinematic"
+  ],
+  "300162": [
+    "کاپلی",
+    "Copyright-safe ultra-realistic modern wedding portrait,"
+  ],
+  "300167": [
+    "کاپلی زوج ترند این روز ها",
+    "Couple Selfie Photo"
+  ],
+  "300169": [
+    "کاپلی",
+    "Hyper-realistic, high-resolution photo of a young couple"
+  ],
+  "300171": [
+    "عکس",
+    "A room with pink decorations"
+  ],
+  "300173": [
+    "بهت میگه که اگه قرار بود یه آدم معروف دوست دختر یا دوست پسرت باشه اون آدم کی بود",
+    "Style: High-resolution, hyper-photorealistic candid"
+  ],
+  "300196": [
+    "عکس انیمه‌ای",
+    "Anime Cinematic"
+  ],
+  "300509": [
+    "مدل مو لاکچری",
+    "Hairstyle Portrait Cinematic"
+  ],
+  "300510": [
+    "مدل مو سیاه‌وسفید",
+    "Hairstyle Portrait Studio"
+  ],
+  "300511": [
+    "Prompt: اگه تو دنیای جادو بودی، کی میشدی؟ این پرامپت بهت میگه",
+    "Cat Photo Nature"
+  ],
+  "300512": [
+    "Prompt: Girl",
+    "Woman Color"
+  ],
+  "300528": [
+    "عکس",
+    "متن بالا رو کپی کنید و جای کلمه red باید کلمه انگلیسی هر"
+  ],
+  "300532": [
+    "پرتره",
+    "Portrait"
+  ],
+  "300533": [
+    "عکس وینتیج",
+    "Face Photo Night"
+  ],
+  "300534": [
+    "استایل",
+    "A Polaroid-style photograph of a boy and a girl posing"
+  ],
+  "300541": [
+    "Prompt: Girl",
+    "Caricature"
+  ],
+  "300553": [
+    "Prompt: Girl",
+    "Woman Portrait Realistic"
+  ],
+  "300557": [
+    "سلفی سینمایی",
+    "Selfie Cinematic"
+  ],
+  "300570": [
+    "Prompt: Girl",
+    "Caricature Portrait"
+  ],
+  "300573": [
+    "ماشین وینتیج",
+    "Woman Photo Night"
+  ],
+  "300579": [
+    "مدل مو سیاه‌وسفید",
+    "Car Cinematic Color"
+  ],
+  "300580": [
+    "مجسمه لاکچری",
+    "Portrait Fashion"
+  ],
+  "300586": [
+    "عکس",
+    "یک پرتره هنری و دراماتیک سیاه وسفید با استفاده از تکنیک"
+  ],
+  "300587": [
+    "پرتره شبانه",
+    "A powerful mafia boss walking down stone steps at night,"
+  ],
+  "300588": [
+    "واترمارک نئون",
+    "Palm Portrait Photo"
+  ],
+  "300591": [
+    "عکس",
+    "Girl Photo Realistic"
+  ],
+  "300594": [
+    "عکس",
+    "Una fotografía hiperrealista, vertical (9:16), estilo"
+  ],
+  "300596": [
+    "عکس",
+    "یک سلفی عمودی نزدیک (کلوزآپ) از یک زن و مرد جوان"
+  ],
+  "300598": [
+    "مرد سیاه‌وسفید",
+    "Man reclining in a chair, body angled to the right, head"
+  ],
+  "300599": [
+    "گل نئون",
+    "Woman Neon"
+  ],
+  "300601": [
+    "عکس استودیویی",
+    "Girl Photo Studio"
+  ],
+  "300610": [
+    "کاپل وینتیج",
+    "Couple Portrait Anime"
+  ],
+  "300611": [
+    "مدل مو لاکچری",
+    "Woman Portrait Cinematic"
+  ],
+  "300615": [
+    "عکس سینمایی",
+    "Girl Photo Color"
+  ],
+  "300664": [
+    "Prompt: اگه داخل انیمیشن inside out بودی احساس غالبت چی می شد",
+    "Photo Cinematic"
+  ],
+  "300684": [
+    "عکس",
+    "تصویری تمام قد یا نیم تنه از چهره موجود در عکس مرجع، با حفظ"
+  ],
+  "300689": [
+    "عکس",
+    "ظاهر را دقیقاً مطابق عکس آپلود شده، با نسبت ۱:۱ حفظ کنید:"
+  ],
+  "300692": [
+    "سلفی لاکچری",
+    "Couple Selfie Photo"
+  ],
+  "300694": [
+    "عکس",
+    "پرتره نمای نزدیک طبق عکس اپلود شده و حفظ کامل چهره بدون"
+  ],
+  "300695": [
+    "عکس",
+    "پرتره سینمایی فوق واقع گرایانه از یک زن جوان زیبا طبق عکس"
+  ],
+  "300696": [
+    "عکس",
+    "یک عکس با وضوح بالا طبق عکس رفرنس و حفظ چهره و قاب عمودی که"
+  ],
+  "300697": [
+    "عکس",
+    "یه عکس با کیفیت و طبیعی از رفرنس ارسال شده و حفظ چهره بدون"
+  ],
+  "300698": [
+    "عکس",
+    "پرتره سینمایی فوق واقع گرایانه از یک زن جوان خوش پوش که در"
+  ],
+  "300699": [
+    "عکس",
+    "نور طلایی غروب به آرامی روی زنی جوان با چهره ای طبق عکس"
+  ],
+  "300701": [
+    "عکس",
+    "از تصویر پیوست شده به عنوان مرجع چهره و ویژگی های ظاهری"
+  ],
+  "300702": [
+    "عکس",
+    "نوع درخواست: تصویر فوتورئالیستی عاشقانه در حال شنا نسخه: v1"
+  ],
+  "300703": [
+    "عکس",
+    "پرتره از پشت شانه (Over-the-Shoulder) از عکس طبق رفرنس که"
+  ],
+  "300704": [
+    "عکس",
+    "یک پرترهٔ فوتورئالیستی و سینمایی از یک زن جوان طبق عکس"
+  ],
+  "300738": [
+    "عکس",
+    "Girl Photo Makeup"
+  ],
+  "300760": [
+    "مدل مو سینمایی",
+    "Hairstyle Portrait Photo"
+  ],
+  "300795": [
+    "عکس وینتیج",
+    "BEDROOM.HE'S SITTING ON THE FLOOR IN FRONT OF THE TV"
+  ],
+  "300796": [
+    "مدل مو با حفظ چهره",
+    "Hairstyle Preview With Face Lock"
+  ],
+  "300804": [
+    "پرتره کلاژ",
+    "Paper-cut collage portrait using only the face"
+  ],
+  "300805": [
+    "عکس",
+    "Realistic"
+  ],
+  "300806": [
+    "پرتره وینتیج",
+    "VIBE: Y2K QUIRKY EDITORIAL, MTV ERA SKATE-MAG, SURREAL HUMOR"
+  ],
+  "300807": [
+    "پرتره پیکاسو-کاوایی",
+    "Picasso Meets Kawaii Illustration"
+  ],
+  "300810": [
+    "عکس سینمایی",
+    "[REFRENCE IMAGE] IN A CARICATURE STYLE, WITH EXAGGERATED"
+  ],
+  "300811": [
+    "مدل مو سینمایی",
+    "BEHIND HIM ON THE LEFT, TOM THE CARTOON CAT GIVES A BIG"
+  ],
+  "300815": [
+    "عکس",
+    "نمای کلوزآپ و بسیار نزدیک از چهره ی عکس رفرنس و حفظ هویت"
+  ],
+  "300819": [
+    "پرتره سینمایی",
+    "Eyes Portrait Cinematic"
+  ],
+  "300821": [
+    "کلاژ سیاه‌وسفید",
+    "Palm Collage"
+  ],
+  "300834": [
+    "واترمارک خیابانی",
+    "Palm Street Cinematic"
+  ],
+  "300942": [
+    "پرتره وینتیج",
+    "Man Portrait Fall"
+  ],
+  "301220": [
+    "پاییزی",
+    "Girl Photo Night"
+  ],
+  "301221": [
+    "طبیعت",
+    "Girl Photo Nature"
+  ],
+  "301222": [
+    "عکس لاکچری",
+    "Night Vintage"
+  ],
+  "301223": [
+    "عکس نور طلایی",
+    "Girl Photo Golden Hour"
+  ],
+  "301224": [
+    "دختر شبانه",
+    "Girl Night"
+  ],
+  "301225": [
+    "سلفی",
+    "Girl Selfie Photo"
+  ],
+  "301226": [
+    "عکس نور طلایی",
+    "Face Beach Sunset"
+  ],
+  "301227": [
+    "نور طلایی",
+    "Girl Portrait Photo"
+  ],
+  "301228": [
+    "عکس",
+    "Palm Photo Summer"
+  ],
+  "301229": [
+    "دختر نور طلایی",
+    "Girl Evening Sunset"
+  ],
+  "301230": [
+    "عکس شبانه",
+    "Child Photo Night"
+  ],
+  "301231": [
+    "پرتره شبانه",
+    "Girl Portrait Night"
+  ],
+  "301232": [
+    "عکس شبانه",
+    "Girl Photo Night"
+  ],
+  "301233": [
+    "عکس خیابانی",
+    "Girl Photo Street"
+  ],
+  "301234": [
+    "سلفی نئون",
+    "Eyes Selfie Neon"
+  ],
+  "301238": [
+    "دختر وینتیج",
+    "Girl Photo Night"
+  ],
+  "301241": [
+    "عروسی وینتیج",
+    "Motorcycle Anime Cinematic"
+  ],
+  "301242": [
+    "کاپل استودیویی",
+    "{ \"task_configuration\": { \"task_type\":"
+  ],
+  "301243": [
+    "واترمارک سیاه‌وسفید",
+    "Woman Portrait Photo"
+  ],
+  "301246": [
+    "پرتره نور طلایی",
+    "Girl Sunset Portrait"
+  ],
+  "301248": [
+    "سینمایی",
+    "Girl Portrait Photo"
+  ],
+  "301249": [
+    "سلفی ساحلی",
+    "Hairstyle Selfie Beach"
+  ],
+  "301265": [
+    "لاکچری",
+    "Girl Portrait Photo"
+  ],
+  "301267": [
+    "لاکچری",
+    "Girl Beach Night"
+  ],
+  "301271": [
+    "پرتره",
+    "Girl Portrait Photo"
+  ],
+  "301276": [
+    "پسر شبانه",
+    "Man Night Close-Up"
+  ],
+  "301282": [
+    "مدل مو شبانه",
+    "Hairstyle Night Summer"
+  ],
+  "301285": [
+    "گربه لاکچری",
+    "Girl Selfie Portrait"
+  ],
+  "301291": [
+    "عکس",
+    "Photo Fall"
+  ],
+  "301298": [
+    "پوستر نئون",
+    "Car Street Night"
+  ],
+  "301299": [
+    "عکس",
+    "با استفاده از عکس مرجع، چهره را دقیقاً همان طور که هست حفظ"
+  ],
+  "301300": [
+    "عکس",
+    "کلاژی از چهار پرتره سیاه وسفید از یک دختر طبق عکس رفرنس و"
+  ],
+  "301301": [
+    "عکس خیابانی",
+    "Girl Photo Street"
+  ],
+  "301306": [
+    "گربه سینمایی",
+    "Cat Cinematic Realistic"
+  ],
+  "301308": [
+    "خیابانی",
+    "Girl Photo Street"
+  ],
+  "301313": [
+    "عکس",
+    "Girl Photo Realistic"
+  ],
+  "600078": [
+    "کاپلی یلدایی",
+    "Couple Portrait Photo"
+  ],
+  "600083": [
+    "پسرانه و دخترانه پرامپت دختر",
+    "BLAZER, HEAD TURNS TO THE RIGHT, INTENSIVE GAZE, WARM HIGH"
+  ],
+  "600085": [
+    "دخترانه و پسرانه یلدایی دخترانه",
+    "Ultra-realistic 8K warm Yalda night portrait built 100%"
+  ],
+  "600087": [
+    "شبیه کدوم کاراکتری",
+    "Face Selfie Photo"
+  ],
+  "600090": [
+    "عکس به صورت نقاشی",
+    "Palm Anime"
+  ],
+  "905636": [
+    "کاریکاتور",
+    "3D Caricature of a Celebrity"
+  ],
+  "905638": [
+    "عکس",
+    "یک تصویرسازی ساده سیاه و سفید از یک [موضوع] با [لباس]، در"
+  ],
+  "905640": [
+    "مناسب برای تولید محتوا از فروش محصولتون",
+    "[product], high-end product advertising, white seamless"
+  ],
+  "905646": [
+    "ادیت با عکس مرجع",
+    "Photo Edit With Face Reference"
+  ],
+  "905647": [
+    "مدل مو نور طلایی",
+    "1： Transform the photo into a cozy botanical illustration"
+  ],
+  "905669": [
+    "آماده!  کافیست عکس تون رو همراه با این پرامپت برای هوش مصنوعی ارسال کنید  روی پرامپت کلیک کنید تا کپی شود",
+    "Eyes Portrait Photo"
+  ],
+  "905670": [
+    "زنانه",
+    "Woman Portrait Photo"
+  ],
+  "905733": [
+    "دخترونه",
+    "Girl Portrait Photo"
+  ],
+  "905778": [
+    "پسرونه  مخصوص عکس پروفایل  فقط کافیه عکس خودتون رو به همراه پرامپت زیر برای هوش مصنوعی ارسال کنید حتما تست کنید عالی میشه",
+    "A hyper-realistic, highly detailed black-and-white night"
+  ],
+  "905798": [
+    "کاپلی",
+    "A cinematic overhead street photo of a young couple walking"
+  ],
+  "905799": [
+    "دخترونه",
+    "Only one expressive eye is visible, softly emerging through"
+  ],
+  "905800": [
+    "در غروب آفتاب",
+    "A young woman with warm brown eyes and soft, natural"
+  ],
+  "905802": [
+    "کاپلی لب دریا",
+    "Couple Realistic"
+  ],
+  "905803": [
+    "پسرونه",
+    "Ultra-realistic street style portrait of a young"
+  ],
+  "905811": [
+    "مخصوص بک گراند محصول مناسب آنلاین شاپ ها",
+    "Studio shot of the product shown in the reference image,"
+  ],
+  "905820": [
+    "عکس داخل استودیو عکاسی",
+    "A professional studio portrait of a young woman with long,"
+  ],
+  "905823": [
+    "دخترونه سیاه سفید",
+    "A professional black and white studio portrait of a young"
+  ],
+  "905824": [
+    "پسرونه",
+    "Portrait Studio"
+  ],
+  "905827": [
+    "کاپلی سبک دوربینای قدیمی",
+    "Inside the Polaroid, show Subject 1 (adult male) slightly"
+  ],
+  "905828": [
+    "طبیعت گردی",
+    "Photography of a rugged athletic man with short dark hair"
+  ],
+  "905831": [
+    "دخترونه تو کافه جنگلی",
+    "She wears an oversized white off-shoulder shirt, soft wavy"
+  ],
+  "905832": [
+    "دخترونه شیک",
+    "A cinematic medium close-up portrait of a gorgeous young"
+  ],
+  "905833": [
+    "پرتره لایف‌استایل سینمایی",
+    "Cinematic Lifestyle Portrait"
+  ],
+  "905835": [
+    "عکس استودیویی",
+    "A professional studio portrait of a young woman with long,"
+  ],
+  "905846": [
+    "خوبم تو طبیعت بزاریم",
+    "A stunning vertical 9:16 composite photograph that"
+  ],
+  "905876": [
+    "مردونه سیاه سفید",
+    "Ultra-realistic cinematic black-and-white editorial"
+  ],
+  "_note": "id -> [title_fa, title_en, category_override?]. Authored by hand from prompt bodies."
 }

@@ -10,8 +10,12 @@
   <meta property="og:url" content="https://mohsen-niksirat.github.io/promptopia/">
   <!-- Google Search Console: uncomment and paste your verification token, e.g.
   <meta name="google-site-verification" content="YOUR_TOKEN_HERE"> -->
-  <!-- Privacy-friendly stats (GoatCounter, no cookies): create a free site at goatcounter.com,
-       then replace YOUR-CODE below with your site code (the xxx in https://xxx.goatcounter.com) -->
+  <!-- Privacy-friendly stats (GoatCounter, no cookies):
+       1. Create a free site at https://www.goatcounter.com/signup
+       2. Enter your live domain (e.g. mohsen-niksirat.github.io)
+       3. Replace YOUR-CODE below with your site code (the xxx in https://xxx.goatcounter.com/count)
+       Hash-route views (#p<id> / #s-<cat>-page-N) are counted separately.
+       Note: GoatCounter excludes localhost by default, so it only fires on the deployed site. -->
   <script>window.GOATCOUNTER_SITE = 'https://YOUR-CODE.goatcounter.com/count';</script>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
@@ -24,7 +28,7 @@
   <meta property="og:image" content="assets/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body>
   <div class="aurora" aria-hidden="true">
@@ -74,26 +78,37 @@
         <a class="btn btn-ghost" href="https://chatgpt.com/" target="_blank" rel="noopener" data-i18n="tryChatgpt">چت‌جی‌پی‌تی</a>
       </div>
       <div class="hero-cta">
-        <a class="btn btn-ghost" href="#gallery" data-i18n="browse">دیدن گالری</a>
+        <a class="btn btn-ghost" href="#categoryNav" data-i18n="browse">دیدن گالری</a>
       </div>
       <div class="hero-stats" id="heroStats"></div>
+      <div class="daily" id="dailyBox" hidden></div>
     </section>
 
     <section class="gallery-section wrap" id="gallery">
+      <nav class="category-nav" id="categoryNav" aria-label="Categories"></nav>
       <div class="toolbar" data-reveal>
         <label class="search">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <input id="searchInput" type="search" autocomplete="off" data-i18n-ph="search" placeholder="جستجو در پرامپت‌ها…">
         </label>
-        <div class="chips" id="chips" role="tablist" aria-label="Categories"></div>
         <select id="sortSelect" class="select" aria-label="Sort">
           <option value="new" data-i18n="sortNew">جدیدترین</option>
           <option value="old" data-i18n="sortOld">قدیمی‌ترین</option>
         </select>
+        <button class="btn btn-ghost btn-sm dice-btn" id="randomBtn" type="button">
+          <span class="dice" aria-hidden="true">🎲</span>
+          <span data-i18n="random">پرامپت تصادفی</span>
+        </button>
+        <button class="icon-btn" id="favExport" type="button" aria-label="Export favorites">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" id="favImport" type="button" aria-label="Import favorites">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-5 5 5-5 5 5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <input type="file" id="favFile" accept="application/json,.json" hidden>
       </div>
       <div class="count" id="resultCount"></div>
-      <div class="grid" id="grid"></div>
-      <nav class="pagination" id="pagination" aria-label="Pagination"></nav>
+      <div id="sections"></div>
       <div class="empty" id="emptyBox" hidden>
         <div class="empty-emoji" aria-hidden="true">🔍</div>
         <p data-i18n="empty">چیزی پیدا نشد.</p>
@@ -206,10 +221,10 @@
       }, 800);
     })();
   </script>
-  <!-- ?v=7: cache-busting — bump together with sw.js VERSION on every release so
+  <!-- ?v=12: cache-busting — bump together with sw.js VERSION on every release so
        stale service-worker/caches never serve old code to returning visitors -->
-  <script src="data/prompts.js?v=7"></script>
-  <script src="js/i18n.js?v=7"></script>
-  <script src="js/app.js?v=7"></script>
+  <script src="data/prompts.js?v=12"></script>
+  <script src="js/i18n.js?v=12"></script>
+  <script src="js/app.js?v=12"></script>
 </body>
 </html>

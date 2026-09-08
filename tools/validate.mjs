@@ -30,11 +30,13 @@ if (data) {
       hand-curated text prompts live in tools/text-prompts.json) */
 const curation = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'curation.json'), 'utf8'));
 let textCount = 0;
+let textIds = new Set();
 try {
   const tp = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'text-prompts.json'), 'utf8'));
   textCount = (tp.prompts || []).length;
+  textIds = new Set((tp.prompts || []).map((p) => p.id));
 } catch { /* missing/malformed file -> textCount stays 0 */ }
-const photoCount = data ? data.prompts.filter((p) => p.id < 20000).length : 0;
+const photoCount = data ? data.prompts.filter((p) => !textIds.has(p.id)).length : 0;
 if (data && curation.selected.length !== photoCount) {
   fail(`curation.json has ${curation.selected.length} ids but data has ${photoCount} photo prompts (+ ${textCount} text prompts) — re-run build`);
 } else if (data) ok(`curation count matches data (${photoCount} photos + ${textCount} text)`);
@@ -71,6 +73,22 @@ try {
 for (const f of ['robots.txt', 'sitemap.xml', 'manifest.webmanifest', 'sw.js', '.nojekyll', 'index.html']) {
   if (fs.existsSync(path.join(ROOT, f))) ok(`present: ${f}`);
   else fail(`missing: ${f}`);
+}
+
+/* 7. cache-bust version in index.html matches sw.js VERSION */
+try {
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const sw = fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8');
+  const htmlVs = [...html.matchAll(/\?v=(\d+)/g)].map((m) => Number(m[1]));
+  const swV = /promptopia-v(\d+)/.exec(sw);
+  const swVs = [...sw.matchAll(/\?v=(\d+)/g)].map((m) => Number(m[1]));
+  if (!htmlVs.length || !swV) fail('cache-bust version markers missing');
+  else if (new Set(htmlVs).size > 1) fail(`inconsistent ?v= values in index.html: ${htmlVs.join(', ')} — run node tools/bump.mjs`);
+  else if (htmlVs[0] !== Number(swV[1])) fail(`index.html uses ?v=${htmlVs[0]} but sw.js VERSION is v${swV[1]} — run node tools/bump.mjs`);
+  else if (!swVs.length || new Set(swVs).size > 1 || swVs[0] !== htmlVs[0]) fail(`sw.js CORE cache-bust (${swVs.join(', ')}) differs from index.html ?v=${htmlVs[0]} — run node tools/bump.mjs`);
+  else ok(`cache-bust ?v=${htmlVs[0]} matches sw.js VERSION + CORE`);
+} catch (e) {
+  fail('could not read version markers: ' + e.message);
 }
 
 console.log(errors ? `\n✗ ${errors} problem(s) found` : '\n✓ all checks passed');

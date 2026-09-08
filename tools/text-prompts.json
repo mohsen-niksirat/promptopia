@@ -6,15 +6,24 @@
       "cat": "writing",
       "catFa": "نویسندگی",
       "catEn": "Writing",
-      "t": { "fa": "داستان کوتاه بنویس", "en": "Write a Short Story" },
+      "t": {
+        "fa": "داستان کوتاه بنویس",
+        "en": "Write a Short Story"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: نویسنده داستان کوتاه حرفه‌ای.\nوظیفه: یک داستان کوتاه درباره [موضوع/ایده] بنویس.\nخروجی:\n- ۸۰۰ تا ۱۲۰۰ کلمه\n- عنوانی جذاب برای داستان\n- سه بخش: شروع با یک اتفاق یا جزئیات گیرا، میانه با یک کشمکش مشخص (درونی یا بیرونی)، پایان با یک چرخش یا جمع‌بندی احساسی\n- حداقل یک شخصیت اصلی با انگیزه و ضعف مشخص\n- دیالوگ طبیعی و توصیف‌های حسی (نه فقط ظاهری)\nنکات:\n- لحن متناسب با ژانر [درام/معمایی/رمانتیک/ترسناک] باشد\n- از کلیشه و جمله‌های تکراری دوری کن\n- اگر بخواهم، ادامه داستان را در بخش‌های بعدی بنویس"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a professional short-story writer.\nTask: write a short story about [topic/idea].\nOutput:\n- 800–1200 words\n- A compelling title\n- Three parts: an opening hook with vivid detail, a middle with a clear conflict (inner or outer), and an ending with a twist or emotional payoff\n- At least one main character with a clear motivation and flaw\n- Natural dialogue and sensory descriptions, not just visual ones\nRules:\n- Match the tone of the [genre: drama/mystery/romance/horror]\n- Avoid clichés and repetitive phrasing\n- If I ask, continue the story in follow-up messages"
         }
       ]
@@ -24,15 +33,24 @@
       "cat": "writing",
       "catFa": "نویسندگی",
       "catEn": "Writing",
-      "t": { "fa": "رمان ناتمام را تمام کن", "en": "Finish an Unfinished Novel" },
+      "t": {
+        "fa": "رمان ناتمام را تمام کن",
+        "en": "Finish an Unfinished Novel"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: ویراستار و نویسنده همکار که قرار است رمانی ناتمام را به سرانجام برساند.\nوظیفه: متن [بخش نوشته‌شده رمان] را بخوان و:\n- سبک، لحن، ریتم و زاویه دید نویسنده را دقیق تحلیل کن\n- خلاصه‌ای از داستان تا اینجا و شخصیت‌ها بده\n- سه مسیر احتمالی برای ادامه با نقاط قوت و ریسک هرکدام پیشنهاد بده\n- سپس ادامه را از جایی که متن قطع شده، در همان سبک بنویس\nخروجی:\n- بخش تحلیل (حداکثر ۳۰۰ کلمه)\n- ادامه داستان حداقل ۱۰۰۰ کلمه، هم‌خوان با شخصیت‌ها و اتفاقات قبلی\nنکته: اگر پایان بندی مشخصی در ذهن داری، بگو تا همان را هدف بگیرم."
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a collaborating editor tasked with finishing an unfinished novel.\nTask: read the [written part of the novel] and:\n- Analyze the author's style, tone, rhythm and point of view precisely\n- Summarize the story so far and the characters\n- Propose three possible directions for continuing, with the strengths and risks of each\n- Then continue the story from where it stopped, in the same style\nOutput:\n- Analysis section (max 300 words)\n- At least 1000 words of continuation consistent with the existing characters and events\nNote: if you have a specific ending in mind, tell me so I can aim for it."
         }
       ]
@@ -42,15 +60,24 @@
       "cat": "writing",
       "catFa": "نویسندگی",
       "catEn": "Writing",
-      "t": { "fa": "اسکریپت ویدیو بنویس", "en": "Write a Video Script" },
+      "t": {
+        "fa": "اسکریپت ویدیو بنویس",
+        "en": "Write a Video Script"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: فیلم‌نامه‌نویس ویدیوهای آموزشی/یوتیوب.\nوظیفه: یک اسکریپت کامل برای ویدیویی درباره [موضوع] با مدت [مثلاً ۸ دقیقه] بنویس.\nخروجی:\n- تیتر جذاب و سه ایده برای عنوان ویدیو\n- هُک شروع (۱۰-۱۵ ثانیه اول که مخاطب را نگه دارد)\n- اسکریپت خط‌به‌خط با زمان‌بندی هر بخش\n- بخش‌بندی به سکانس‌ها: مقدمه، بدنه (۲-۳ ایده اصلی)، جمع‌بندی و کال تو اکشن\n- برای هر سکانس: متن گوینده + توضیح تصویر/گرافیک روی صفحه\n- یک جمله چکیده که بیننده بعد از ویدیو به خاطر بسپارد\nنکات:\n- لحن صمیمی و ساده، جملات کوتاه مناسب گفتار\n- از اصطلاحات تخصصی بی‌توضیح پرهیز کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a scriptwriter for educational/YouTube videos.\nTask: write a complete script for a video about [topic] with a runtime of [e.g. 8 minutes].\nOutput:\n- A catchy headline and three title ideas\n- A cold open (first 10–15 seconds that keeps the viewer)\n- A line-by-line script with timing for each section\n- Segments: intro, body (2–3 core ideas), summary and a call to action\n- For each segment: narrator text + on-screen visual/graphic description\n- One takeaway sentence the viewer should remember after the video\nRules:\n- Friendly, simple tone with short sentences suited to speech\n- Avoid unexplained jargon"
         }
       ]
@@ -60,15 +87,24 @@
       "cat": "writing",
       "catFa": "نویسندگی",
       "catEn": "Writing",
-      "t": { "fa": "شعر سفارشی بساز", "en": "Compose a Custom Poem" },
+      "t": {
+        "fa": "شعر سفارشی بساز",
+        "en": "Compose a Custom Poem"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: شاعر معاصر.\nوظیفه: شعری درباره [موضوع/احساس/مناسبت] برای [مخاطب/هدیه‌دهنده] بسرای.\nخروجی:\n- ۸ تا ۱۶ بیت (یا بر اساس قالب درخواستی)\n- انتخاب قالب: آزاد، نیمایی یا کلاسیک — اگر مشخص نکردی، متناسب با موضوع انتخاب کن\n- حداقل دو تصویر شاعرانه (تشبیه یا استعاره) مرتبط با موضوع\n- وزن و قافیه روان بدون قافیه‌های اجباری و تکراری\n- پایان‌بندی با یک بیت ماندگار\nنکات:\n- حس و لحن شعر با مناسبت هماهنگ باشد\n- از شعرهای معروف تقلید نکن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a contemporary poet.\nTask: compose a poem about [topic/feeling/occasion] for [audience/recipient].\nOutput:\n- 8–16 lines (or follow the requested form)\n- Choose the form: free verse, blank verse or structured — pick what fits the topic if not specified\n- At least two poetic images (simile or metaphor) tied to the theme\n- Smooth rhythm and rhyme without forced or repetitive rhymes\n- End with a memorable closing line\nRules:\n- The mood of the poem should match the occasion\n- Do not imitate famous poems"
         }
       ]
@@ -78,15 +114,24 @@
       "cat": "coding",
       "catFa": "کدنویسی",
       "catEn": "Coding",
-      "t": { "fa": "باگ را پیدا و رفع کن", "en": "Find and Fix a Bug" },
+      "t": {
+        "fa": "باگ را پیدا و رفع کن",
+        "en": "Find and Fix a Bug"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: مهندس نرم‌افزار ارشد و اشکال‌زدایی حرفه‌ای.\nوظیفه: کد زیر را که [توضیح مشکل/خطا] دارد بررسی کن:\n[kد کد اینجا]\nخروجی:\n۱. تشخیص: ریشه مشکل در کدام بخش و چرا (تحلیل علت، نه فقط علائم)\n۲. راه‌حل پیشنهادی: کد اصلاح‌شده به‌همراه توضیح تغییرات\n۳. پیشگیری: چه تستی یا چه تغییری از بازگشت این باگ جلوگیری می‌کند\nنکات:\n- اگر خطا خاصی داری، متن کامل خطا را هم بده\n- اگر زبان/فریم‌ورک مشخص است بگو تا راه‌حل متناسب باشد\n- کد را کامل و قابل کپی برگردان، نه فقط تکه‌های تغییر"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a senior software engineer and professional debugger.\nTask: examine the code below that has [problem/error description]:\n[PASTE CODE HERE]\nOutput:\n1. Diagnosis: where the root cause is and why (root-cause analysis, not just symptoms)\n2. Proposed fix: corrected code with an explanation of the changes\n3. Prevention: what test or change stops this bug from coming back\nRules:\n- If you have a specific error, include the full error message\n- State the language/framework so the fix matches your stack\n- Return complete, copy-pasteable code, not just snippets"
         }
       ]
@@ -96,15 +141,24 @@
       "cat": "coding",
       "catFa": "کدنویسی",
       "catEn": "Coding",
-      "t": { "fa": "کد را ریفکتور کن", "en": "Refactor This Code" },
+      "t": {
+        "fa": "کد را ریفکتور کن",
+        "en": "Refactor This Code"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: معمار نرم‌افزار.\nوظیفه: کد زیر را بازسازی (ریفکتور) کن بدون اینکه رفتار آن تغییر کند:\n[کد اینجا]\nاهداف:\n- خوانایی: نام‌گذاری معنادار متغیرها و توابع\n- سادگی: حذف تکرار و کاهش پیچیدگی (چند توابع تودرتو را ساده کن)\n- قابلیت تست: جداسازی منطق خالص از وابستگی‌های بیرونی\nخروجی:\n- کد ریفکتورشده کامل و قابل کپی\n- فهرست تغییرات: هر تغییر در یک خط با دلیل\n- اگر شکستی احتمالی در رفتار وجود دارد، هشدار بده\nنکته: اگر فریم‌ورک یا نسخه زبان را مشخص کنی، راه‌حل دقیق‌تر می‌شود."
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a software architect.\nTask: refactor the code below without changing its behavior:\n[PASTE CODE HERE]\nGoals:\n- Readability: meaningful variable and function names\n- Simplicity: remove duplication and reduce complexity (simplify deeply nested functions)\n- Testability: separate pure logic from external dependencies\nOutput:\n- Complete, copy-pasteable refactored code\n- A change list: each change on one line with a reason\n- Flag any potential behavioral breakage\nNote: specifying the framework or language version gives a more precise result."
         }
       ]
@@ -114,15 +168,24 @@
       "cat": "coding",
       "catFa": "کدنویسی",
       "catEn": "Coding",
-      "t": { "fa": "تابع/کامپوننت بساز", "en": "Build a Function or Component" },
+      "t": {
+        "fa": "تابع/کامپوننت بساز",
+        "en": "Build a Function or Component"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: توسعه‌دهنده فول‌استک.\nوظیفه: یک [تابع/کامپوننت/کلاس] در زبان [زبان/فریم‌ورک] بساز که [شرح دقیق خواسته] را انجام دهد.\nخروجی:\n- کد کامل و آماده استفاده\n- امضای ورودی/خروجی مشخص (پارامترها، نوع و خروجی)\n- مدیریت خطا و حالت‌های مرزی (ورودی خالی، مقدار نامعتبر و…)\n- مثال استفاده: یک نمونه فراخوانی/استفاده واقعی با خروجی نمونه\n- توضیح یک‌خطی هر بخش مهم کد\nنکات:\n- از کتابخانه‌های غیرضروری استفاده نکن؛ اگر لازم است، نامش را بگو\n- اگر وابستگی دیگری لازم است، راهنمای نصب بده\n- کد را با بهترین شیوه‌های آن زبان بنویس"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a full-stack developer.\nTask: build a [function/component/class] in [language/framework] that does [detailed description of the requirement].\nOutput:\n- Complete, ready-to-use code\n- A clear input/output signature (parameters, types and return value)\n- Error handling and edge cases (empty input, invalid values, etc.)\n- A usage example: one real call/use with sample output\n- A one-line explanation for each important part of the code\nRules:\n- Avoid unnecessary libraries; if one is needed, name it\n- If extra dependencies are required, provide install instructions\n- Follow the language's best practices"
         }
       ]
@@ -132,15 +195,24 @@
       "cat": "coding",
       "catFa": "کدنویسی",
       "catEn": "Coding",
-      "t": { "fa": "کد را مستند کن", "en": "Document This Code" },
+      "t": {
+        "fa": "کد را مستند کن",
+        "en": "Document This Code"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: تک‌نویس فنی.\nوظیفه: کد زیر را مستندسازی کن:\n[کد اینجا]\nخروجی:\n- کامنت‌های کوتاه و هدفمند روی بخش‌های غیربدیهی (چرا، نه چی)\n- برای هر تابع/کلاس: شرح، پارامترها، خروجی و مثال استفاده\n- فایل README کوتاه شامل: معرفی، نصب/راه‌اندازی، مثال استفاده و عیب‌یابی رایج\n- اگر کد پایگاه داده/API دارد، مستندات نقاط اتصال را هم بنویس\nنکات:\n- کامنت‌ها به زبان [فارسی/انگلیسی] نوشته شوند\n- از مستندسازی تزئینی و اضافه پرهیز کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a technical writer.\nTask: document the code below:\n[PASTE CODE HERE]\nOutput:\n- Short, purposeful comments on non-obvious parts (explain why, not what)\n- For each function/class: description, parameters, return value and a usage example\n- A short README: introduction, install/setup, usage example and common troubleshooting\n- If the code touches a database/API, document the integration points too\nRules:\n- Comments should be in [Persian/English]\n- Avoid decorative or redundant documentation"
         }
       ]
@@ -150,15 +222,24 @@
       "cat": "marketing",
       "catFa": "مارکتینگ و کپی‌رایتینگ",
       "catEn": "Marketing & Copywriting",
-      "t": { "fa": "کپشن اینستاگرام بنویس", "en": "Write an Instagram Caption" },
+      "t": {
+        "fa": "کپشن اینستاگرام بنویس",
+        "en": "Write an Instagram Caption"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: کپی‌رایتر شبکه‌های اجتماعی.\nوظیفه: برای [نوع پست: محصول/معرفی/آموزش/مسابقه/خبر] درباره [موضوع/محصول] کپشن اینستاگرام بنویس.\nخروجی:\n- ۳ نسخه با لحن‌های متفاوت: صمیمی، حرفه‌ای و طنز/دوستانه\n- هر نسخه شامل: متن اصلی (۳-۵ خط)، هشتگ‌های مرتبط (۵-۷ مورد) و پیشنهاد کال تو اکشن\n- یک نسخه کوتاه مخصوص استوری\n- خط اول هر کپشن طوری باشد که مخاطب را وادار به خواندن ادامه کند (هوک)\nنکات:\n- مخاطب هدف: [مخاطب]\n- از ادعاهای غیرواقعی پرهیز کن\n- تا حد امکان از کلمات محاوره‌ای امروزی و ریتم‌دار استفاده کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a social media copywriter.\nTask: write Instagram captions for a [post type: product/intro/promo/giveaway/announcement] about [topic/product].\nOutput:\n- 3 versions with different tones: friendly, professional and humorous/casual\n- Each version includes: main copy (3–5 lines), relevant hashtags (5–7) and a call-to-action suggestion\n- One short version for Stories\n- The first line of each caption must hook the reader into continuing\nRules:\n- Target audience: [audience]\n- Avoid unrealistic claims\n- Prefer modern, rhythmic everyday language where possible"
         }
       ]
@@ -168,15 +249,24 @@
       "cat": "marketing",
       "catFa": "مارکتینگ و کپی‌رایتینگ",
       "catEn": "Marketing & Copywriting",
-      "t": { "fa": "ایمیل سرد فروش بنویس", "en": "Write a Cold Sales Email" },
+      "t": {
+        "fa": "ایمیل سرد فروش بنویس",
+        "en": "Write a Cold Sales Email"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: متخصص فروش B2B.\nوظیفه: یک ایمیل سرد (اولین تماس) برای معرفی [محصول/خدمت] به [نوع مخاطب/شرکت] بنویس.\nخروجی:\n- خط موضوع (Subject): دو گزینه کوتاه و کلیک‌خور\n- بدنه ایمیل (حداکثر ۱۲۰ کلمه) شامل:\n  ۱. خط اول شخصی‌سازی‌شده بر اساس شرکت/نقش مخاطب\n  ۲. بیان یک مشکل مشخص که محصول ما حل می‌کند\n  ۳. یک جمله درباره راه‌حل (بدون جزئیات فنی اضافه)\n  ۴. کال تو اکشن ساده و کم‌فشار (مثلاً «آیا این مشکل را دارید؟»)\n- نسخه پیگیری ۲ روز بعد (کوتاه‌تر)\nنکات:\n- لحن محترمانه و بدون تملق\n- از کلمات اغراق‌آمیز («بهترین»، «انقلابی») پرهیز کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a B2B sales specialist.\nTask: write a cold outreach email introducing [product/service] to [audience type/company].\nOutput:\n- Subject line: two short, click-worthy options\n- Email body (max 120 words) including:\n  1. A personalized opening line based on the company/role\n  2. A specific problem our product solves\n  3. One sentence about the solution (no excessive technical detail)\n  4. A simple, low-pressure call to action (e.g. \"Is this a problem you're facing?\")\n- A shorter 2-day follow-up version\nRules:\n- Respectful tone, no flattery\n- Avoid hype words (\"best\", \"revolutionary\")"
         }
       ]
@@ -186,16 +276,52 @@
       "cat": "marketing",
       "catFa": "مارکتینگ و کپی‌رایتینگ",
       "catEn": "Marketing & Copywriting",
-      "t": { "fa": "نام و شعار برند بساز", "en": "Create a Brand Name & Tagline" },
+      "t": {
+        "fa": "نام و شعار برند بساز",
+        "en": "Create a Brand Name & Tagline"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: متخصص برندینگ و نام‌گذاری.\nوظیفه: برای کسب‌وکاری که [شرح کسب‌وکار/محصول] است و مخاطبش [مخاطب]، نام برند و شعار پیشنهاد بده.\nخروجی:\n- ۱۰ نام پیشنهادی در دسته‌بندی: ۴ نام فارسی، ۳ نام لاتین (با تلفظ فارسی)، ۳ نام ترکیبی\n- برای هر نام: دلیل انتخاب، حس/تداعی، و بررسی اجمالی قابلیت ثبت (احتمال تداخل کم)\n- ۵ شعار (تگ‌لاین) کوتاه، یکی برای هر لحن: انگیزشی، توصیفی، چالشی، طنز و لوکس\n- پیشنهاد نام دامنه برای ۳ نام برتر (در صورت امکان)\nنکات:\n- نام‌ها کوتاه، به‌خاطرماندنی و تلفظ‌آسان باشند\n- از نام‌های تکراری و شبیه برندهای بزرگ پرهیز کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a branding and naming specialist.\nTask: suggest a brand name and tagline for a business that [business/product description] targeting [audience].\nOutput:\n- 10 name suggestions grouped: 4 Persian names, 3 Latin names (with Persian pronunciation), 3 hybrid names\n- For each name: the reasoning, the feeling/association, and a quick trademark check note (low collision likelihood)\n- 5 short taglines, one per tone: inspirational, descriptive, challenging, humorous and luxury\n- Domain name suggestions for the top 3 names (when possible)\nRules:\n- Names must be short, memorable and easy to pronounce\n- Avoid names that copy big existing brands"
+        }
+      ]
+    },
+    {
+      "id": 20012,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": {
+        "fa": "پرسونای مشتری بساز",
+        "en": "Build a Customer Persona"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: تحلیلگر بازاریابی.\nوظیفه: برای [محصول/خدمت] یک پرسونای مشتری کامل بساز.\nخروجی:\n- مشخصات جمعیتی: سن، جنسیت، موقعیت مکانی، شغل و درآمد\n- مشخصات رفتاری: عادت‌های خرید، کانال‌های اطلاعاتی (اینستاگرام/تلگرام/گوگل)، ساعات آنلاین\n- دردها و نیازها: ۳ مشکل اصلی که محصول ما حل می‌کند و ۳ ترس/موانع خرید\n- انگیزه‌ها: چه چیزی او را به خرید ترغیب می‌کند\n- پیام بازاریابی: یک پیام کلیدی برای هر کانال (اینستاگرام، سایت، پیامک)\n- یک پاراگراف روایت (Story) از یک روز مشتری که محصول در آن نقش دارد\nنکات:\n- پرسونا واقع‌گرایانه باشد نه ایده‌آل\n- اگر داده/نظری از مشتریان واقعی داری، حتماً بده تا دقیق‌تر شود"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a marketing analyst.\nTask: build a complete customer persona for [product/service].\nOutput:\n- Demographics: age, gender, location, job and income\n- Behavioral profile: buying habits, information channels (Instagram/Telegram/Google), peak online hours\n- Pains and needs: 3 main problems our product solves and 3 fears/purchase barriers\n- Motivations: what drives them to buy\n- Marketing message: one key message per channel (Instagram, website, SMS)\n- A narrative paragraph (story) of a customer's day where the product plays a role\nRules:\n- Keep the persona realistic, not idealized\n- If you have data or feedback from real customers, share it for a sharper result"
         }
       ]
     },
@@ -204,15 +330,24 @@
       "cat": "education",
       "catFa": "آموزش",
       "catEn": "Education",
-      "t": { "fa": "یک مفهوم را ساده توضیح بده", "en": "Explain a Concept Simply" },
+      "t": {
+        "fa": "یک مفهوم را ساده توضیح بده",
+        "en": "Explain a Concept Simply"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: معلم خصوصی باتجربه.\nوظیفه: مفهوم [موضوع/مفهوم] را طوری توضیح بده که یک مبتدی کاملاً بفهمد.\nخروجی:\n- توضیح با یک مثال از زندگی روزمره (قبل از تعریف رسمی)\n- تعریف ساده در یک جمله\n- ۳ نکته کلیدی که معمولاً اشتباه فهمیده می‌شود + رفع هر اشتباه\n- یک تشبیه یا استعاره برای ماندگاری در ذهن\n- سوال کوتاه برای سنجش فهم مخاطب + پاسخش\nنکات:\n- از اصطلاحات تخصصی بدون توضیح پرهیز کن\n- اگر سطح مخاطب [مبتدی/متوسط/پیشرفته] است، عمق را تنظیم کن\n- اگر بخواهم، ادامه توضیح را با جزئیات بیشتر بده"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as an experienced private tutor.\nTask: explain [topic/concept] so a complete beginner fully understands it.\nOutput:\n- An explanation starting with a real-life example (before the formal definition)\n- A one-sentence simple definition\n- 3 commonly misunderstood points, each with the correct understanding\n- A simile or metaphor to make it stick\n- A short comprehension question with its answer\nRules:\n- Avoid unexplained jargon\n- Adjust depth for the audience level: [beginner/intermediate/advanced]\n- If asked, continue with more detail"
         }
       ]
@@ -222,15 +357,24 @@
       "cat": "education",
       "catFa": "آموزش",
       "catEn": "Education",
-      "t": { "fa": "تمرین و آزمون طراحی کن", "en": "Design Exercises & a Quiz" },
+      "t": {
+        "fa": "تمرین و آزمون طراحی کن",
+        "en": "Design Exercises & a Quiz"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: طراح محتوای آموزشی.\nوظیفه: برای موضوع [موضوع/درس] و سطح [سطح] تمرین و آزمون طراحی کن.\nخروجی:\n- ۵ تمرین تشریحی با پاسخ کامل (برای یادگیری تدریجی)\n- ۱۰ سوال چهارگزینه‌ای با گزینه‌های منطقی و پاسخ + توضیح کوتاه هر پاسخ\n- ۲ سوال ترکیبی که چند مفهوم را به هم ربط می‌دهد\n- راهنمای نمره‌دهی: هر بخش چند نمره دارد\n- جدول زمان‌بندی پیشنهادی برای حل\nنکات:\n- سختی سوالات تدریجی بالا برود\n- سوالات شبیه سوالات واقعی/امتحانی باشند\n- اگر سبک خاصی مدنظر داری (کتبی/آنلاین) بگو"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as an instructional designer.\nTask: design exercises and a quiz for the topic [topic/lesson] at [level].\nOutput:\n- 5 open-ended exercises with full answers (for gradual learning)\n- 10 multiple-choice questions with plausible options, answers and a short explanation for each\n- 2 combined questions linking several concepts\n- A scoring guide: points per section\n- A suggested time budget for solving\nRules:\n- Difficulty should ramp up gradually\n- Questions should mirror real/exam-style questions\n- Tell me if you have a specific format in mind (written/online)"
         }
       ]
@@ -240,15 +384,24 @@
       "cat": "education",
       "catFa": "آموزش",
       "catEn": "Education",
-      "t": { "fa": "برنامه مطالعه بساز", "en": "Build a Study Plan" },
+      "t": {
+        "fa": "برنامه مطالعه بساز",
+        "en": "Build a Study Plan"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: مشاور تحصیلی.\nوظیفه: برای [هدف/آزمون] با [مدت زمان مثلاً ۳ ماه] و [ساعت مطالعه روزانه مثلاً ۳ ساعت] برنامه مطالعه بساز.\nخروجی:\n- برنامه هفتگی: کدام روز/ساعت چه مبحثی خوانده شود\n- اولویت‌بندی مباحث بر اساس اهمیت و ضعف‌های احتمالی\n- برنامه مرور: چه زمانی مطالب قبلی مرور شوند (با فاصله‌گذاری)\n- آزمون‌های آزمایشی: هر چند وقت یک‌بار و چطور تحلیل شوند\n- ۳ نکته برای حفظ انگیزه و جلوگیری از فرسودگی\nنکات:\n- برنامه واقع‌بینانه باشد، نه آرمانی\n- اگر درسی ضعیف‌تر است، زمان بیشتری به آن اختصاص بده\n- اگر بخواهی، برای یک هفته اول برنامه ساعت‌به‌ساعت بده"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as an academic advisor.\nTask: build a study plan for [goal/exam] with [duration, e.g. 3 months] and [daily study time, e.g. 3 hours].\nOutput:\n- A weekly schedule: which day/hour to study which topic\n- Priority ranking of topics by importance and likely weak spots\n- A spaced review schedule for previously covered material\n- Practice-test guidance: frequency and how to analyze results\n- 3 tips for staying motivated and avoiding burnout\nRules:\n- Keep the plan realistic, not idealistic\n- Allocate more time to weaker subjects\n- If asked, provide an hour-by-hour plan for the first week"
         }
       ]
@@ -258,15 +411,24 @@
       "cat": "business",
       "catFa": "کسب‌وکار",
       "catEn": "Business",
-      "t": { "fa": "بیزینس پلن بنویس", "en": "Write a Business Plan" },
+      "t": {
+        "fa": "بیزینس پلن بنویس",
+        "en": "Write a Business Plan"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: مشاور راه‌اندازی کسب‌وکار.\nوظیفه: برای کسب‌وکاری که [شرح کسب‌وکار/ایده] است یک بیزینس پلن بنویس.\nخروجی (هر بخش ۳-۵ خط):\n- خلاصه اجرایی: ارزش پیشنهادی در دو جمله\n- تحلیل بازار: اندازه بازار، رقبا و تمایز ما\n- مدل درآمد: منابع درآمد و قیمت‌گذاری پیشنهادی\n- استراتژی بازاریابی: کانال‌های جذب مشتری\n- ساختار تیم: نقش‌های کلیدی موردنیاز\n- پیش‌بینی مالی ساده: هزینه راه‌اندازی، هزینه ماهانه و نقطه سر به سر\n- ریسک‌ها: ۳ ریسک اصلی + راه کاهش هرکدام\nنکات:\n- اعداد واقع‌بینانه باشند؛ اگر عددی را نمی‌دانی، فرض کن و بنویس «فرض»\n- برای جذب سرمایه‌گذار یا بانک، خلاصه اجرایی را قوی‌تر کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a startup consultant.\nTask: write a business plan for a venture described as [business/idea description].\nOutput (3–5 lines per section):\n- Executive summary: the value proposition in two sentences\n- Market analysis: market size, competitors and our differentiation\n- Revenue model: income streams and suggested pricing\n- Marketing strategy: customer acquisition channels\n- Team structure: key roles needed\n- Simple financial forecast: startup cost, monthly cost and break-even point\n- Risks: the 3 main risks and how to mitigate each\nRules:\n- Keep numbers realistic; where unknown, state an assumption and label it \"assumption\"\n- If the plan targets investors or a bank, strengthen the executive summary"
         }
       ]
@@ -276,15 +438,24 @@
       "cat": "business",
       "catFa": "کسب‌وکار",
       "catEn": "Business",
-      "t": { "fa": "تحلیل SWOT انجام بده", "en": "Run a SWOT Analysis" },
+      "t": {
+        "fa": "تحلیل SWOT انجام بده",
+        "en": "Run a SWOT Analysis"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: تحلیلگر استراتژی.\nوظیفه: برای [شرح کسب‌وکار/پروژه] یک تحلیل SWOT کامل انجام بده.\nخروجی:\n- جدول/بخش چهارگانه:\n  • نقاط قوت (داخلی): ۵ مورد مشخص و قابل‌اثبات\n  • نقاط ضعف (داخلی): ۵ مورد با راهکار پیشنهادی برای هرکدام\n  • فرصت‌ها (بیرونی): ۵ مورد با اولویت اثرگذاری\n  • تهدیدها (بیرونی): ۵ مورد با راه مقابله\n- بعد از تحلیل: ۲ استراتژی SO (استفاده از قوت برای بهره‌برداری از فرصت) و ۲ استراتژی WT (غلبه بر ضعف برای کاهش تهدید)\n- یک جمع‌بندی یک‌خطی\nنکات:\n- آیتم‌ها مشخص و عملی باشند، نه کلی («کیفیت خوب» کافی نیست)\n- اگر صنعت/رقیب مشخصی داری بگو تا تحلیل دقیق‌تر شود"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a strategy analyst.\nTask: run a complete SWOT analysis for [business/project description].\nOutput:\n- A four-part breakdown:\n  • Strengths (internal): 5 concrete, verifiable items\n  • Weaknesses (internal): 5 items, each with a suggested fix\n  • Opportunities (external): 5 items ranked by impact\n  • Threats (external): 5 items with countermeasures\n- Then: 2 SO strategies (use strengths to seize opportunities) and 2 WT strategies (overcome weaknesses to reduce threats)\n- A one-line conclusion\nRules:\n- Items must be specific and actionable, not generic (\"good quality\" is not enough)\n- Sharing your industry/competitors makes the analysis sharper"
         }
       ]
@@ -294,15 +465,24 @@
       "cat": "business",
       "catFa": "کسب‌وکار",
       "catEn": "Business",
-      "t": { "fa": "استراتژی قیمت‌گذاری", "en": "Pricing Strategy" },
+      "t": {
+        "fa": "استراتژی قیمت‌گذاری",
+        "en": "Pricing Strategy"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: مشاور قیمت‌گذاری.\nوظیفه: برای [محصول/خدمت] با هزینه تولید [هزینه] و قیمت رقبا [قیمت رقبا] یک استراتژی قیمت‌گذاری پیشنهاد بده.\nخروجی:\n- ۳ مدل قیمت‌گذاری ممکن (مثلاً: قیمت‌گذاری بر اساس هزینه، رقابتی، ارزش‌محور) با مزایا و معایب هرکدام\n- قیمت پیشنهادی نهایی + محاسبه حاشیه سود\n- استراتژی تخفیف و بسته‌بندی (باندل)\n- سناریوی واکنش رقبا به قیمت ما و پاسخ ما\n- ۲ روش تست قیمت قبل از نهایی‌کردن\nنکات:\n- اگر مشتریان [B2B/B2C] هستند، منطق قیمت را متناسب کن\n- از کسری‌های اعشاری و اعداد روانشناسی استفاده کن اگر مناسب است"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a pricing consultant.\nTask: suggest a pricing strategy for [product/service] with a production cost of [cost] and competitor prices of [competitor prices].\nOutput:\n- 3 possible pricing models (e.g. cost-based, competitive, value-based) with pros and cons of each\n- A final recommended price with margin calculation\n- A discount and bundling strategy\n- A scenario for competitor reaction to our price and our response\n- 2 ways to test the price before finalizing\nRules:\n- Tailor the pricing logic to [B2B/B2C] customers\n- Use psychological and round numbers where appropriate"
         }
       ]
@@ -312,15 +492,24 @@
       "cat": "career",
       "catFa": "CV و مصاحبه",
       "catEn": "CV & Interview",
-      "t": { "fa": "رزومه حرفه‌ای بساز", "en": "Build a Professional CV" },
+      "t": {
+        "fa": "رزومه حرفه‌ای بساز",
+        "en": "Build a Professional CV"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: مشاور کاریابی و رزومه‌نویس.\nوظیفه: برای شغلی که [موقعیت شغلی] است و با سوابق زیر [خلاصه سوابق/تجربه‌ها] یک رزومه حرفه‌ای آماده کن.\nخروجی:\n- ساختار کامل رزومه: اطلاعات تماس، خلاصه حرفه‌ای (۲-۳ خط)، سوابق شغلی، تحصیلات، مهارت‌ها\n- بازنویسی هر تجربه با فرمت STAR یا «اقدام + نتیجه قابل‌سنجش»\n- مهارت‌ها دسته‌بندی‌شده: فنی، نرم و زبانی\n- ۲ نسخه از خلاصه حرفه‌ای: یکی برای شغل موردنظر و یکی عمومی\n- لیست کلمات کلیدی که برای ATS (سیستم‌های غربالگری) باید در رزومه باشد\nنکات:\n- اعداد و نتایج مشخص («افزایش ۲۰٪ فروش») بهتر از توصیف کلی است\n- رزومه حداکثر ۲ صفحه باشد"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a career and CV consultant.\nTask: prepare a professional CV for the role [job title] based on this background [summary of experience].\nOutput:\n- Full CV structure: contact info, professional summary (2–3 lines), work history, education, skills\n- Rewrite each experience using the STAR format or \"action + measurable result\"\n- Skills grouped into: technical, soft and language\n- 2 versions of the professional summary: one tailored to the target role, one general\n- A list of keywords to include for ATS screening systems\nRules:\n- Concrete numbers and results (\"+20% sales\") beat vague descriptions\n- Keep the CV to at most 2 pages"
         }
       ]
@@ -330,15 +519,24 @@
       "cat": "career",
       "catFa": "CV و مصاحبه",
       "catEn": "CV & Interview",
-      "t": { "fa": "سوالات مصاحبه و پاسخ", "en": "Interview Q&A Prep" },
+      "t": {
+        "fa": "سوالات مصاحبه و پاسخ",
+        "en": "Interview Q&A Prep"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: مربی آمادگی مصاحبه شغلی.\nوظیفه: برای موقعیت [موقعیت شغلی] و با سوابق من [خلاصه سوابق] مصاحبه را شبیه‌سازی کن.\nخروجی:\n- ۱۰ سوال رایج مصاحبه برای این شغل\n- برای هر سوال: پاسخ پیشنهادی ۳-۴ خطی با روش STAR که از سوابق من استفاده کند\n- ۳ سوال رفتاری/سناریویی خاص این شغل + پاسخ نمونه\n- ۳ سوالی که باید از کارفرما بپرسد (نشان‌دهنده حرفه‌ای‌گری)\n- ۵ نکته درباره زبان بدن و لحن\nنکات:\n- پاسخ‌ها طبیعی به نظر برسند، نه حفظی\n- اگر سوالی نداشت، یک سوال دشوار دیگر هم اضافه کن و پاسخش را بده"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as an interview coach.\nTask: simulate a job interview for the role [job title] based on my background [summary of experience].\nOutput:\n- 10 common interview questions for this role\n- For each: a suggested 3–4 line answer using the STAR method that draws on my background\n- 3 role-specific behavioral/scenario questions with sample answers\n- 3 questions I should ask the employer (shows professionalism)\n- 5 tips on body language and tone\nRules:\n- Answers should sound natural, not rehearsed\n- If anything is missing, add one harder question with its answer"
         }
       ]
@@ -348,15 +546,24 @@
       "cat": "career",
       "catFa": "CV و مصاحبه",
       "catEn": "CV & Interview",
-      "t": { "fa": "نامه انگیزشی بنویس", "en": "Write a Cover Letter" },
+      "t": {
+        "fa": "نامه انگیزشی بنویس",
+        "en": "Write a Cover Letter"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: نگارنده حرفه‌ای نامه انگیزشی.\nوظیفه: برای درخواست شغل [موقعیت شغلی] در [شرکت] با توجه به سوابق من [خلاصه سوابق] یک نامه انگیزشی بنویس.\nخروجی:\n- نامه در ۳ پاراگراف:\n  ۱. معرفی کوتاه + چرا این شرکت/نقش (تحقیق‌شده و مشخص)\n  ۲. دو دستاورد کلیدی من که با نیازهای نقش هم‌خوان است (با عدد)\n  ۳. جمع‌بندی + دعوت به مصاحبه\n- نسخه دوم با لحن کوتاه‌تر برای ایمیل\n- خط موضوع ایمیل پیشنهادی\nنکات:\n- از قالب «من کیستم» کلیشه‌ای پرهیز کن؛ مستقیماً به نیاز شرکت برو\n- حداکثر ۲۵۰ کلمه\n- اگر آگهی شغل را بدهی، دقیقاً به الزامات آن اشاره می‌کنم"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a professional cover-letter writer.\nTask: write a cover letter applying for [job title] at [company], drawing on my background [summary of experience].\nOutput:\n- A letter in 3 paragraphs:\n  1. Short introduction + why this company/role (specific and researched)\n  2. Two of my key achievements aligned with the role's needs (with numbers)\n  3. Closing + invitation for an interview\n- A shorter email-length second version\n- A suggested email subject line\nRules:\n- Avoid the clichéd \"who I am\" template; go straight to the company's needs\n- Keep it under 250 words\n- If you share the job ad, I'll address its exact requirements"
         }
       ]
@@ -366,15 +573,24 @@
       "cat": "seo",
       "catFa": "سئو و محتوا",
       "catEn": "SEO & Content",
-      "t": { "fa": "مقاله سئوشده بنویس", "en": "Write an SEO Article" },
+      "t": {
+        "fa": "مقاله سئوشده بنویس",
+        "en": "Write an SEO Article"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: نویسنده محتوای سئو.\nوظیفه: مقاله‌ای درباره [موضوع] برای کلمه کلیدی اصلی [کلمه کلیدی] بنویس.\nخروجی:\n- تیتر اصلی شامل کلمه کلیدی + ۳ تیتر جایگزین\n- ساختار با تیترهای H2/H3 شامل: مقدمه، بدنه (هر بخش به یک سوال کاربر پاسخ دهد)، جمع‌بندی\n- کلمه کلیدی و مترادف‌هایش به‌طور طبیعی در متن توزیع شوند (بدون پرکردن)\n- ۱۲۰۰-۱۵۰۰ کلمه، جمله‌های کوتاه و پاراگراف‌های ۳-۴ خطی\n- سوالات متداول (FAQ) با پاسخ کوتاه (مناسب اسکیمای سوالات)\n- متای توضیحات و پیشنهاد لینک داخلی\nنکات:\n- متن برای کاربر بنویس، نه فقط موتور جستجو\n- از منابع قابل اعتماد داده و آمار بده (با ذکر منبع)"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as an SEO content writer.\nTask: write an article about [topic] targeting the primary keyword [keyword].\nOutput:\n- A main headline including the keyword + 3 alternative headlines\n- Structure with H2/H3 headings: intro, body (each section answers a user question), conclusion\n- The keyword and its variants distributed naturally (no keyword stuffing)\n- 1200–1500 words, short sentences, 3–4 line paragraphs\n- An FAQ section with short answers (suitable for FAQ schema)\n- Meta description and internal-link suggestions\nRules:\n- Write for users first, not just the search engine\n- Include data and statistics from reliable sources, with attribution"
         }
       ]
@@ -384,15 +600,24 @@
       "cat": "seo",
       "catFa": "سئو و محتوا",
       "catEn": "SEO & Content",
-      "t": { "fa": "متا تایتل و دیسکریپشن بساز", "en": "Write Meta Title & Description" },
+      "t": {
+        "fa": "متا تایتل و دیسکریپشن بساز",
+        "en": "Write Meta Title & Description"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: متخصص سئو تکنیکال.\nوظیفه: برای صفحه [صفحه/محتوای صفحه] با کلمه کلیدی [کلمه کلیدی] متا تایتل و متا دیسکریپشن بنویس.\nخروجی:\n- ۵ متا تایتل (حداکثر ۶۰ کاراکتر) هرکدام با کلمه کلیدی و ارزش پیشنهادی\n- ۵ متا دیسکریپشن (حداکثر ۱۵۵ کاراکتر) با کلمه کلیدی، مزیت و دعوت به کلیک\n- ۳ پیشنهاد URL اسلاگ کوتاه و سئوپسند\n- ۳ ایده تیتر H1\n- بررسی: کدام ترکیب تایتل/دیسکریپشن بیشترین نرخ کلیک احتمالی را دارد و چرا\nنکات:\n- از تکرار کلمه کلیدی در هر تایتل پرهیز کن\n- دیسکریپشن‌ها حس کنجکاوی ایجاد کنند اما گمراه‌کننده نباشند"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a technical SEO specialist.\nTask: write meta titles and descriptions for the page [page/page content] targeting the keyword [keyword].\nOutput:\n- 5 meta titles (max 60 characters), each with the keyword and a value proposition\n- 5 meta descriptions (max 155 characters) with the keyword, benefit and a click incentive\n- 3 short, SEO-friendly URL slug suggestions\n- 3 H1 headline ideas\n- An assessment: which title/description pairing is most likely to get clicks and why\nRules:\n- Avoid repeating the keyword in every title\n- Descriptions should spark curiosity without being misleading"
         }
       ]
@@ -402,34 +627,349 @@
       "cat": "seo",
       "catFa": "سئو و محتوا",
       "catEn": "SEO & Content",
-      "t": { "fa": "تقویم محتوا بساز", "en": "Build a Content Calendar" },
+      "t": {
+        "fa": "تقویم محتوا بساز",
+        "en": "Build a Content Calendar"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
           "text": "نقش: استراتژیست محتوا.\nوظیفه: برای کسب‌وکاری که [شرح کسب‌وکار] است و کانال‌های [کانال‌ها] یک تقویم محتوای یک‌ماهه بساز.\nخروجی:\n- جدول هفتگی (۴ هفته): هر روز یک ایده محتوا با نوع آن (پست آموزشی/تبلیغی/سرگرمی/تعاملی)\n- برای هر ایده: هدف (آگاهی/تعامل/فروش) و کانال مناسب\n- ۵ ایده محتوای تکراری/سریالی برای وفادارسازی مخاطب\n- ۳ ایده محتوای تولیدی سنگین (ویدیو/مقاله) برای هفته آینده\n- تعادل ۸۰/۲۰: ۸۰٪ ارزش‌محور، ۲۰٪ فروش‌محور\nنکات:\n- ایده‌ها متناسب با [مخاطب] باشد\n- اگر مناسبت خاصی (تعطیلات/رویداد) نزدیک است، در تقویم لحاظ کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
           "text": "Act as a content strategist.\nTask: build a one-month content calendar for a business described as [business description] on channels [channels].\nOutput:\n- A weekly table (4 weeks): one content idea per day with its type (educational/promotional/entertainment/interactive)\n- For each idea: the goal (awareness/engagement/sales) and best channel\n- 5 recurring/series content ideas to build audience loyalty\n- 3 heavy-production ideas (video/article) for the coming weeks\n- An 80/20 balance: 80% value-driven, 20% sales-driven\nRules:\n- Ideas must fit the [audience]\n- Include nearby occasions (holidays/events) if relevant"
         }
       ]
     },
     {
-      "id": 20012,
-      "cat": "marketing",
-      "catFa": "مارکتینگ و کپی‌رایتینگ",
-      "catEn": "Marketing & Copywriting",
-      "t": { "fa": "پرسونای مشتری بساز", "en": "Build a Customer Persona" },
+      "id": 20025,
+      "cat": "writing",
+      "catFa": "نویسندگی",
+      "catEn": "Writing",
+      "t": {
+        "fa": "خلاصه کتاب یا مقاله بنویس",
+        "en": "Summarize a Book or Article"
+      },
       "date": "2026-09-08",
       "variants": [
         {
-          "l": { "fa": "فارسی", "en": "Persian" },
-          "text": "نقش: تحلیلگر بازاریابی.\nوظیفه: برای [محصول/خدمت] یک پرسونای مشتری کامل بساز.\nخروجی:\n- مشخصات جمعیتی: سن، جنسیت، موقعیت مکانی، شغل و درآمد\n- مشخصات رفتاری: عادت‌های خرید، کانال‌های اطلاعاتی (اینستاگرام/تلگرام/گوگل)، ساعات آنلاین\n- دردها و نیازها: ۳ مشکل اصلی که محصول ما حل می‌کند و ۳ ترس/موانع خرید\n- انگیزه‌ها: چه چیزی او را به خرید ترغیب می‌کند\n- پیام بازاریابی: یک پیام کلیدی برای هر کانال (اینستاگرام، سایت، پیامک)\n- یک پاراگراف روایت (Story) از یک روز مشتری که محصول در آن نقش دارد\nنکات:\n- پرسونا واقع‌گرایانه باشد نه ایده‌آل\n- اگر داده/نظری از مشتریان واقعی داری، حتماً بده تا دقیق‌تر شود"
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: خلاصه‌نویس حرفه‌ای و ویراستار.\nوظیفه: متن [متن مقاله/بخش‌هایی از کتاب] را خلاصه کن.\nخروجی:\n- خلاصه اجرایی در ۳-۵ جمله (ایده اصلی، استدلال کلیدی و نتیجه)\n- خلاصه دقیق‌تر در ۱۰-۱۵ خط، ساختارمند با تیترهای کوتاه\n- ۳-۵ نکته کلیدی قابل استفاده عملی\n- نقل‌قول یا جمله ماندگار از متن اصلی\n- نظر کوتاه: این متن برای چه کسی مفید است\nنکات:\n- خلاصه باید بدون خواندن اصل متن قابل استفاده باشد\n- از نظر خودت جدا از خلاصه بنویس و مشخص کن\n- اگر متن طولانی است، بخش‌بندی فصل/بخش را حفظ کن"
         },
         {
-          "l": { "fa": "انگلیسی", "en": "English" },
-          "text": "Act as a marketing analyst.\nTask: build a complete customer persona for [product/service].\nOutput:\n- Demographics: age, gender, location, job and income\n- Behavioral profile: buying habits, information channels (Instagram/Telegram/Google), peak online hours\n- Pains and needs: 3 main problems our product solves and 3 fears/purchase barriers\n- Motivations: what drives them to buy\n- Marketing message: one key message per channel (Instagram, website, SMS)\n- A narrative paragraph (story) of a customer's day where the product plays a role\nRules:\n- Keep the persona realistic, not idealized\n- If you have data or feedback from real customers, share it for a sharper result"
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a professional summarizer and editor.\nTask: summarize [article text / book passages].\nOutput:\n- An executive summary in 3–5 sentences (main idea, key argument, conclusion)\n- A more detailed summary in 10–15 lines, structured with short headings\n- 3–5 actionable key takeaways\n- A memorable quote from the original text\n- A short note on who would benefit from this text\nRules:\n- The summary must stand alone without reading the original\n- Keep your own opinion separate from the summary and label it\n- For long texts, preserve the chapter/section structure"
+        }
+      ]
+    },
+    {
+      "id": 20026,
+      "cat": "writing",
+      "catFa": "نویسندگی",
+      "catEn": "Writing",
+      "t": {
+        "fa": "پست وبلاگ ترغیب‌کننده بنویس",
+        "en": "Write a Persuasive Blog Post"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: بلاگر و کپی‌رایتر متخصص.\nوظیفه: یک پست وبلاگ ترغیب‌کننده درباره [موضوع] برای مخاطب [مخاطب] بنویس.\nخروجی:\n- عنوان اصلی + ۳ عنوان جایگزین (با اعداد و کنجکاوی‌برانگیز)\n- مقدمه با یک هوک قوی در ۲ جمله اول\n- بدنه با ساختار مشکل → راه‌حل → مزیت (AIDA یا PAS)\n- حداقل یک آمار یا ادعای قابل راستی‌آزمایی\n- نتیجه‌گیری با کال تو اکشن مشخص\n- زیرعنوان برای هر بخش (اسکن‌پذیری)\nنکات:\n- طول: ۸۰۰-۱۲۰۰ کلمه مگر اینکه خلاف آن گفته شود\n- لحن [صمیمی/حرفه‌ای/طنز] متناسب با برند\n- از جمله‌های کوتاه و پاراگراف‌های ۲-۳ خطی استفاده کن"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a skilled blogger and copywriter.\nTask: write a persuasive blog post about [topic] for [audience].\nOutput:\n- A main headline plus 3 alternatives (numbers, curiosity-driven)\n- An intro with a strong hook in the first 2 sentences\n- A body following problem → solution → benefit (AIDA or PAS)\n- At least one verifiable statistic or claim\n- A conclusion with a clear call to action\n- Subheadings for every section (scannability)\nRules:\n- Length: 800–1200 words unless told otherwise\n- Tone: [friendly/professional/humorous] matching the brand\n- Use short sentences and 2–3 line paragraphs"
+        }
+      ]
+    },
+    {
+      "id": 20027,
+      "cat": "coding",
+      "catFa": "کدنویسی",
+      "catEn": "Coding",
+      "t": {
+        "fa": "تست واحد بنویس",
+        "en": "Write Unit Tests"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: مهندس تضمین کیفیت و توسعه‌دهنده تست‌محور (TDD).\nوظیفه: برای کد زیر تست واحد بنویس:\n[کد اینجا]\nخروجی:\n- تست‌های حالت خوشحال (happy path): رفتار مورد انتظار\n- تست‌های مرزی: ورودی خالی، صفر، مقادیر بیشینه/کمینه، null/undefined\n- تست‌های خطا: خطاها و استثناهای مورد انتظار\n- تست‌های یکپارچگی سبک برای تعامل با ماژول‌های مجاور (در صورت نیاز)\n- پوشش اعلام‌شده: کدام خطوط/شاخه‌ها پوشش داده می‌شوند\nنکات:\n- نام تست‌ها توصیفی باشد: should_do_x_when_y\n- از mocking فقط برای مرزهای بیرونی استفاده کن\n- تست‌ها مستقل از ترتیب اجرا باشند"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a QA engineer and TDD developer.\nTask: write unit tests for the code below:\n[PASTE CODE HERE]\nOutput:\n- Happy-path tests: expected behavior\n- Edge cases: empty input, zero, min/max values, null/undefined\n- Error tests: expected errors and exceptions\n- Light integration tests for interactions with neighboring modules (if needed)\n- Declared coverage: which lines/branches are covered\nRules:\n- Descriptive test names: should_do_x_when_y\n- Mock only external boundaries\n- Tests must be independent of execution order"
+        }
+      ]
+    },
+    {
+      "id": 20028,
+      "cat": "coding",
+      "catFa": "کدنویسی",
+      "catEn": "Coding",
+      "t": {
+        "fa": "کد را بهینه کن",
+        "en": "Optimize Code Performance"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: مهندس عملکرد (Performance Engineer).\nوظیفه: کد زیر را از نظر سرعت و مصرف منابع بهینه کن بدون تغییر رفتار:\n[کد اینجا]\nخروجی:\n- تحلیل گلوگاه: کدام بخش بیشترین زمان/حافظه را مصرف می‌کند و چرا\n- کد بهینه‌شده کامل و قابل کپی\n- مقایسه قبل/بعد: تخمین پیچیدگی زمانی و فضایی (Big O)\n- اگر الگوریتم بهتر یا ساختار داده مناسب‌تری وجود دارد، پیشنهاد بده\n- هشدار در مورد trade-offها (مثلاً حافظه در برابر سرعت)\nنکات:\n- اول اندازه‌گیری، بعد بهینه‌سازی: اگر بنچمارکی داری بده\n- بهینه‌سازی‌های ریز (مثل تغییر نام متغیر) انجام نده مگر اینکه روی عملکرد اثر بگذارد"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a performance engineer.\nTask: optimize the code below for speed and resource usage without changing its behavior:\n[PASTE CODE HERE]\nOutput:\n- Bottleneck analysis: which part consumes the most time/memory and why\n- Complete, copy-pasteable optimized code\n- Before/after comparison: estimated time and space complexity (Big O)\n- If a better algorithm or data structure exists, suggest it\n- Flag trade-offs (e.g. memory vs speed)\nRules:\n- Measure first, then optimize: share a benchmark if you have one\n- Skip micro-optimizations (e.g. variable renaming) unless they affect performance"
+        }
+      ]
+    },
+    {
+      "id": 20029,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": {
+        "fa": "اسکریپت فروش تلگرام و واتساپ بنویس",
+        "en": "Write a Telegram & WhatsApp Sales Script"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: فروشنده حرفه‌ای چت‌محور.\nوظیفه: یک اسکریپت فروش برای [محصول/خدمت] در تلگرام/واتساپ بنویس.\nخروجی:\n- پیام اولیه (۳-۵ خط): معرفی کوتاه بدون اسپم بودن\n- سناریوی پاسخ به ۵ اعتراض رایج (قیمت بالا، نیاز ندارم، بعداً، قبلاً خریدم، تردید)\n- پیام پیگیری روز ۲ و روز ۵ (کوتاه و کم‌فشار)\n- تکنیک بستن فروش (Closing): ۲ جمله برای گرفتن تصمیم\n- نسخه فارسی محاوره‌ای و نسخه رسمی‌تر\nنکات:\n- پیام‌ها کوتاه باشند (چت، نه ایمیل)\n- از ایموجی‌های ملایم استفاده کن، نه اغراق‌آمیز\n- همیشه راه خروج بده: مشتری راحت بتواند «نه» بگوید"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a professional chat-based salesperson.\nTask: write a sales script for [product/service] on Telegram/WhatsApp.\nOutput:\n- Opening message (3–5 lines): a short intro that doesn't feel spammy\n- Replies to 5 common objections (too expensive, not interested, later, already bought, hesitating)\n- Follow-up messages on day 2 and day 5 (short, low-pressure)\n- Two closing sentences to move toward a decision\n- A casual Persian version and a more formal one\nRules:\n- Keep messages short (chat, not email)\n- Use mild emoji, never over-the-top ones\n- Always leave an exit: the customer can easily say no"
+        }
+      ]
+    },
+    {
+      "id": 20030,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": {
+        "fa": "کمپین تبلیغاتی پلن کن",
+        "en": "Plan an Ad Campaign"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: مدیر کمپین تبلیغات دیجیتال.\nوظیفه: برای [محصول/خدمت] با بودجه [بودجه] و هدف [هدف: فروش/لید/آگاهی] یک کمپین پلن کن.\nخروجی:\n- انتخاب پلتفرم‌ها (گوگل/اینستاگرام/تلگرام/توییتر) با دلیل\n- تقسیم بودجه پیشنهادی بین پلتفرم‌ها و مراحل قیف\n- ۳ گروه تبلیغ با مخاطب‌شناسی، پیام و CTA متفاوت\n- پیشنهاد ۵ تیتر و ۵ تصویر/کلیت مفهوم برای A/B تست\n- شاخص‌های کلیدی (KPI) و هدف عددی برای هر مرحله\n- برنامه زمانی ۳۰ روزه با نقاط بازبینی\nنکات:\n- فرض‌هایت را صریح بنویس (نرخ کلیک، نرخ تبدیل)\n- تست را کوچک شروع کن و بودجه را روی برنده‌ها بگذار"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a digital ad campaign manager.\nTask: plan a campaign for [product/service] with a budget of [budget] and goal [goal: sales/leads/awareness].\nOutput:\n- Platform selection (Google/Instagram/Telegram/X) with reasoning\n- Suggested budget split across platforms and funnel stages\n- 3 ad groups with different audiences, messages and CTAs\n- 5 headline and 5 visual concept suggestions for A/B testing\n- Key performance indicators with numeric targets per stage\n- A 30-day timeline with review checkpoints\nRules:\n- State your assumptions explicitly (click-through and conversion rates)\n- Start tests small, then move budget to the winners"
+        }
+      ]
+    },
+    {
+      "id": 20031,
+      "cat": "education",
+      "catFa": "آموزش",
+      "catEn": "Education",
+      "t": {
+        "fa": "فلشکارت برای یادگیری بساز",
+        "en": "Build Study Flashcards"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: متخصص یادگیری فاصله‌دار (Spaced Repetition).\nوظیفه: برای موضوع [موضوع/درس] و سطح [سطح] فلشکارت بساز.\nخروجی:\n- ۲۰ فلشکارت با فرمت: سوال (رو) / پاسخ (پشت)\n- دسته‌بندی: تعریف، مثال، مقایسه، سوال مفهومی\n- ۳ فلشکارت اشتباه‌رایج (ترفند سوال که پاسخ درست را از غلط جدا می‌کند)\n- برای هر کارت تگ سختی (آسان/متوسط/سخت)\n- ۲ روش پیشنهادی برای مرور (مثلاً الگوریتم لایتنر یا Anki)\nنکات:\n- هر کارت فقط یک مفهوم را پوشش دهد\n- پاسخ‌ها کوتاه (حداکثر ۲ جمله) و قابل خودارزیابی باشند\n- از عکس یا نماد در کارت‌ها غافل نشو اگر کمک می‌کند"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a spaced-repetition learning specialist.\nTask: build flashcards for [topic/lesson] at [level].\nOutput:\n- 20 flashcards: question (front) / answer (back)\n- Grouped by type: definition, example, comparison, conceptual question\n- 3 common-mistake cards (tricky questions that separate right from wrong understanding)\n- A difficulty tag for each card (easy/medium/hard)\n- 2 review methods (e.g. Leitner box or Anki)\nRules:\n- One concept per card\n- Short answers (max 2 sentences) that allow self-grading\n- Don't skip images or symbols when they help"
+        }
+      ]
+    },
+    {
+      "id": 20032,
+      "cat": "business",
+      "catFa": "کسب‌وکار",
+      "catEn": "Business",
+      "t": {
+        "fa": "تحلیل رقبا انجام بده",
+        "en": "Run a Competitor Analysis"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: تحلیلگر بازار.\nوظیفه: برای کسب‌وکار [شرح کسب‌وکار] با رقبای [لیست رقبا یا حوزه رقابتی] تحلیل رقبا انجام بده.\nخروجی:\n- جدول مقایسه: قیمت، مخاطب هدف، کانال‌های بازاریابی، نقاط قوت/ضعف هر رقیب\n- تحلیل پیشنهاد ارزش هر رقیب: چه وعده‌ای می‌دهند و چطور\n- ۳ فرصت تمایز که رقبا پوشش نمی‌دهند\n- ۲ تهدید از سمت رقبا + راه مقابله\n- پوزیشن‌گیری پیشنهادی برای ما در یک جمله\nنکات:\n- فقط بر اساس اطلاعات عمومی و قابل مشاهده تحلیل کن\n- اگر وب‌سایت یا پیج رقبا را داری، حتماً بده تا دقیق‌تر شویم"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a market analyst.\nTask: run a competitor analysis for [business description] against [competitor list or competitive landscape].\nOutput:\n- A comparison table: pricing, target audience, marketing channels, strengths/weaknesses per competitor\n- A value-proposition analysis per competitor: what they promise and how\n- 3 differentiation opportunities competitors don't cover\n- 2 competitive threats with countermeasures\n- A one-sentence recommended positioning for us\nRules:\n- Analyze only public, observable information\n- Share competitor websites/pages if you have them for sharper results"
+        }
+      ]
+    },
+    {
+      "id": 20033,
+      "cat": "career",
+      "catFa": "CV و مصاحبه",
+      "catEn": "CV & Interview",
+      "t": {
+        "fa": "پروفایل لینکدین را بهینه کن",
+        "en": "Optimize Your LinkedIn Profile"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: مربی برند شخصی و لینکدین.\nوظیفه: بر اساس اطلاعات زیر پروفایل لینکدین را بهینه کن: [موقعیت شغلی فعلی]، [دستاوردها/تجربه‌ها]، [هدف: مهاجرت/کاریابی/برند شخصی].\nخروجی:\n- هدلاین (Headline): ۲ گزینه حداکثر ۲۲۰ کاراکتر\n- بخش درباره من (About): ۳ پاراگراف (هوک، دستاوردها با عدد، دعوت به ارتباط)\n- تجربه‌ها: بازنویسی هر نقش با فرمت «اقدام + نتیجه قابل‌سنجش»\n- کلمات کلیدی که برای جستجوی استخدام‌کننده‌ها باید در پروفایل باشد\n- ۳ پیشنهاد پست اولیه برای افزایش دیده‌شدن\nنکات:\n- زبان [فارسی/انگلیسی] یا ترکیبی را مشخص کن\n- عدد و نتیجه ملموس را جایگزین توصیف کلی کن"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a personal-branding and LinkedIn coach.\nTask: optimize a LinkedIn profile based on: [current role], [achievements/experience], [goal: immigration/job hunting/personal brand].\nOutput:\n- Headline: 2 options, max 220 characters\n- About section: 3 paragraphs (hook, quantified achievements, connection invitation)\n- Experience: rewrite each role as \"action + measurable result\"\n- Keywords recruiters search for that must appear in the profile\n- 3 first-post ideas to boost visibility\nRules:\n- Specify the language ([Persian/English]) or a mix\n- Replace generic descriptions with numbers and tangible results"
+        }
+      ]
+    },
+    {
+      "id": 20034,
+      "cat": "career",
+      "catFa": "CV و مصاحبه",
+      "catEn": "CV & Interview",
+      "t": {
+        "fa": "نامه استعفا بنویس",
+        "en": "Write a Resignation Letter"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: مشاور روابط شغلی.\nوظیفه: یک نامه استعفای حرفه‌ای بنویس برای [شرکت] از سمت [سمت].\nخروجی:\n- نامه اصلی (حداکثر ۱۵۰ کلمه): اعلام استعفا، تاریخ آخرین روز کاری، تشکر کوتاه\n- نسخه کوتاه‌تر برای ایمیل (۵ خط)\n- ۲ جمله برای گفت‌وگوی حضوری (در صورت درخواست)\n- متن انتقال وظایف: ۳-۴ خط که تعهد به تحویل کار را نشان دهد\nنکات:\n- لحن مثبت و بی‌طرفانه؛ هرگز منفی ننویس\n- دلیل ترک را کلی بگو (فرصت جدید/رشد شخصی) مگر اینکه بخواهی دقیق بگویی\n- تاریخ دقیق و مهلت قانونی را جا نگذار"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a workplace-relations advisor.\nTask: write a professional resignation letter for [company] from the role of [position].\nOutput:\n- The main letter (max 150 words): resignation notice, last working day, brief thanks\n- A shorter email version (5 lines)\n- 2 sentences for the in-person conversation (if asked)\n- A handover statement (3–4 lines) showing commitment to a smooth transition\nRules:\n- Keep the tone positive and neutral; never write anything negative\n- State the reason generically (new opportunity/personal growth) unless you want specifics\n- Don't omit the exact date and notice period"
+        }
+      ]
+    },
+    {
+      "id": 20035,
+      "cat": "seo",
+      "catFa": "سئو",
+      "catEn": "SEO",
+      "t": {
+        "fa": "استراتژی کلمات کلیدی بساز",
+        "en": "Build a Keyword Strategy"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: متخصص سئو.\nوظیفه: برای وب‌سایت [وب‌سایت/حوزه کاری] و مخاطب [مخاطب] استراتژی کلمات کلیدی بساز.\nخروجی:\n- ۱۰ کلمه کلیدی اصلی با دسته‌بندی: هدف جستجو (اطلاعاتی/خریدی/ناوبری)، سختی و حجم تقریبی\n- ۱۰ کلمه کلیدی طولانی (Long-tail) با احتمال تبدیل بالاتر\n- نقشه نگاشت: هر کلمه کلیدی به کدام صفحه موجود/جدید برسد\n- ۳ خوشه موضوعی (Topic Cluster) با صفحه ستونی و زیرصفحه‌ها\n- اولویت‌بندی ۳۰ روز اول: کدام کلمات اول پیگیری شوند\nنکات:\n- فرض حجم/سختی را مشخص کن اگر ابزار دقیقی نداری\n- از کلمات کلیدی که با نیت خرید هم‌خوانی ندارند برای صفحات فروش استفاده نکن"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as an SEO specialist.\nTask: build a keyword strategy for [website/niche] targeting [audience].\nOutput:\n- 10 core keywords classified by search intent (informational/transactional/navigational), difficulty and estimated volume\n- 10 long-tail keywords with higher conversion likelihood\n- A mapping: which keyword goes to which existing/new page\n- 3 topic clusters with a pillar page and supporting pages\n- First-30-days priority: which keywords to track first\nRules:\n- Label volume/difficulty as estimates if you lack a precise tool\n- Don't assign purchase-intent keywords to non-commercial pages"
+        }
+      ]
+    },
+    {
+      "id": 20036,
+      "cat": "writing",
+      "catFa": "نویسندگی",
+      "catEn": "Writing",
+      "t": {
+        "fa": "متن را حرفه‌ای ترجمه کن",
+        "en": "Translate Text Professionally"
+      },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": {
+            "fa": "فارسی",
+            "en": "Persian"
+          },
+          "text": "نقش: مترجم حرفه‌ای.\nوظیفه: متن زیر را از [زبان مبدأ] به [زبان مقصد] ترجمه کن:\n[متن اینجا]\nخروجی:\n- ترجمه روان و طبیعی (نه تحت‌اللفظی) با حفظ لحن متن اصلی\n- یادداشت‌های ترجمه: اصطلاحات، ارجاعات فرهنگی و تصمیم‌های دشوار\n- ۲ نسخه جایگزین برای ۳ جمله‌ای که ترجمه‌شان سخت‌تر است\n- واژه‌نامه کوچک (Glossary) برای اصطلاحات تخصصی تکرارشونده\nنکات:\n- لحن و سطح رسمی بودن متن مبدأ را حفظ کن\n- اگر متن فنی است، یکدستی اصطلاحات مهم‌تر از زیبایی جمله است\n- تاریخ/واحد/فرمت‌ها را با فرهنگ مقصد هماهنگ کن"
+        },
+        {
+          "l": {
+            "fa": "انگلیسی",
+            "en": "English"
+          },
+          "text": "Act as a professional translator.\nTask: translate the text below from [source language] to [target language]:\n[PASTE TEXT HERE]\nOutput:\n- A fluent, natural translation (not literal) that preserves the original tone\n- Translation notes: idioms, cultural references and difficult decisions\n- 2 alternative versions for the 3 hardest sentences\n- A small glossary for recurring technical terms\nRules:\n- Preserve the register and formality of the source\n- For technical texts, consistent terminology matters more than pretty prose\n- Adapt dates, units and formats to the target culture"
         }
       ]
     }
