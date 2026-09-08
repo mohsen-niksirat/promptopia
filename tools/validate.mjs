@@ -27,15 +27,18 @@ if (data) {
 }
 
 /* 2. curation.json matches the shipped data (photo prompts only —
-      hand-curated text prompts live in tools/text-prompts.json) */
+      hand-curated text prompts live in tools/text-prompts*.json) */
 const curation = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'curation.json'), 'utf8'));
 let textCount = 0;
 let textIds = new Set();
 try {
-  const tp = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'text-prompts.json'), 'utf8'));
-  textCount = (tp.prompts || []).length;
-  textIds = new Set((tp.prompts || []).map((p) => p.id));
-} catch { /* missing/malformed file -> textCount stays 0 */ }
+  for (const f of ['text-prompts.json', 'text-prompts-more.json']) {
+    try {
+      const tp = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', f), 'utf8'));
+      for (const p of tp.prompts || []) { textIds.add(p.id); textCount++; }
+    } catch { /* missing file -> skip */ }
+  }
+} catch { /* malformed -> textCount stays 0 */ }
 const photoCount = data ? data.prompts.filter((p) => !textIds.has(p.id)).length : 0;
 if (data && curation.selected.length !== photoCount) {
   fail(`curation.json has ${curation.selected.length} ids but data has ${photoCount} photo prompts (+ ${textCount} text prompts) — re-run build`);

@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const TEXT_PROMPTS_PATH = path.join(__dirname, 'text-prompts.json');
+export const TEXT_PROMPTS_MORE_PATH = path.join(__dirname, 'text-prompts-more.json');
 
 /* ids in this range are text prompts, not photo prompts */
 export const TEXT_ID_MIN = 20000;
@@ -35,9 +36,16 @@ export function normalizeTextPrompt(p) {
 }
 
 export function loadTextPrompts() {
-  if (!fs.existsSync(TEXT_PROMPTS_PATH)) return [];
-  const raw = JSON.parse(fs.readFileSync(TEXT_PROMPTS_PATH, 'utf8'));
-  return (raw.prompts || []).map(normalizeTextPrompt);
+  const files = [TEXT_PROMPTS_PATH, TEXT_PROMPTS_MORE_PATH];
+  const out = [];
+  for (const f of files) {
+    if (!fs.existsSync(f)) continue;
+    const raw = JSON.parse(fs.readFileSync(f, 'utf8'));
+    for (const p of raw.prompts || []) out.push(normalizeTextPrompt(p));
+  }
+  /* de-dupe by id, keep first */
+  const seen = new Set();
+  return out.filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)));
 }
 
 /* ------------------------------------------------------------------ */
@@ -51,6 +59,9 @@ const CAT_STYLE = {
   business:  { c1: '#34d399', c2: '#10b981', glow: '#6ee7b7' },
   career:    { c1: '#22d3ee', c2: '#06b6d4', glow: '#67e8f9' },
   seo:       { c1: '#818cf8', c2: '#6366f1', glow: '#a5b4fc' },
+  video:     { c1: '#f43f5e', c2: '#ec4899', glow: '#fda4af' },
+  ui:        { c1: '#2dd4bf', c2: '#0ea5e9', glow: '#5eead4' },
+  'prompt-eng': { c1: '#c084fc', c2: '#8b5cf6', glow: '#e9d5ff' },
 };
 const FALLBACK_CAT = 'writing';
 
@@ -93,6 +104,25 @@ const ICONS = {
     <rect x="426" y="520" width="40" height="140" rx="14" fill="#ffffff" opacity=".5"/>
     <rect x="486" y="560" width="40" height="100" rx="14" fill="#ffffff" opacity=".65"/>
     <rect x="546" y="600" width="40" height="60" rx="14" fill="#ffffff" opacity=".8"/>`,
+  video: /* play button in rounded frame */ `
+    <rect x="292" y="468" width="440" height="344" rx="48" fill="none" stroke="url(#acc)" stroke-width="44"/>
+    <path d="M462 552 L622 640 L462 728 Z" fill="url(#acc)"/>
+    <rect x="352" y="780" width="120" height="22" rx="11" fill="#ffffff" opacity=".4"/>
+    <rect x="492" y="780" width="200" height="22" rx="11" fill="#ffffff" opacity=".25"/>`,
+  ui: /* browser window + cursor */ `
+    <rect x="272" y="452" width="480" height="340" rx="34" fill="none" stroke="url(#acc)" stroke-width="40"/>
+    <line x1="272" y1="540" x2="752" y2="540" stroke="url(#acc)" stroke-width="30"/>
+    <circle cx="322" cy="497" r="18" fill="#ffffff" opacity=".6"/>
+    <circle cx="374" cy="497" r="18" fill="#ffffff" opacity=".4"/>
+    <rect x="322" y="592" width="200" height="30" rx="15" fill="#ffffff" opacity=".45"/>
+    <rect x="322" y="648" width="380" height="26" rx="13" fill="#ffffff" opacity=".3"/>
+    <path d="M620 660 L740 780 L688 786 L716 848 L680 862 L654 800 L620 728 Z" fill="#ffffff" opacity=".85"/>`,
+  'prompt-eng': /* spark/wand + brackets */ `
+    <path d="M300 480 L340 480 M320 460 L320 500" stroke="url(#acc)" stroke-width="36" stroke-linecap="round"/>
+    <path d="M684 780 L724 780 M704 760 L704 800" stroke="#ffffff" stroke-width="36" stroke-linecap="round" opacity=".6"/>
+    <path d="M400 470 L330 640 L400 810" fill="none" stroke="url(#acc)" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M624 470 L694 640 L624 810" fill="none" stroke="#ffffff" stroke-width="64" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+    <path d="M470 430 L560 850" stroke="#ffffff" stroke-width="34" stroke-linecap="round" opacity=".35"/>`,
 };
 
 /* Deterministic SVG cover for a text prompt: category palette + icon,

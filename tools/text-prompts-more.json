@@ -1,0 +1,220 @@
+{
+  "prompts": [
+    {
+      "id": 20037,
+      "cat": "video",
+      "catFa": "تولید ویدیو",
+      "catEn": "Video Generation",
+      "t": { "fa": "پرامپت ویدیوی سینمایی بساز", "en": "Generate a Cinematic Video Prompt" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: کارگردان و متخصص پرامپت‌نویسی برای مدل‌های متن‌به‌ویدیو (Veo، Runway، Kling، Pika).\nوظیفه: برای ایده‌ی [توصیف ایده/صحنه] یک پرامپت ویدیویی حرفه‌ای بنویس.\nخروجی:\n- یک پاراگراف صحنه: موضوع، فضا، نور و رنگ\n- حرکت دوربین: نوع نما، زاویه و مسیر حرکت (دالی، کرین، هند هلد...)\n- ریتم و مدت: طول برداشت‌ها و تعداد سکانس‌ها\n- سبک بصری: سینماتیک/مستند/انیمیشن + مرجع رنگ و فیلم\n- جزئیات صوتی: موسیقی و افکت پیشنهادی (اگر مدل پشتیبانی می‌کند)\nنکات:\n- از صفت‌های دقیق و قابل تصویرسازی استفاده کن، نه کلی‌گویی\n- همه‌چیز را در یک برداشت قابل‌اجرا خلاصه کن\n- اگر می‌خواهم نسخه ۵ و ۱۰ ثانیه‌ای جدا بده"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a director and expert prompt writer for text-to-video models (Veo, Runway, Kling, Pika).\nTask: write a professional video prompt for this idea: [describe idea/scene].\nOutput:\n- One scene paragraph: subject, environment, lighting and color\n- Camera work: shot type, angle and movement (dolly, crane, handheld...)\n- Pacing and duration: shot lengths and number of sequences\n- Visual style: cinematic/documentary/animated + color and film references\n- Audio notes: suggested music and effects (if the model supports it)\nRules:\n- Use precise, visualizable adjectives, never vague ones\n- Keep everything executable in a single shot\n- Offer separate 5-second and 10-second versions if I ask"
+        }
+      ]
+    },
+    {
+      "id": 20038,
+      "cat": "video",
+      "catFa": "تولید ویدیو",
+      "catEn": "Video Generation",
+      "t": { "fa": "استوری‌بورد ویدیو بساز", "en": "Build a Video Storyboard" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: استوری‌بوردیست و فیلم‌نامه‌نویس.\nوظیفه: برای ویدیوی [موضوع/هدف و مدت] یک استوری‌بورد کامل طراحی کن.\nخروجی:\n- جدول سکانس‌ها: شماره، مدت، نوع نما، توضیح تصویر، متن/دیالوگ، افکت صوتی\n- ۶ تا ۱۲ برداشت با منطق روایی (هوک، توسعه، اوج، جمع‌بندی)\n- برای هر برداشت یک پرامپت تصویری کوتاه برای ساخت فریم اول با AI\n- پیشنهاد موسیقی و ترنزیشن بین سکانس‌ها\nنکات:\n- فریم‌ها باید قابل ساخت با مدل‌های تصویر باشند\n- روایت را برای پلتفرم [اینستاگرام/یوتیوب/تیک‌تاک] بهینه کن\n- اگر مدت مشخصی نگفتم، برای [۶۰ ثانیه] طراحی کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a storyboard artist and screenwriter.\nTask: design a complete storyboard for a video about [topic/goal and length].\nOutput:\n- A scene table: number, duration, shot type, visual description, dialogue/text, sound effect\n- 6–12 shots with narrative logic (hook, build-up, climax, resolution)\n- A short AI image prompt for the first frame of each shot\n- Suggested music and transitions between scenes\nRules:\n- Frames must be creatable with AI image models\n- Optimize the story for [Instagram/YouTube/TikTok]\n- If I don't give a duration, design for [60 seconds]"
+        }
+      ]
+    },
+    {
+      "id": 20039,
+      "cat": "video",
+      "catFa": "تولید ویدیو",
+      "catEn": "Video Generation",
+      "t": { "fa": "سناریوی تبلیغ ویدیویی بنویس", "en": "Write a Video Ad Script" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: کپی‌رایتر ویدیو و متخصص تبلیغات.\nوظیفه: سناریوی یک تبلیغ [مدت ثانیه] ثانیه‌ای برای [محصول/خدمت] و مخاطب [مخاطب] بنویس.\nخروجی:\n- هوک ۳ ثانیه‌ای که جلوی اسکرول را می‌گیرد\n- خط‌به‌خط: تصویر روی صفحه + متن گوینده/زیرنویس + لحن\n- یک مزیت اصلی و اثبات آن (نه فهرست ویژگی‌ها)\n- کال تو اکشن واضح در ثانیه آخر\n- دو نسخه جایگزین هوک برای تست A/B\nنکات:\n- برای پلتفرم [اینستاگرام/یوتیوب] تنظیم کن\n- بدون اغراق و ادعای غیرقابل‌اثبات\n- گفتار ساده و محاوره‌ای، جمله‌های کوتاه"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a video copywriter and advertising specialist.\nTask: write a [duration]-second ad script for [product/service] targeting [audience].\nOutput:\n- A 3-second hook that stops the scroll\n- Line by line: on-screen visuals + voiceover/subtitle + tone\n- One core benefit with proof (not a feature list)\n- A clear call to action in the final seconds\n- Two alternative hooks for A/B testing\nRules:\n- Tailor it for [Instagram/YouTube]\n- No exaggeration or unverifiable claims\n- Simple conversational speech with short sentences"
+        }
+      ]
+    },
+    {
+      "id": 20040,
+      "cat": "video",
+      "catFa": "تولید ویدیو",
+      "catEn": "Video Generation",
+      "t": { "fa": "حرکت دوربین را طراحی کن", "en": "Design Camera Movement & Style" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مدیر فیلم‌برداری (DoP).\nوظیفه: برای ویدیوی [توصیف صحنه/حس موردنظر] زبان بصری و حرکت دوربین را طراحی کن.\nخروجی:\n- پالت رنگ و منابع نور (سه‌نقطه‌ای/طبیعی/نئون...)\n- نقشه حرکت دوربین صحنه‌به‌صحنه: نمای آغازین، فاصله، ارتفاع، مسیر\n- نسبت تصویر و دیافراگم/شاتر پیشنهادی برای حس [حماسی/صمیمی/خشک]\n- ترنزیشن‌های منطقی بین نماها\n- در پایان: یک پرامپت آماده برای مدل‌های ویدیوساز از کل صحنه\nنکات:\n- هر انتخاب را با حس روایی‌اش توضیح بده\n- اگر حس [حس] را مشخص نکردم، پیشنهاد بده"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a director of photography (DoP).\nTask: design the visual language and camera movement for a video with this scene/mood: [describe scene/desired feeling].\nOutput:\n- Color palette and lighting sources (three-point/natural/neon...)\n- Shot-by-shot camera plan: opening frame, distance, height, path\n- Aspect ratio and aperture/shutter suggestions for a [epic/intimate/stark] feel\n- Logical transitions between shots\n- Finally: a ready-to-use prompt for AI video models covering the whole scene\nRules:\n- Justify each choice with its narrative feeling\n- If I didn't specify the [mood], propose one"
+        }
+      ]
+    },
+    {
+      "id": 20041,
+      "cat": "ui",
+      "catFa": "طراحی UI/UX",
+      "catEn": "UI/UX Design",
+      "t": { "fa": "پرامپت UI حرفه‌ای از ایده بساز", "en": "Turn an Idea into a Pro UI Prompt" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: طراح محصول و مهندس پرامپت برای ابزارهای طراحی با هوش مصنوعی (Figma AI، Midjourney، GPT Image).\nوظیفه: ایده‌ی [توصیف محصول/صفحه] را به پرامپت‌های طراحی UI تبدیل کن.\nخروجی:\n- خلاصه محصول: کاربر هدف، کار اصلی، پلتفرم\n- ساختار صفحه: بلوک‌های اصلی از بالا به پایین\n- پرامپت اصلی: سبک بصری، پالت رنگ، تایپوگرافی، فاصله‌ها، حالت دسکتاپ/موبایل\n- ۳ پرامپت کوتاه برای کامپوننت‌های کلیدی (هدر، کارت، فرم)\n- کلمات منفی برای جلوگیری از سبک‌های ناخواسته\nنکات:\n- پرامپت‌ها برای [ابزار] بهینه باشند\n- سبک [مینیمال/سرگرم‌کننده/سازمانی] را حفظ کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a product designer and prompt engineer for AI design tools (Figma AI, Midjourney, GPT Image).\nTask: convert this product idea: [describe product/page] into UI design prompts.\nOutput:\n- Product brief: target user, core job, platform\n- Page structure: main blocks from top to bottom\n- Master prompt: visual style, color palette, typography, spacing, desktop/mobile states\n- 3 short prompts for key components (header, card, form)\n- Negative keywords to avoid unwanted styles\nRules:\n- Optimize prompts for [tool]\n- Keep the [minimal/playful/corporate] style"
+        }
+      ]
+    },
+    {
+      "id": 20042,
+      "cat": "ui",
+      "catFa": "طراحی UI/UX",
+      "catEn": "UI/UX Design",
+      "t": { "fa": "لندینگ پیج طراحی کن", "en": "Design a Landing Page" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: طراح UX و کپی‌رایتر تبدیل.\nوظیفه: برای [محصول/خدمت] با هدف [فروش/ثبت‌نام/جذب لید] یک لندینگ پیج طراحی کن.\nخروجی:\n- استراتژی پیام: وعده اصلی، مخاطب، اعتراض‌ها و پاسخ‌ها\n- ساختار سکشن‌ها: هیرو، مزایا، اثبات اجتماعی، قیمت، FAQ، CTA نهایی\n- برای هر سکشن: تیتر، زیرتیتر و متن پیشنهادی\n- نقشه بصری: چیدمان، رنگ تاکیدی، جای تصاویر\n- ۵ تکنیک افزایش نرخ تبدیل مخصوص این صفحه\nنکات:\n- برای [ساس/اپ/فروشگاه] شخصی‌سازی کن\n- تیترها زیر ۱۰ کلمه و نتیجه‌محور باشند"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a UX designer and conversion copywriter.\nTask: design a landing page for [product/service] aiming at [sales/signup/lead gen].\nOutput:\n- Message strategy: core promise, audience, objections and answers\n- Section structure: hero, benefits, social proof, pricing, FAQ, final CTA\n- For each section: headline, subheadline and suggested copy\n- Visual map: layout, accent color, image placements\n- 5 conversion tactics specific to this page\nRules:\n- Tailor it for [SaaS/app/ecommerce]\n- Headlines under 10 words and outcome-focused"
+        }
+      ]
+    },
+    {
+      "id": 20043,
+      "cat": "ui",
+      "catFa": "طراحی UI/UX",
+      "catEn": "UI/UX Design",
+      "t": { "fa": "آنات UX انجام بده", "en": "Run a UX Audit" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مشاور ارشد تجربه کاربری.\nوظیفه: محصول [نام/لینک/توضیح] را از نظر UX ارزیابی کن. کاربر هدف: [مخاطب]. هدف تجاری: [هدف].\nخروجی:\n- سفر کاربر فعلی را گام‌به‌گام بازسازی کن و اصطکاک‌ها را نشانه‌گذاری کن\n- ۱۰ مشکل اولویت‌دار: شدت (بالا/متوسط/پایین) + اثر روی نرخ تبدیل\n- برای هر مشکل: پیشنهاد اصلاح مشخص و قابل اجرا\n- ۳ آزمون A/B پیشنهادی با فرضیه و معیار موفقیت\n- چک‌لیست دسترسی‌پذیری (کنتراست، تمرکز، برچسب فرم)\nنکات:\n- اگر اسکرین‌شات/ساختار صفحه می‌دهم از آن استفاده کن\n- اولویت با اصلاح‌های کم‌هزینه و پراثر باشد"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a senior UX consultant.\nTask: audit the UX of [product/link/description]. Target user: [audience]. Business goal: [goal].\nOutput:\n- Rebuild the current user journey step by step and flag friction points\n- 10 prioritized issues: severity (high/medium/low) + conversion impact\n- For each issue: a concrete, implementable fix\n- 3 suggested A/B tests with hypothesis and success metric\n- An accessibility checklist (contrast, focus, form labels)\nRules:\n- Use screenshots or page structure if I provide them\n- Prioritize low-cost, high-impact fixes"
+        }
+      ]
+    },
+    {
+      "id": 20044,
+      "cat": "prompt-eng",
+      "catFa": "مهندسی پرامپت",
+      "catEn": "Prompt Engineering",
+      "t": { "fa": "پرامپت تصویر اینستاگرام بساز", "en": "Craft an Instagram Image Prompt" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مهندس پرامپت تصویر برای مدل‌های Midjourney، GPT Image، Flux، Ideogram و Stable Diffusion.\nوظیفه: برای پست اینستاگرام درباره [موضوع/برند و حال‌وهوا] پرامپت تصویری حرفه‌ای بساز.\nخروجی:\n- پرامپت اصلی: موضوع، ترکیب‌بندی، نور، پالت رنگ، سبک، جزئیات لنز\n- نسخه عمودی ۴:۵ برای فید + نسخه ۹:۱۶ برای استوری\n- نسخه مخصوص Midjourney با پارامترها (--ar، --style، --v)\n- نسخه با متن روی تصویر برای Ideogram/GPT Image (متن دقیق در گیومه)\n- کلمات منفی: چیزهایی که نباید در تصویر باشند\nنکات:\n- تصویر باید در فید متمایز و مرتبط با برند باشد\n- اگر سبک برند [سبک] است، حفظش کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as an image prompt engineer for Midjourney, GPT Image, Flux, Ideogram and Stable Diffusion.\nTask: craft a professional image prompt for an Instagram post about [topic/brand and mood].\nOutput:\n- Master prompt: subject, composition, lighting, color palette, style, lens details\n- A 4:5 vertical feed version + a 9:16 story version\n- A Midjourney-specific version with parameters (--ar, --style, --v)\n- A text-on-image version for Ideogram/GPT Image (exact text in quotes)\n- Negative keywords: what must not appear in the image\nRules:\n- The image must stand out in the feed and match the brand\n- If the brand style is [style], preserve it"
+        }
+      ]
+    },
+    {
+      "id": 20045,
+      "cat": "prompt-eng",
+      "catFa": "مهندسی پرامپت",
+      "catEn": "Prompt Engineering",
+      "t": { "fa": "پرامپت استاندارد Midjourney بنویس", "en": "Write a Structured Midjourney Prompt" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: متخصص Midjourney با تسلط بر نسخه‌های اخیر و پارامترها.\nوظیفه: ایده‌ی [توصیف ایده] را به ۳ پرامپت Midjourney ساختاریافته تبدیل کن.\nخروجی:\n- برای هر پرامپت: سوژه اصلی، محیط، سبک/هنرمند مرجع، نور، رنگ، لنز، پارامترها\n- پارامترهای مناسب: --ar نسبت تصویر، --v نسخه، --style، --chaos و --weird برای خلاقیت\n- توضیح یک‌خطی اینکه هر پرامپت چه تفاوتی با بقیه دارد\n- یک نسخه با --no برای حذف عناصر مزاحم\n- راهنمای کوتاه: اگر نتیجه [مشکل] بود، کدام پارامتر را تغییر بدهم\nنکات:\n- از توصیف‌های مختصر و قوی استفاده کن نه جمله‌های بلند\n- اگر نسبت تصویر نگفتم، [۱۶:۹] فرض کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a Midjourney specialist fluent in recent versions and parameters.\nTask: convert this idea: [describe idea] into 3 structured Midjourney prompts.\nOutput:\n- For each: main subject, environment, style/artist reference, lighting, color, lens, parameters\n- Proper parameters: --ar aspect ratio, --v version, --style, --chaos and --weird for creativity\n- A one-line note on how each prompt differs\n- One version with --no to remove unwanted elements\n- A short guide: if the result shows [problem], change which parameter\nRules:\n- Use concise, powerful descriptors, not long sentences\n- If no aspect ratio given, assume [16:9]"
+        }
+      ]
+    },
+    {
+      "id": 20046,
+      "cat": "prompt-eng",
+      "catFa": "مهندسی پرامپت",
+      "catEn": "Prompt Engineering",
+      "t": { "fa": "پرامپت عکس محصول بساز", "en": "Create a Product Photo Prompt" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: عکاس تبلیغاتی محصول و مهندس پرامپت.\nوظیفه: برای محصول [نام/توضیح محصول] پرامپت‌های عکس تبلیغاتی حرفه‌ای بنویس.\nخروجی:\n- ۴ پرامپت برای ست‌های متفاوت: پس‌زمینه سفید استودیویی، لایف‌استایل، صحنه با دست، تخت‌سنگین (flat lay)\n- برای هر کدام: نورپردازی، ترکیب‌بندی، زاویه لنز، عمق میدان، بازتاب و سایه\n- نسبت تصویر مناسب [فروشگاه/اینستاگرام]\n- جزئیات متریال محصول (بافت، شفافیت، براقیت) که واقع‌گرایی را بالا می‌برد\n- کلمات منفی برای جلوگیری از تغییر ناخواسته لوگو/متن روی بسته‌بندی\nنکات:\n- محصول باید دقیقاً مطابق توضیح من بماند\n- سبک [لوکس/جوان‌پسند/مینیمال] را رعایت کن"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a product advertising photographer and prompt engineer.\nTask: write professional product photo prompts for [product name/description].\nOutput:\n- 4 prompts for different setups: white studio background, lifestyle, in-hand scene, flat lay\n- For each: lighting, composition, lens angle, depth of field, reflections and shadows\n- Aspect ratio suited for [shop/Instagram]\n- Material details (texture, transparency, gloss) that boost realism\n- Negative keywords to avoid unwanted logo/text changes on packaging\nRules:\n- The product must stay exactly as my description\n- Respect the [luxury/youthful/minimal] style"
+        }
+      ]
+    },
+    {
+      "id": 20047,
+      "cat": "seo",
+      "catFa": "سئو و محتوا",
+      "catEn": "SEO & Content",
+      "t": { "fa": "آدیت سئوی سایت را انجام بده", "en": "Audit a Website's SEO" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: مشاور سئوی تکنیکال.\nوظیفه: سایت [آدرس/توضیح ساختار] را از نظر سئو ارزیابی کن. کسب‌وکار: [حوزه فعالیت].\nخروجی:\n- مشکلات تکنیکال: سرعت، موبایل، ایندکس‌پذیری، ساختار هدینگ، اسکیما — با شدت\n- مشکلات محتوایی: نازک‌بودن، تداخل کلیدواژه، شکاف محتوایی نسبت به رقبا\n- مشکلات آن‌پیج: تایتل/دیسکریپشن تکراری یا بلند، لینک‌سازی داخلی\n- جدول اولویت اقدام: کار، اثر تخمینی، زحمت، ترتیب اجرا\n- برای هر مشکل: راه‌حل مشخص و ابزار بررسی\nنکات:\n- اگر داده سرچ‌کنسول می‌دهم در تحلیل استفاده کن\n- خروجی برای [توسعه‌دهنده/مدیر] قابل‌فهم باشد"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a technical SEO consultant.\nTask: evaluate [site URL/structure description] for SEO. Business: [field].\nOutput:\n- Technical issues: speed, mobile, indexability, heading structure, schema — with severity\n- Content issues: thin pages, keyword cannibalization, content gaps vs competitors\n- On-page issues: duplicate/long titles and descriptions, internal linking\n- A prioritized action table: task, estimated impact, effort, execution order\n- For each issue: a concrete fix and a verification tool\nRules:\n- Use Search Console data if I provide it\n- Make the output understandable for [developers/managers]"
+        }
+      ]
+    },
+    {
+      "id": 20048,
+      "cat": "marketing",
+      "catFa": "مارکتینگ و کپی‌رایتینگ",
+      "catEn": "Marketing & Copywriting",
+      "t": { "fa": "محتوای کامل یک موضوع را تولید کن", "en": "Generate Full Content for One Topic" },
+      "date": "2026-09-08",
+      "variants": [
+        {
+          "l": { "fa": "فارسی", "en": "Persian" },
+          "text": "نقش: استراتژیست محتوای چندکاناله.\nوظیفه: درباره موضوع [موضوع] برای [برند/کسب‌وکار] یک بسته محتوایی کامل برای همه کانال‌ها تولید کن.\nخروجی:\n- پیام اصلی و ۳ پیام فرعی برای کانال‌های مختلف\n- مقاله وبلاگ: تیتر، ساختار هدینگ‌ها، خلاصه هر بخش\n- ۳ پست اینستاگرام: کپشن + ایده تصویر + هشتگ\n- ۱ پست لینکدین با روایت حرفه‌ای\n- ایمیل خبرنامه: موضوع + بدنه کوتاه + CTA\n- ۵ ایده ویدیوی کوتاه با هوک هر کدام\nنکات:\n- لحن برند: [لحن]. مخاطب: [مخاطب]\n- هر کانال باید نسخه بومی خودش باشد نه کپی یکسان\n- اگر فقط بخشی را می‌خواهم، همان را کامل بده"
+        },
+        {
+          "l": { "fa": "انگلیسی", "en": "English" },
+          "text": "Act as a multi-channel content strategist.\nTask: produce a complete content pack for the topic [topic] for [brand/business] across all channels.\nOutput:\n- One core message and 3 channel-specific sub-messages\n- Blog article: title, heading structure, summary per section\n- 3 Instagram posts: caption + image idea + hashtags\n- 1 LinkedIn post with a professional narrative\n- Newsletter email: subject + short body + CTA\n- 5 short-video ideas with a hook for each\nRules:\n- Brand tone: [tone]. Audience: [audience]\n- Each channel gets a native version, not a copy-paste\n- If I ask for one piece only, deliver that fully"
+        }
+      ]
+    }
+  ]
+}

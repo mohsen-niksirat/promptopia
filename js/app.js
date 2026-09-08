@@ -37,6 +37,7 @@
     writing: '✍️', coding: '⌘', marketing: '📣', education: '📚', business: '💼', career: '🚀', seo: '⌕',
     portrait: '✦', family: '♡', travel: '✈️', vehicles: '🚘', food: '🍜', animals: '🐾', fantasy: '🪄',
     product: '🛍️', utility: '🧰', fashion: '👗', luxury: '💎', favs: '♥',
+    video: '🎬', ui: '🎨', 'prompt-eng': '✨',
   };
   window.APP_LANG = state.lang;
 
@@ -215,6 +216,23 @@
       <div class="section-more-row"><button class="btn btn-ghost btn-sm section-more" type="button" data-more="${esc(key)}" hidden></button></div>
       <nav class="pagination section-pagination" data-section="${esc(key)}" aria-label="${esc(label)} ${esc(window.t('pagination'))}"></nav>
     </section>`;
+  }
+
+  /* the section the user is currently looking at: the one whose box
+     overlaps the viewport center (null when still at the hero) */
+  function activeSectionKey() {
+    const sections = $$('#sections .prompt-section');
+    if (!sections.length) return null;
+    const mid = innerHeight / 2;
+    let best = null;
+    let bestDist = Infinity;
+    for (const s of sections) {
+      const r = s.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) continue;
+      const dist = Math.abs((r.top + r.bottom) / 2 - mid);
+      if (dist < bestDist) { bestDist = dist; best = s; }
+    }
+    return best ? best.dataset.section : null;
   }
 
   function renderSections() {
@@ -410,7 +428,9 @@
     history.replaceState(null, '', location.pathname + location.search + (state.modal.returnHash || ''));
   }
 
+  let fillSeq = 0;
   function fillModal() {
+    const seq = ++fillSeq;
     const p = state.modal.prompt;
     const v = p.variants[state.modal.variant] || p.variants[0];
     const isText = !!p.text;
@@ -418,16 +438,19 @@
     const iv = imgVariants(p);
     const mi = $('#modalImg');
     if (mi.getAttribute('src') !== iv.src) {
-      /* blur-up swap: fade out, switch to the new source, decode, then fade in — no stale frame */
+      /* blur-up swap: fade out, switch to the new source, reveal on load — no stale frame.
+         seq guards against a slow load of prompt A revealing over prompt B. */
       mi.classList.add('img-fade');
+      const show = () => { if (seq === fillSeq) mi.classList.remove('img-fade'); };
       mi.src = iv.src;
       mi.srcset = iv.srcset;
       mi.sizes = iv.srcset ? MODAL_SIZES : '';
       mi.closest('.modal-media').style.backgroundImage = "url('" + iv.blur + "')";
-      const reveal = () => requestAnimationFrame(() => mi.classList.remove('img-fade'));
-      Promise.resolve(mi.decode ? mi.decode().catch(() => {}) : null).then(reveal);
+      if (mi.complete && mi.naturalWidth > 0) setTimeout(show, 40);
+      else { mi.addEventListener('load', show, { once: true }); mi.addEventListener('error', show, { once: true }); }
     } else {
       mi.closest('.modal-media').style.backgroundImage = "url('" + iv.blur + "')";
+      mi.classList.remove('img-fade');
     }
     mi.alt = title(p);
     $('#modalIcon').src = isText ? p.img : '';
@@ -485,7 +508,8 @@
 
     /* keyboard: '/' focuses search, arrows move between modals within a category */
     document.addEventListener('keydown', (ev) => {
-      const typing = ev.target.matches('input, textarea, select') || ev.target.isContentEditable;
+      const t = ev.target;
+      const typing = t instanceof Element && (t.matches('input, textarea, select') || t.isContentEditable);
       if (ev.key === '/' && !typing && !modal.open) {
         ev.preventDefault();
         $('#searchInput').focus();
@@ -595,14 +619,22 @@
       if (card) openModal(Number(card.dataset.id));
     });
 
-    // random prompt (toolbar + inside the modal)
+    // random prompt (toolbar + inside the modal) — respects what the user is browsing:
+    // active search first, then the nearest category section, else the whole gallery
     const pickRandom = () => {
       if (!DATA.length) return;
-      let id = DATA[Math.floor(Math.random() * DATA.length)].id;
-      if (state.modal.prompt && DATA.length > 1) {
-        for (let i = 0; i < 8 && id === state.modal.prompt.id; i++) {
-          id = DATA[Math.floor(Math.random() * DATA.length)].id;
-        }
+      const q = norm(state.q.trim());
+      let pool = [];
+      if (q) pool = DATA.filter((p) => promptMatches(p, q));
+      else {
+        const key = activeSectionKey();
+        if (key) pool = filteredSection(key);
+      }
+      if (!pool.length) pool = DATA;
+      const draw = () => pool[Math.floor(Math.random() * pool.length)].id;
+      let id = draw();
+      if (state.modal.prompt && pool.length > 1) {
+        for (let i = 0; i < 8 && id === state.modal.prompt.id; i++) id = draw();
       }
       openModal(id);
     };
