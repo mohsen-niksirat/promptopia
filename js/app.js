@@ -543,6 +543,25 @@
       if (ev.target.closest('.fav, .btn-use')) return;
       openModal(Number(card.dataset.id));
     });
+
+    /* mobile touch: first tap reveals overlays, second tap opens modal */
+    sections.addEventListener('touchstart', (ev) => {
+      const card = ev.target.closest('.card');
+      if (card && !card.classList.contains('touched')) {
+        /* clear other touched cards */
+        $$('.card.touched', sections).forEach(c => c.classList.remove('touched'));
+        card.classList.add('touched');
+        ev.preventDefault(); /* stop the subsequent click from opening modal */
+      } else if (card && card.classList.contains('touched')) {
+        /* second tap: dispatch click to open modal, clear touched state */
+        card.classList.remove('touched');
+        card.click();
+      } else {
+        /* tapped outside any card: clear all */
+        $$('.card.touched', sections).forEach(c => c.classList.remove('touched'));
+      }
+    }, { passive: false });
+
     sections.addEventListener('keydown', (ev) => {
       const card = ev.target.closest('.card');
       if (card && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); openModal(Number(card.dataset.id)); }

@@ -505,7 +505,10 @@ html[data-mode="light"] .ic-moon { display: none; }
   content: ''; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(to top, rgba(7, 8, 13, .78), rgba(7, 8, 13, 0) 52%);
   pointer-events: none;
+  opacity: 0; transition: opacity .35s ease;
 }
+.card:hover .card-media::after, .card:focus-visible .card-media::after,
+.card.touched .card-media::after { opacity: 1; }
 html[data-theme="light"] .card-media::after { background: linear-gradient(to top, rgba(23, 25, 35, .62), rgba(23, 25, 35, 0) 52%); }
 .card-media .skeleton { position: absolute; inset: 0; opacity: .55; background: linear-gradient(100deg, var(--surface) 40%, var(--surface-2) 50%, var(--surface) 60%); background-size: 200% 100%; animation: shimmer 1.4s infinite; }
 @keyframes shimmer { to { background-position: -200% 0; } }
@@ -516,6 +519,11 @@ html[data-theme="light"] .card-media::after { background: linear-gradient(to top
   background: rgba(7, 8, 13, .55); color: #fff;
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, .16);
+  opacity: 0; transform: translateY(-6px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.card:hover .badge, .card:focus-visible .badge, .card.touched .badge {
+  opacity: 1; transform: translateY(0);
 }
 
 .fav {
@@ -524,8 +532,10 @@ html[data-theme="light"] .card-media::after { background: linear-gradient(to top
   background: rgba(7, 8, 13, .5); color: #fff;
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, .14);
-  transition: transform .2s, background .2s;
+  transition: transform .2s, background .2s, opacity .3s ease;
+  opacity: 0;
 }
+.card:hover .fav, .card:focus-visible .fav, .card.touched .fav { opacity: 1; }
 .fav:hover { transform: scale(1.12); }
 .fav.on { color: #fb7185; }
 .fav.on svg path { fill: currentColor; }
@@ -535,11 +545,21 @@ html[data-theme="light"] .card-media::after { background: linear-gradient(to top
   padding: 14px 16px 12px; color: #fff; font-weight: 700; font-size: .98rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, .4);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .3s ease, transform .3s ease;
 }
+.card:hover .card-title, .card:focus-visible .card-title,
+.card.touched .card-title { opacity: 1; transform: translateY(0); }
 
 .card-foot {
   display: flex; gap: 8px; padding: 12px;
   border-top: 1px solid var(--border);
+  max-height: 0; padding: 0 12px; opacity: 0;
+  transition: max-height .3s ease, padding .3s ease, opacity .3s ease;
+  overflow: hidden;
+}
+.card:hover .card-foot, .card:focus-visible .card-foot, .card.touched .card-foot {
+  max-height: 60px; padding: 12px; opacity: 1;
 }
 .card-foot .btn-copy, .card-foot .btn-use {
   flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
@@ -650,6 +670,7 @@ html.modal-open, html.modal-open body { overflow: hidden; }
 .badge-premium {
   color: #fbbf24 !important; font-weight: 800;
   text-shadow: 0 0 8px rgba(251,191,36,.5);
+  opacity: 1 !important; transform: translateY(0) !important;
 }
 .prompt-box.locked { position: relative; user-select: none; overflow: hidden; }
 .prompt-box.locked .lock-teaser {
