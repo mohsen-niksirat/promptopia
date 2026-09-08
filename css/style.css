@@ -541,9 +541,9 @@ html[data-theme="light"] .card-media::after { background: linear-gradient(to top
 .fav.on svg path { fill: currentColor; }
 
 .card-title {
-  position: absolute; bottom: 0; inset-inline: 0; z-index: 2;
-  padding: 14px 16px 12px; color: #fff; font-weight: 700; font-size: .98rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+  position: absolute; bottom: 56px; inset-inline: 0; z-index: 2;
+  padding: 10px 16px; color: #fff; font-weight: 700; font-size: .92rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .5);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   opacity: 0; transform: translateY(8px);
   transition: opacity .3s ease, transform .3s ease;
