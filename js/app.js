@@ -93,6 +93,7 @@
     $('#langToggle').textContent = L.langSwitch;
     $$('[data-i18n]').forEach((el) => { el.textContent = window.t(el.getAttribute('data-i18n')); });
     $$('[data-i18n-ph]').forEach((el) => { el.placeholder = window.t(el.getAttribute('data-i18n-ph')); });
+    $('#modalRandom').setAttribute('aria-label', window.t('random'));
     $('#themeToggle').setAttribute('aria-label', window.t('chooseTheme'));
     $('#favExport').setAttribute('aria-label', window.t('favExport'));
     $('#favImport').setAttribute('aria-label', window.t('favImport'));
@@ -416,10 +417,18 @@
     modal.classList.toggle('text-prompt', isText);
     const iv = imgVariants(p);
     const mi = $('#modalImg');
-    mi.src = iv.src;
-    mi.srcset = iv.srcset;
-    mi.sizes = iv.srcset ? MODAL_SIZES : '';
-    mi.closest('.modal-media').style.backgroundImage = "url('" + iv.blur + "')";
+    if (mi.getAttribute('src') !== iv.src) {
+      /* blur-up swap: fade out, switch to the new source, decode, then fade in — no stale frame */
+      mi.classList.add('img-fade');
+      mi.src = iv.src;
+      mi.srcset = iv.srcset;
+      mi.sizes = iv.srcset ? MODAL_SIZES : '';
+      mi.closest('.modal-media').style.backgroundImage = "url('" + iv.blur + "')";
+      const reveal = () => requestAnimationFrame(() => mi.classList.remove('img-fade'));
+      Promise.resolve(mi.decode ? mi.decode().catch(() => {}) : null).then(reveal);
+    } else {
+      mi.closest('.modal-media').style.backgroundImage = "url('" + iv.blur + "')";
+    }
     mi.alt = title(p);
     $('#modalIcon').src = isText ? p.img : '';
     $('#modalIcon').alt = catLabel(p);
@@ -586,8 +595,8 @@
       if (card) openModal(Number(card.dataset.id));
     });
 
-    // random prompt
-    $('#randomBtn').addEventListener('click', () => {
+    // random prompt (toolbar + inside the modal)
+    const pickRandom = () => {
       if (!DATA.length) return;
       let id = DATA[Math.floor(Math.random() * DATA.length)].id;
       if (state.modal.prompt && DATA.length > 1) {
@@ -596,7 +605,9 @@
         }
       }
       openModal(id);
-    });
+    };
+    $('#randomBtn').addEventListener('click', pickRandom);
+    $('#modalRandom').addEventListener('click', pickRandom);
 
     // favorites export / import (backup & restore on another device)
     $('#favExport').addEventListener('click', () => {
