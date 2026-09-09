@@ -498,6 +498,8 @@ html[data-mode="light"] .ic-moon { display: none; }
   position: relative; border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--border); background: var(--surface);
   cursor: pointer; outline: none;
+  /* no iOS long-press callout / selection on gallery cards */
+  -webkit-touch-callout: none; -webkit-user-select: none; user-select: none;
   transition: transform .3s cubic-bezier(.2, .7, .2, 1), box-shadow .3s ease, border-color .3s ease;
   opacity: 0;
 }
@@ -543,8 +545,10 @@ html[data-theme="light"] .card-media::after { background: linear-gradient(to top
   border: 1px solid rgba(255, 255, 255, .14);
   transition: transform .2s, background .2s, opacity .3s ease;
   opacity: 0;
+  /* invisible controls must not swallow taps (opacity doesn't block hit-testing) */
+  pointer-events: none;
 }
-.card:hover .fav, .card:focus-visible .fav, .card.touched .fav { opacity: 1; }
+.card:hover .fav, .card:focus-visible .fav, .card.touched .fav { opacity: 1; pointer-events: auto; }
 .fav:hover { transform: scale(1.12); }
 .fav.on { color: #fb7185; }
 .fav.on svg path { fill: currentColor; }
@@ -560,18 +564,25 @@ html[data-theme="light"] .card-media::after { background: linear-gradient(to top
 .card:hover .card-title, .card:focus-visible .card-title,
 .card.touched .card-title { opacity: 1; transform: translateY(0); }
 
+/* text prompts have no photo to admire — their title/category stay visible
+   without hover, on desktop and mobile alike */
+.card-text .card-media::after { opacity: 1; }
+.card-text .card-title { opacity: 1; transform: none; }
+.card-text .badge { opacity: 1; transform: none; }
+
 .card-foot {
   position: absolute; bottom: 0; inset-inline: 0; z-index: 3;
   display: flex; gap: 8px; padding: 12px;
   background: linear-gradient(to top, rgba(7, 8, 13, .85), rgba(7, 8, 13, 0));
   opacity: 0; transform: translateY(8px);
+  pointer-events: none; /* see .fav — hidden buttons must not intercept taps */
   transition: opacity .3s ease, transform .3s ease;
 }
 html[data-theme="light"] .card-foot {
   background: linear-gradient(to top, rgba(23, 25, 35, .8), rgba(23, 25, 35, 0));
 }
 .card:hover .card-foot, .card:focus-visible .card-foot, .card.touched .card-foot {
-  opacity: 1; transform: translateY(0);
+  opacity: 1; transform: translateY(0); pointer-events: auto;
 }
 .card-foot .btn-copy, .card-foot .btn-use {
   flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px;

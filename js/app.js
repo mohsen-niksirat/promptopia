@@ -389,7 +389,7 @@
     const iv = imgVariants(p);
     const srcset = iv.srcset ? ` srcset="${iv.srcset}" sizes="${CARD_SIZES}"` : '';
     const locked = isLocked(p);
-    return `<article class="card" data-id="${p.id}" tabindex="0" role="button" aria-label="${esc(title(p))}">
+    return `<article class="card${p.text ? ' card-text' : ''}" data-id="${p.id}" tabindex="0" role="button" aria-label="${esc(title(p))}">
       <div class="card-media" style="background-image:url('${iv.blur}')">
         <span class="skeleton" aria-hidden="true"></span>
         <img data-lazy src="${iv.src}"${srcset} alt="${esc(title(p))}" loading="lazy" decoding="async">
@@ -544,23 +544,42 @@
       openModal(Number(card.dataset.id));
     });
 
-    /* mobile touch: first tap reveals overlays, second tap opens modal */
+    /* mobile: quick tap = open modal (one tap, like desktop click).
+       press & hold ≈500ms on a photo card = reveal overlays (category,
+       title, actions) instead of the old double-tap dance.
+       text-prompt cards keep everything visible, nothing to reveal. */
+    let pressTimer = null, pressCard = null, pressMoved = false;
+    const clearPressed = () => {
+      if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; }
+    };
     sections.addEventListener('touchstart', (ev) => {
+      if (ev.touches.length !== 1) { clearPressed(); return; } /* pinch/2-finger */
       const card = ev.target.closest('.card');
-      if (card && !card.classList.contains('touched')) {
-        /* clear other touched cards */
-        $$('.card.touched', sections).forEach(c => c.classList.remove('touched'));
-        card.classList.add('touched');
-        ev.preventDefault(); /* stop the subsequent click from opening modal */
-      } else if (card && card.classList.contains('touched')) {
-        /* second tap: dispatch click to open modal, clear touched state */
-        card.classList.remove('touched');
-        card.click();
-      } else {
-        /* tapped outside any card: clear all */
-        $$('.card.touched', sections).forEach(c => c.classList.remove('touched'));
+      $$('.card.touched', sections).forEach(c => { if (c !== card) c.classList.remove('touched'); });
+      pressMoved = false;
+      if (!card || card.classList.contains('card-text')) return; /* text cards: normal tap flow */
+      pressCard = card;
+      /* NOTE: no preventDefault here — scrolling must keep working */
+      pressTimer = setTimeout(() => {
+        if (!pressMoved && pressCard) {
+          pressCard.classList.add('touched');
+          if (navigator.vibrate) navigator.vibrate(10);
+        }
+      }, 500);
+    }, { passive: true });
+    sections.addEventListener('touchmove', () => { pressMoved = true; clearPressed(); }, { passive: true });
+    sections.addEventListener('touchcancel', () => { pressMoved = true; clearPressed(); }, { passive: true });
+    sections.addEventListener('touchend', () => {
+      clearPressed();
+      /* hold-revealed card stays revealed until the next tap elsewhere; the
+         click handler below opens the modal only if it was NOT just revealed */
+      const wasRevealed = pressCard && pressCard.classList.contains('touched');
+      if (wasRevealed) {
+        /* swallow the synthetic click that follows this touch */
+        pressCard.addEventListener('click', (e) => { e.stopImmediatePropagation(); }, { once: true, capture: true });
       }
-    }, { passive: false });
+      pressCard = null;
+    }, { passive: true });
 
     sections.addEventListener('keydown', (ev) => {
       const card = ev.target.closest('.card');
