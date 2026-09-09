@@ -552,6 +552,16 @@
     const clearPressed = () => {
       if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; }
     };
+    /* one-time hint: teach the hold-to-reveal gesture (touch devices only) */
+    const HINT_KEY = 'promptopia-holdhint';
+    let hintShown = false;
+    try { hintShown = localStorage.getItem(HINT_KEY) === '1'; } catch { /* private mode */ }
+    const maybeHint = () => {
+      if (hintShown) return;
+      hintShown = true;
+      try { localStorage.setItem(HINT_KEY, '1'); } catch { /* ignore */ }
+      toast(window.t('holdHint'));
+    };
     sections.addEventListener('touchstart', (ev) => {
       if (ev.touches.length !== 1) { clearPressed(); return; } /* pinch/2-finger */
       const card = ev.target.closest('.card');
@@ -564,6 +574,7 @@
         if (!pressMoved && pressCard) {
           pressCard.classList.add('touched');
           if (navigator.vibrate) navigator.vibrate(10);
+          maybeHint();
         }
       }, 500);
     }, { passive: true });

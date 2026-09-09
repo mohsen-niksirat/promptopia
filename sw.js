@@ -1,15 +1,15 @@
 /* Promptopia service worker — offline support */
-const VERSION = 'promptopia-v24';
-/* ?v=24 must match the cache-busting query on css/js/data in index.html */
+const VERSION = 'promptopia-v25';
+/* ?v=25 must match the cache-busting query on css/js/data in index.html */
 const CORE = [
   './',
   './index.html',
-  './css/style.css?v=24',
-  './js/premium.js?v=24',
-  './js/counter.js?v=24',
-  './js/i18n.js?v=24',
-  './js/app.js?v=24',
-  './data/prompts.js?v=24',
+  './css/style.css?v=25',
+  './js/premium.js?v=25',
+  './js/counter.js?v=25',
+  './js/i18n.js?v=25',
+  './js/app.js?v=25',
+  './data/prompts.js?v=25',
   './assets/fonts/Vazirmatn-Variable.woff2',
   './assets/favicon.svg',
   './manifest.webmanifest',
