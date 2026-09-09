@@ -11,3 +11,6 @@ package-lock.json
 Thumbs.db
 .DS_Store
 serve.cjs
+
+# raw data dumps (too big for the repo)
+*.zip

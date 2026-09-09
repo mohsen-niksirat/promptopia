@@ -219,7 +219,12 @@ function parseMessage(msg, idx) {
   const pushVariant = () => {
     if (current && cleanText(current.text).length >= 80) {
       variants.push({
-        labelFa: cleanText(labelParts.join(' ')).replace(/[:：]\s*$/, ''),
+        /* cut the channel's own boilerplate tail ("📑 متن پرامپت (با ضربه کپی می‌شود):")
+           off the label before it can leak into titles */
+        labelFa: cleanText(labelParts.join(' '))
+          .replace(/\s*متن پرامپت[\s\S]*$/, '')
+          .replace(/(?:\s|[\uD800-\uDBFF][\uDC00-\uDFFF]?|[\uDC00-\uDFFF]|\uFE0F|\u200D|[!؛:.])+$/g, '')
+          .replace(/[:：]\s*$/, ''),
         text: cleanText(current.text),
         botUrl: current.botUrl || null,
       });
@@ -342,13 +347,16 @@ async function cmdParse() {
     console.error('no work/exp* directories found — put Telegram exports in work/exp1, work/exp2, ...');
     process.exit(1);
   }
-  const bases = { exp1: 0, exp2: 300000, exp3: 600000, exp4: 900000 };
+  const bases = { exp1: 0, exp2: 300000, exp3: 600000, exp4: 900000, exp5: 1200000 };
   const items = [];
   const seen = new Set();
   for (const dir of dirs) {
     for (const p of parseExport(dir, bases[dir] || 0)) {
-      const dupKey = p.variants[0].text.slice(0, 120);
-      if (seen.has(dupKey)) continue;   // same prompt posted in several chats
+      /* same prompt reposted across chats: hash the whole body, not just the
+         head — this channel reuses the same opening boilerplate ("Strict
+         identity lock:...") across dozens of distinct prompts. */
+      const dupKey = p.variants.map((v) => v.text).join('\n').slice(0, 4000);
+      if (seen.has(dupKey)) continue;
       seen.add(dupKey);
       items.push(p);
     }

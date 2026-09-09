@@ -431,6 +431,15 @@ html[data-mode="light"] .ic-moon { display: none; }
   cursor: pointer;
 }
 
+/* native dropdown list: force readable colors on every platform/theme.
+   --surface is translucent and native popups don't composite it over the
+   page (dark text on white popup), so use the opaque --bg instead. */
+.select option,
+.select optgroup {
+  background: var(--bg);
+  color: var(--text);
+}
+
 .dice-btn { padding: 10px 16px; }
 .dice { display: inline-block; transition: transform .3s; }
 .dice-btn:hover .dice { animation: diceSpin .55s cubic-bezier(.34, 1.56, .64, 1); }
