@@ -24,7 +24,8 @@
   const state = {
     lang: LS.get('lang', 'fa'),
     theme: THEMES.some((t) => t.id === savedTheme) ? savedTheme : 'dark',
-    q: '',
+    qTitle: '',
+    qBody: '',
     sort: 'new',
     sectionPages: Object.create(null),
     expanded: Object.create(null),
@@ -153,23 +154,24 @@
 
   function catLabel(p) { return state.lang === 'fa' ? p.catFa : p.catEn; }
 
-  function promptMatches(p, q) {
-    if (!q) return true;
-    return norm([
-      p.t.fa, p.t.en, p.catFa, p.catEn,
-      p.variants.map((v) => v.text).join(' '),
-    ].join(' \n ')).includes(q);
+  function promptMatches(p, qTitle, qBody) {
+    const titleHay = norm([p.t.fa, p.t.en, p.catFa, p.catEn].join(' '));
+    const bodyHay = norm(p.variants.map((v) => v.text).join(' '));
+    if (qTitle && !titleHay.includes(qTitle)) return false;
+    if (qBody && !bodyHay.includes(qBody)) return false;
+    return true;
   }
 
   function filteredSection(key) {
-    const q = norm(state.q.trim());
+    const qTitle = norm(state.qTitle.trim());
+    const qBody = norm(state.qBody.trim());
     let list = DATA.filter((p) => (key === 'favs' ? state.favs.has(p.id) : p.cat === key));
-    if (q) {
-      list = list.filter((p) => promptMatches(p, q));
+    if (qTitle || qBody) {
+      list = list.filter((p) => promptMatches(p, qTitle, qBody));
       const titleHits = [];
       const bodyHits = [];
       for (const p of list) {
-        const inTitle = norm([p.t.fa, p.t.en, p.catFa, p.catEn].join(' ')).includes(q);
+        const inTitle = norm([p.t.fa, p.t.en, p.catFa, p.catEn].join(' ')).includes(qTitle);
         (inTitle ? titleHits : bodyHits).push(p);
       }
       list = titleHits.concat(bodyHits);
@@ -188,7 +190,7 @@
 
   /* a section is expanded either by the user or implicitly while searching */
   function isExpanded(key) {
-    return !!state.q || !!state.expanded[key];
+    return !!state.qTitle || !!state.qBody || !!state.expanded[key];
   }
 
   function renderCategoryNav() {
@@ -244,7 +246,7 @@
     if (!sections) return;
     renderCategoryNav();
     const views = sectionKeys().map((key) => ({ key, list: filteredSection(key) }));
-    const visible = state.q ? views.filter((view) => view.list.length) : views;
+    const visible = (state.qTitle || state.qBody) ? views.filter((view) => view.list.length) : views;
     const total = views.reduce((sum, view) => sum + view.list.length, 0);
     $('#resultCount').textContent = window.t('results', { n: fmt(total) });
     $('#emptyBox').hidden = total > 0;
@@ -603,8 +605,8 @@
       const typing = t instanceof Element && (t.matches('input, textarea, select') || t.isContentEditable);
       if (ev.key === '/' && !typing && !modal.open) {
         ev.preventDefault();
-        $('#searchInput').focus();
-        $('#searchInput').select();
+        $('#searchTitle').focus();
+        $('#searchTitle').select();
         return;
       }
       if (!modal.open || !state.modal.prompt) return;
@@ -620,14 +622,17 @@
     });
 
     let searchTimer = null;
-    $('#searchInput').addEventListener('input', (ev) => {
+    const onSearch = () => {
       clearTimeout(searchTimer);
       searchTimer = setTimeout(() => {
-        state.q = ev.target.value;
+        state.qTitle = $('#searchTitle').value;
+        state.qBody = $('#searchBody').value;
         resetSectionPages();
         renderSections();
       }, 160);
-    });
+    };
+    $('#searchTitle').addEventListener('input', onSearch);
+    $('#searchBody').addEventListener('input', onSearch);
 
     $('#sortSelect').addEventListener('change', (ev) => {
       state.sort = ev.target.value;
@@ -755,9 +760,10 @@
     // active search first, then the nearest category section, else the whole gallery
     const pickRandom = () => {
       if (!DATA.length) return;
-      const q = norm(state.q.trim());
+      const qTitle = norm(state.qTitle.trim());
+      const qBody = norm(state.qBody.trim());
       let pool = [];
-      if (q) pool = DATA.filter((p) => promptMatches(p, q));
+      if (qTitle || qBody) pool = DATA.filter((p) => promptMatches(p, qTitle, qBody));
       else {
         const key = activeSectionKey();
         if (key) pool = filteredSection(key);

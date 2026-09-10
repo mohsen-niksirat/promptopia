@@ -413,16 +413,17 @@ html[data-mode="light"] .ic-moon { display: none; }
   background: linear-gradient(90deg, transparent, var(--border-strong) 18%, var(--border-strong) 82%, transparent);
 }
 .toolbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: clamp(26px, 4vh, 40px); margin-bottom: 14px; }
+.search-pair { display: flex; gap: 10px; flex: 1 1 100%; }
 .search {
   display: flex; align-items: center; gap: 9px;
-  flex: 1 1 260px; max-width: 380px;
+  flex: 1 1 0; min-width: 0;
   padding: 11px 16px; border-radius: 14px;
   border: 1px solid var(--border); background: var(--surface);
   color: var(--muted);
   transition: border-color .2s, box-shadow .2s;
 }
 .search:focus-within { border-color: var(--violet); box-shadow: 0 0 0 3px rgba(167, 139, 250, .18); }
-.search input { flex: 1; background: none; border: 0; outline: 0; color: var(--text); font: inherit; }
+.search input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--text); font: inherit; }
 .search input::placeholder { color: var(--muted); }
 
 .select {
